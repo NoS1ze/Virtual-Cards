@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[import { gs, GlideRecord } from '@servicenow/glide'
+
+export function getVisualCardsForCatalog() {
+  try {
+    const categoryId = getVisualCardsCategoryId()
+    const cards = []
+    
+    const modelGr = new GlideRecord('cmdb_model')
+    modelGr.addQuery('type', 'Product')
+    modelGr.addQuery('status', 'In Production')
+    
+    if (categoryId) {
+      // Handle both reference and string values
+      const condition = modelGr.addQuery('cmdb_model_category', categoryId)
+      condition.addOrCondition('cmdb_model_category', 'visual_cards_category')
+    } else {
+      // Fallback filter
+      modelGr.addQuery('short_description', 'CONTAINS', 'card')
+    }
+    
+    modelGr.query()
+    
+    while (modelGr.next()) {
+      cards.push({
+        sys_id: modelGr.getUniqueValue(),
+        name: modelGr.getValue('name'),
+        short_description: modelGr.getValue('short_description')
+      })
+    }
+    
+    return cards
+    
+  } catch (error) {
+    gs.error('Error fetching visual cards for catalog: ' + error.message)
+    return []
+  }
+}
+
+export function getVisualCardsCategoryId() {
+  try {
+    const categoryGr = new GlideRecord('cmdb_model_category')
+    categoryGr.addQuery('name', 'Visual Cards')
+    categoryGr.query()
+    
+    if (categoryGr.next()) {
+      return categoryGr.getUniqueValue()
+    }
+  } catch (error) {
+    gs.warn('Could not find Visual Cards model category: ' + error.message)
+  }
+  
+  return null
+}
+
+export function getAssignedUsersForCard(cardId) {
+  try {
+    const users = []
+    const assetGr = new GlideRecord('alm_asset')
+    assetGr.addQuery('model', cardId)
+    assetGr.addQuery('install_status', 1) // Installed
+    assetGr.query()
+    
+    while (assetGr.next()) {
+      const userId = assetGr.getValue('assigned_to')
+      if (userId) {
+        users.push(userId)
+      }
+    }
+    
+    return users
+    
+  } catch (error) {
+    gs.error('Error fetching assigned users for card: ' + error.message)
+    return []
+  }
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_konl_visual_card/x-konl-visual-cards/1.0.0/src/server/card-utils.js</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-09 22:04:08</sys_created_on>
+        <sys_id>efbd914211034b578f0d23b25bb46057</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_konl_visual_card/x-konl-visual-cards/1.0.0/src/server/card-utils.js</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_module_efbd914211034b578f0d23b25bb46057</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-09 22:04:08</sys_updated_on>
+    </sys_module>
+</record_update>

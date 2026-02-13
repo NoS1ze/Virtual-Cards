@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[import { gs, GlideRecord } from '@servicenow/glide'
+
+export function generateCard(request, response) {
+  try {
+    const requestBody = request.body.data
+    const { cardName, cardPurpose, expectedContent, styleGuidelines, requestId } = requestBody
+    
+    // Get the Visual Cards model category
+    const categoryId = getVisualCardsCategoryId()
+    
+    // Mock card generation logic - in real implementation this would call external AI/design API
+    const generatedCard = {
+      name: cardName,
+      short_description: cardPurpose,
+      description: `Generated card for: ${cardPurpose}. Content specifications: ${expectedContent}. Style: ${styleGuidelines || 'Default corporate style'}`,
+      picture: generateMockImageUrl(cardName),
+      type: 'Product', // Mark as product type for visual cards
+      status: 'Build', // Draft status for manager review
+      comments: `Generated on ${new Date().toISOString()} for request ${requestId || 'unknown'}`,
+      cmdb_model_category: categoryId
+    }
+    
+    // Create the product model record (our card)
+    const productGr = new GlideRecord('cmdb_model')
+    productGr.initialize()
+    productGr.setValue('name', generatedCard.name)
+    productGr.setValue('short_description', generatedCard.short_description)
+    productGr.setValue('description', generatedCard.description)
+    productGr.setValue('picture', generatedCard.picture)
+    productGr.setValue('type', generatedCard.type)
+    productGr.setValue('status', generatedCard.status)
+    productGr.setValue('comments', generatedCard.comments)
+    
+    if (categoryId) {
+      productGr.setValue('cmdb_model_category', categoryId)
+    }
+    
+    const productSysId = productGr.insert()
+    
+    if (productSysId) {
+      // Log successful generation
+      gs.info(`Visual card generated successfully: ${cardName} (${productSysId})`)
+      
+      response.setStatus(201)
+      response.setBody({
+        success: true,
+        product_model_id: productSysId,
+        card: generatedCard,
+        message: 'Visual card generated successfully as product model'
+      })
+    } else {
+      throw new Error('Failed to create product model record')
+    }
+    
+  } catch (error) {
+    gs.error('Card generation error: ' + error.message)
+    response.setStatus(500)
+    response.setBody({
+      success: false,
+      error: error.message,
+      message: 'Card generation failed'
+    })
+  }
+}
+
+function getVisualCardsCategoryId() {
+  try {
+    const categoryGr = new GlideRecord('cmdb_model_category')
+    categoryGr.addQuery('name', 'Visual Cards')
+    categoryGr.query()
+    
+    if (categoryGr.next()) {
+      return categoryGr.getUniqueValue()
+    }
+  } catch (error) {
+    gs.warn('Could not find Visual Cards model category: ' + error.message)
+  }
+  
+  return null
+}
+
+function generateMockImageUrl(cardName) {
+  // Mock image generation - in reality this would be a proper AI-generated image
+  const baseUrl = 'https://via.placeholder.com/300x200/4A90E2/FFFFFF'
+  const encodedName = encodeURIComponent(cardName.substring(0, 20))
+  return `${baseUrl}?text=${encodedName}`
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_konl_visual_card/x-konl-visual-cards/1.0.0/src/server/card-generator.js</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-09 21:51:45</sys_created_on>
+        <sys_id>8f89465eb9224cbd874ae4cfc6b7b8bf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_konl_visual_card/x-konl-visual-cards/1.0.0/src/server/card-generator.js</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_module_8f89465eb9224cbd874ae4cfc6b7b8bf</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-09 21:51:45</sys_updated_on>
+    </sys_module>
+</record_update>

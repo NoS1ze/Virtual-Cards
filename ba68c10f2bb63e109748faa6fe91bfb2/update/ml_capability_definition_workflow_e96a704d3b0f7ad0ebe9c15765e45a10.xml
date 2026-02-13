@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="ml_capability_definition_workflow">
+    <ml_capability_definition_workflow action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <capability display_value="Workflow">d12a03f173212010c0bbb63854f6a7b9</capability>
+        <current_solution_version>1</current_solution_version>
+        <dataset_language>en</dataset_language>
+        <description>Group Action Framework Solution</description>
+        <fields/>
+        <filter/>
+        <pretrained>false</pretrained>
+        <request_source>api</request_source>
+        <solution_label>kb_knowledge_gaf_clustering_1770865114873</solution_label>
+        <solution_name>ml_x_konl_x_konl_visual_card_global_kb_knowledge_gaf_clustering_1770865114873</solution_name>
+        <solution_parameters/>
+        <solution_properties>{"description":"Group Action Framework Solution","label":"kb_knowledge_gaf_clustering_1770865114873","predictPipeline":{},"schedulingInfo":{"useCase":"Group Action Framework Solution"},"tags":"Group Action Framework,workflow,bertopic","trainingPipeline":{"pipelineName":"gaf_clustering_v2","pipelineOutput":{"models":{"group_details_report":"::GroupActionGenerator.group_details_report","group_report":"::GroupActionGenerator.group_report","bertopic":"::GroupActionGenerator.bertopic","knn":"::GroupActionGenerator.knn","sys_ids":"::GroupActionGenerator.sys_ids"}},"pipelineInput":{"config":{"id_column":"sys_id","combined_field_name":"combined","active_duplication_management":false,"pre_processing_options":{"activation":true,"pre_processing_steps":[{"type":"html","order":1}]},"clustering":{"embedding_method":{"sentence-transformers":{"model_name":"docintel_itam_candidate_classifier/all-MiniLM-L6-v2"}},"dim_reduction_method":{"umap":{"n_neighbors":3,"n_components":30,"min_dist":0,"metric":"euclidean","random_state":42}},"clustering_method":{"hdbscan":{"min_samples":2,"min_cluster_size":2,"prediction_data":true,"cluster_selection_epsilon":0.1}},"vectorizer_method":{"count-vectorizer":{"stop_words":"english","ngram_range":[1,1],"min_df":1}},"cluster_merge_enabled":false,"cluster_sim_threshold_percentage":0.9,"similar_record_threshold_percentage":0.4},"pipeline_name":"gaf_clustering_v2","report":"29d87cdad1d91110989f463a1d0963db","sampling":{"enable_sampling":true,"sampling_strategy":"random","min_required_for_sampling":99999,"sample_size":0.75,"max_number_of_messages":100000},"join_tables":false,"primary_table_column_name":"sys_id","secondary_table_column_name":"record_id","fields":["short_description","text","ref_kb_template_kcs_article.kb_cause","ref_kb_template_kcs_article.kb_environment","ref_kb_template_kcs_article.kb_resolution","ref_kb_template_kcs_article.kb_issue","ref_kb_template_what_is.kb_introduction","ref_kb_template_what_is.kb_explanation","ref_kb_template_how_to.kb_instructions","ref_kb_template_how_to.kb_introduction","ref_kb_template_faq.kb_question","ref_kb_template_faq.kb_answer"]},"meta":{"_logged_in_user":"dd0e46c33b39a650d4fa7d34c3e45a69","skillAclInvocationMode":"ENFORCE_ACL","action_skill_id":"4a1774b0472f52102a4a017a516d43ce","executionMode":"SYNC","_connection_alias":"","capability_type":"skill","__executionRequestIdx__":"0","_session_language":"en","topic_skill_id":"4809247047eb52102a4a017a516d439c","transactionId":"b00b8876-3a3f-4cd2-ab2b-a14770c36f43","capability":"1d8ba13e773302103f075cea5b5a9931","flowEnforceAclInvocation":"true","hasAIConfig":false,"definition":"ac0cfdb2773702103f075cea5b5a996c","chaining":true,"mainFeature":true,"retry":3,"group_skill_id":"ff51e4b447ab52102a4a017a516d435c","document_table":"kb_knowledge"},"datasets":{"message_content":{"tableName":"kb_knowledge","fieldNames":["short_description","text","ref_kb_template_kcs_article.kb_cause","ref_kb_template_kcs_article.kb_environment","ref_kb_template_kcs_article.kb_resolution","ref_kb_template_kcs_article.kb_issue","ref_kb_template_what_is.kb_introduction","ref_kb_template_what_is.kb_explanation","ref_kb_template_how_to.kb_instructions","ref_kb_template_how_to.kb_introduction","ref_kb_template_faq.kb_question","ref_kb_template_faq.kb_answer"],"encodedQuery":"workflow_state\u003dpublished^sys_class_name!\u003dkb_knowledge_block^NQworkflow_stateINdraft,review^base_versionISEMPTY^sys_class_name!\u003dkb_knowledge_block^EQ","name":"incidents","fetchDisplayValue":false},"incidents":{"tableName":"kb_knowledge","fieldNames":["short_description","text","ref_kb_template_kcs_article.kb_cause","ref_kb_template_kcs_article.kb_environment","ref_kb_template_kcs_article.kb_resolution","ref_kb_template_kcs_article.kb_issue","ref_kb_template_what_is.kb_introduction","ref_kb_template_what_is.kb_explanation","ref_kb_template_how_to.kb_instructions","ref_kb_template_how_to.kb_introduction","ref_kb_template_faq.kb_question","ref_kb_template_faq.kb_answer"],"encodedQuery":"workflow_state\u003dpublished^sys_class_name!\u003dkb_knowledge_block^NQworkflow_stateINdraft,review^base_versionISEMPTY^sys_class_name!\u003dkb_knowledge_block^EQ","name":"incidents","fetchDisplayValue":false}}}},"workflowConfiguration":{"trainingFrequency":"run_once"}}</solution_properties>
+        <stopwords>a6282a25533333008c5bddeeff7b12c3</stopwords>
+        <sys_class_name>ml_capability_definition_workflow</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-12 02:58:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e96a704d3b0f7ad0ebe9c15765e45a10</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Group Action Framework Solution</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>ml_capability_definition_workflow_e96a704d3b0f7ad0ebe9c15765e45a10</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-12 02:58:34</sys_updated_on>
+        <table/>
+        <tags>Group Action Framework,workflow,bertopic</tags>
+        <training_frequency>run_once</training_frequency>
+        <triggered_source>API</triggered_source>
+        <word_vector_corpus/>
+    </ml_capability_definition_workflow>
+</record_update>

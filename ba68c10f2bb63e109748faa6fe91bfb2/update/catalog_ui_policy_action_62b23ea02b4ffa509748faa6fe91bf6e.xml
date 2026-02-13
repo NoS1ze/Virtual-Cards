@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
+    <catalog_ui_policy_action action="INSERT_OR_UPDATE">
+        <catalog_item display_value="Request New Card">bc7ee6e42b0ffa509748faa6fe91bffc</catalog_item>
+        <catalog_variable>IO:5e323a202b4ffa509748faa6fe91bfa9</catalog_variable>
+        <cleared>false</cleared>
+        <disabled>ignore</disabled>
+        <field/>
+        <field_message/>
+        <field_message_type>none</field_message_type>
+        <mandatory>true</mandatory>
+        <order>100</order>
+        <sys_class_name>catalog_ui_policy_action</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-10 22:27:20</sys_created_on>
+        <sys_id>62b23ea02b4ffa509748faa6fe91bf6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>condition</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>catalog_ui_policy_action_62b23ea02b4ffa509748faa6fe91bf6e</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-10 22:27:20</sys_updated_on>
+        <table/>
+        <ui_policy display_value="Make 'condition' mandatory &amp; visible depending on 'assignment_method'">3772f2a02b4ffa509748faa6fe91bf7d</ui_policy>
+        <value/>
+        <value_action>clear_value</value_action>
+        <variable>condition</variable>
+        <variable_set/>
+        <visible>true</visible>
+    </catalog_ui_policy_action>
+    <sys_translated_text action="delete_multiple" query="documentkey=62b23ea02b4ffa509748faa6fe91bf6e"/>
+</record_update>
