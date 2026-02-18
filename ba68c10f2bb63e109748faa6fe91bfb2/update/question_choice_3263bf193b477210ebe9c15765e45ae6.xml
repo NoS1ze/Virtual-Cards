@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
     <question_choice action="INSERT_OR_UPDATE">
         <inactive>false</inactive>
+        <misc>0</misc>
         <order>200</order>
         <published_ref/>
         <question display_value="Main Colour">4362bf553b477210ebe9c15765e45a16</question>
+        <rec_misc>0</rec_misc>
         <sys_class_name>question_choice</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-13 11:05:26</sys_created_on>

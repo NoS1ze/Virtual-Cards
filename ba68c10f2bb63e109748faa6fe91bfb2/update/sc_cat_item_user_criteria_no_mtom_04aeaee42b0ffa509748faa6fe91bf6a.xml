@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_no_mtom">
     <sc_cat_item_user_criteria_no_mtom action="INSERT_OR_UPDATE">
-        <sc_cat_item display_value="Request New Card">bc7ee6e42b0ffa509748faa6fe91bffc</sc_cat_item>
+        <sc_cat_item display_value="Request New Recognition Card">bc7ee6e42b0ffa509748faa6fe91bffc</sc_cat_item>
         <sys_class_name>sc_cat_item_user_criteria_no_mtom</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-10 22:09:25</sys_created_on>

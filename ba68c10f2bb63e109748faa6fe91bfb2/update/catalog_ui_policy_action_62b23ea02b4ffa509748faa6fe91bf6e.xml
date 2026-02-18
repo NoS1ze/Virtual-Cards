@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="catalog_ui_policy_action">
     <catalog_ui_policy_action action="INSERT_OR_UPDATE">
-        <catalog_item display_value="Request New Card">bc7ee6e42b0ffa509748faa6fe91bffc</catalog_item>
+        <catalog_item display_value="Request New Recognition Card">bc7ee6e42b0ffa509748faa6fe91bffc</catalog_item>
         <catalog_variable>IO:5e323a202b4ffa509748faa6fe91bfa9</catalog_variable>
         <cleared>false</cleared>
         <disabled>ignore</disabled>

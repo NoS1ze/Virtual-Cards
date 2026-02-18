@@ -7,7 +7,7 @@
         <applies_target_record>true</applies_target_record>
         <applies_to>item</applies_to>
         <catalog_conditions>IO:9451ba6c2b0ffa509748faa6fe91bf06=named_users^EQ</catalog_conditions>
-        <catalog_item display_value="Request New Card">bc7ee6e42b0ffa509748faa6fe91bffc</catalog_item>
+        <catalog_item display_value="Request New Recognition Card">bc7ee6e42b0ffa509748faa6fe91bffc</catalog_item>
         <conditions/>
         <description/>
         <global>true</global>
