@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sc_cat_item_user_criteria_no_mtom">
+    <sc_cat_item_user_criteria_no_mtom action="INSERT_OR_UPDATE">
+        <sc_cat_item display_value="Assign Recognition Card">58e110723b0bf610ebe9c15765e45a68</sc_cat_item>
+        <sys_class_name>sc_cat_item_user_criteria_no_mtom</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-17 10:31:27</sys_created_on>
+        <sys_id>480298323b0bf610ebe9c15765e45a07</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Assign Recognition Card.SNC External</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sc_cat_item_user_criteria_no_mtom_480298323b0bf610ebe9c15765e45a07</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-17 10:31:27</sys_updated_on>
+        <user_criteria display_value="SNC External">66c1b50e730333009508738234f6a7c9</user_criteria>
+    </sc_cat_item_user_criteria_no_mtom>
+</record_update>
