@@ -27,7 +27,7 @@
         <global>false</global>
         <help_tag>More information</help_tag>
         <help_text/>
-        <hidden>true</hidden>
+        <hidden>false</hidden>
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
@@ -53,7 +53,7 @@
         <pricing_implications>false</pricing_implications>
         <published_ref/>
         <question_text>Recognition Card</question_text>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_roles/>
         <read_script/>
         <rec_lookup_price/>
@@ -88,14 +88,14 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 16:56:27</sys_created_on>
         <sys_id>1d72fe873b87ba10ebe9c15765e45a14</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Recognition Card</sys_name>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name>item_option_new_1d72fe873b87ba10ebe9c15765e45a14</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 17:27:49</sys_updated_on>
+        <sys_updated_on>2026-02-19 15:09:37</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

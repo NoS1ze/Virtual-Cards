@@ -52,8 +52,8 @@
         <price_if_checked>0</price_if_checked>
         <pricing_implications>false</pricing_implications>
         <published_ref/>
-        <question_text/>
-        <read_only>false</read_only>
+        <question_text>Preview</question_text>
+        <read_only>true</read_only>
         <read_roles/>
         <read_script/>
         <rec_lookup_price/>
@@ -63,7 +63,7 @@
         <reference/>
         <reference_qual/>
         <reference_qual_condition/>
-        <rich_text/>
+        <rich_text><![CDATA[<div id="card_preview_container"></div>]]></rich_text>
         <roles_to_use_also_request_for/>
         <save_script><![CDATA[/** This script is executed before the Record is generated
 * `current`- GlideRecord produced by Record Producer
@@ -88,18 +88,18 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 17:11:23</sys_created_on>
         <sys_id>baf676033bc7ba10ebe9c15765e45a1e</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_name>preview</sys_name>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>Preview</sys_name>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name>item_option_new_baf676033bc7ba10ebe9c15765e45a1e</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 17:27:49</sys_updated_on>
+        <sys_updated_on>2026-02-18 17:40:56</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
-        <type>32</type>
+        <type>23</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
