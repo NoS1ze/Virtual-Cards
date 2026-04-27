@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_restricted_caller_access">
+    <sys_restricted_caller_access action="INSERT_OR_UPDATE">
+        <description/>
+        <operation>execute</operation>
+        <rca_type>real_rca</rca_type>
+        <source>9e0a0e9373a75300c629e1e54cf6a7cd</source>
+        <source_scope display_value="Employee Center Core">3d1da2705b021200a4656ede91f91ab6</source_scope>
+        <source_table>sp_widget</source_table>
+        <source_type>6</source_type>
+        <status>2</status>
+        <sys_class_name>sys_restricted_caller_access</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-18 17:34:39</sys_created_on>
+        <sys_id>417cb2cb3bc7ba10ebe9c15765e45aaf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>3d1da2705b021200a4656ede91f91ab6</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_restricted_caller_access_417cb2cb3bc7ba10ebe9c15765e45aaf</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-18 17:34:39</sys_updated_on>
+        <target>a9261e433bc3ba10ebe9c15765e45ac3</target>
+        <target_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</target_scope>
+        <target_table>sys_script_include</target_table>
+        <target_type>2</target_type>
+    </sys_restricted_caller_access>
+</record_update>

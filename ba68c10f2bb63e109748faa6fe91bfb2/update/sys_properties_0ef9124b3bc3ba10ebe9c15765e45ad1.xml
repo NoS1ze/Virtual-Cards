@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>x_konl_visual_card.recognition.freeze_categories</name>
+        <read_roles/>
+        <suffix>recognition.freeze_categories</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-18 15:09:00</sys_created_on>
+        <sys_id>0ef9124b3bc3ba10ebe9c15765e45ad1</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>x_konl_visual_card.recognition.freeze_categories</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_properties_0ef9124b3bc3ba10ebe9c15765e45ad1</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-18 16:26:56</sys_updated_on>
+        <type>string</type>
+        <value>2118fa339b1a46f6a4eaddba64c9a131</value>
+        <write_roles>admin</write_roles>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=0ef9124b3bc3ba10ebe9c15765e45ad1"/>
+</record_update>

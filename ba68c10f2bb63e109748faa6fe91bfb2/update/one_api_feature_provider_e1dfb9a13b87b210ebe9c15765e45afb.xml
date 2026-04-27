@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="one_api_feature_provider">
+    <one_api_feature_provider action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <feature display_value="ec920c03ff6d6210509bffffffffffb8">65dfb9a13b87b210ebe9c15765e45afa</feature>
+        <feature_service display_value="OneExtendGenericProvider">5233278353111110c271ddeeff7b129b</feature_service>
+        <feature_service_factory><![CDATA[(function() { return new global.OneExtendGenericProvider(); })()]]></feature_service_factory>
+        <name>Build Agent provider</name>
+        <short_description>Auto Generated </short_description>
+        <sys_class_name>one_api_feature_provider</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 21:18:55</sys_created_on>
+        <sys_id>e1dfb9a13b87b210ebe9c15765e45afb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Build Agent provider</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>one_api_feature_provider_e1dfb9a13b87b210ebe9c15765e45afb</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 21:18:55</sys_updated_on>
+        <type>FDIH Subflow</type>
+        <type_document display_value="Amazon Bedrock Chat Completions">52f46aeb9f2c5210da502fca9a0a1cda</type_document>
+    </one_api_feature_provider>
+</record_update>

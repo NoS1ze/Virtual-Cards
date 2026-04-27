@@ -61,7 +61,7 @@
         <record/>
         <record_producer_table/>
         <reference>cmdb_model_category</reference>
-        <reference_qual>javascript: new x_konl_visual_card.RecognitionCardUtils().getAvailableCategoryFilter() + "^sys_id!=d57b58b63b4bf610ebe9c15765e45a7e"</reference_qual>
+        <reference_qual>javascript: new x_konl_visual_card.RecognitionCardUtils().getAvailableCategoryFilter();</reference_qual>
         <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
@@ -88,14 +88,14 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 16:50:39</sys_created_on>
         <sys_id>f791fe473b87ba10ebe9c15765e45a13</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_name>Recognition Type</sys_name>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name>item_option_new_f791fe473b87ba10ebe9c15765e45a13</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 17:27:50</sys_updated_on>
+        <sys_updated_on>2026-02-20 15:50:51</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>

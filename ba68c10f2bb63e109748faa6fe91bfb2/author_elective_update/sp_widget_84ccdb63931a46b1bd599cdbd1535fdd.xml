@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="DELETE">
+        <category>custom</category>
+        <client_script/>
+        <controller_as/>
+        <css/>
+        <data_table>alm_asset</data_table>
+        <demo_data>{"userCards":[{"sys_id":"sample1","asset_tag":"VC-001","model_name":"Employee Recognition Card","model_description":"Recognize outstanding employee contributions","install_date":"2024-01-15","substatus":"Available","cost":"0"}],"loading":false}</demo_data>
+        <description>A widget that displays visual cards assigned to the logged-in user</description>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>user-cards-widget</id>
+        <internal>false</internal>
+        <link/>
+        <name>User Visual Cards</name>
+        <option_schema>[{"name":"widget_title","label":"Widget Title","type":"string","default_value":"My Visual Cards"},{"name":"show_refresh","label":"Show Refresh Button","type":"boolean","default_value":true}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[data.test="asd";
+]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-10 21:52:06</sys_created_on>
+        <sys_id>84ccdb63931a46b1bd599cdbd1535fdd</sys_id>
+        <sys_mod_count>26</sys_mod_count>
+        <sys_name>User Visual Cards</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sp_widget_84ccdb63931a46b1bd599cdbd1535fdd</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 22:33:08</sys_updated_on>
+        <template/>
+    </sp_widget>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</application>
+        <file_path/>
+        <instance_id>68ca77753bee5e9ca80ce0bf55e45a97</instance_id>
+        <instance_name>knvldev</instance_name>
+        <name>sp_widget_84ccdb63931a46b1bd599cdbd1535fdd</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sp_widget"&gt;&lt;sp_widget action="INSERT_OR_UPDATE"&gt;&lt;category&gt;custom&lt;/category&gt;&lt;client_script/&gt;&lt;controller_as/&gt;&lt;css/&gt;&lt;data_table&gt;alm_asset&lt;/data_table&gt;&lt;demo_data&gt;{"userCards":[{"sys_id":"sample1","asset_tag":"VC-001","model_name":"Employee Recognition Card","model_description":"Recognize outstanding employee contributions","install_date":"2024-01-15","substatus":"Available","cost":"0"}],"loading":false}&lt;/demo_data&gt;&lt;description&gt;A widget that displays visual cards assigned to the logged-in user&lt;/description&gt;&lt;docs/&gt;&lt;field_list/&gt;&lt;has_preview&gt;true&lt;/has_preview&gt;&lt;id&gt;user-cards-widget&lt;/id&gt;&lt;internal&gt;false&lt;/internal&gt;&lt;link/&gt;&lt;name&gt;User Visual Cards&lt;/name&gt;&lt;option_schema&gt;[{"name":"widget_title","label":"Widget Title","type":"string","default_value":"My Visual Cards"},{"name":"show_refresh","label":"Show Refresh Button","type":"boolean","default_value":true}]&lt;/option_schema&gt;&lt;public&gt;false&lt;/public&gt;&lt;roles/&gt;&lt;script&gt;&lt;![CDATA[data.test="asd";
+]]&gt;&lt;/script&gt;&lt;servicenow&gt;false&lt;/servicenow&gt;&lt;sys_class_name&gt;sp_widget&lt;/sys_class_name&gt;&lt;sys_created_by&gt;dzmitry.peshkur-snadmin&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2026-02-10 21:52:06&lt;/sys_created_on&gt;&lt;sys_id&gt;84ccdb63931a46b1bd599cdbd1535fdd&lt;/sys_id&gt;&lt;sys_mod_count&gt;26&lt;/sys_mod_count&gt;&lt;sys_name&gt;User Visual Cards&lt;/sys_name&gt;&lt;sys_package display_value="Visual Cards" source="x_konl_visual_card"&gt;ba68c10f2bb63e109748faa6fe91bfb2&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Visual Cards"&gt;ba68c10f2bb63e109748faa6fe91bfb2&lt;/sys_scope&gt;&lt;sys_update_name&gt;sp_widget_84ccdb63931a46b1bd599cdbd1535fdd&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;dzmitry.peshkur-snadmin&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2026-02-13 22:33:08&lt;/sys_updated_on&gt;&lt;template/&gt;&lt;/sp_widget&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>-1947666032</payload_hash>
+        <record_name>User Visual Cards</record_name>
+        <reverted_from/>
+        <source>ec7eb1213b87b210ebe9c15765e45a1a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 22:33:08</sys_created_on>
+        <sys_id>acd092ed3bc7b210ebe9c15765e45aed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19c5922f1980000001</sys_recorded_at>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 22:33:08</sys_updated_on>
+        <type>Widget</type>
+        <update_guid>ecd0522d46c7b21002ef3be13c2d3ef3</update_guid>
+        <update_guid_history>ecd0522d46c7b21002ef3be13c2d3ef3:-1947666032,37b052edc4c7b210ca3e28c50534553b:593814818,ed2092adb7c7b210d6194fcd5fe7c2b5:-786581398,d4101e6d93c7b2107ef3f66528a7fdd8:806300525,2bff862d7fc7b2103aba0924c0df7d2d:-635321156,5cffca69cbc7b210354c471a06144383:-335775668,cf0fc22dc4c7b21037add3419601420a:1703690524,4bfe8ee96bc7b21076c9678b4f4f0bd7:1786570443,4ade4ee9dbc7b210127581bc07420986:1657251649,5dae0aa93cc7b21034a5021a14599f84:-1138825335,e2bd86a9ddc7b210823e1ec524fce9a8:-102981760,209dca694cc7b210c91c4f7402f598fc:-462413982,438dca691bc7b2102d8170436827fd5a:-358100745,316d8e6951c7b2104cf29d07bc71d871:-462413982,104d4e295cc7b210498713c2673bead2:-813885619,fbac86e515c7b210007c94ea119633a4:-1745679963,b42c0ee526c7b2100bcc9a93b9c07404:-1050080675,a4bb8a65e5c7b21051c03d4ab7d24b83:1977482967,b2ab46e5c7c7b210dd14b49ecf1c78d5:-1533494173,3cab4ea598c7b2102a51c27decad8d26:1000028549,1a5b86a1fec7b210b5a26c4e537d3f25:-2063214025,df2a4ea1c9c7b21003ce76cdd1d43eaa:-786422103,fc698ea10dc7b210bfb4d9baae00c1e0:-1379307349,5dc8ca21bac7b210c3adaf20722865da:706144766,d22242a5e687b2108333c06c7b0e27b7:524621237,929b62204c0ffa50f0469f119f282ab6:1004779797,12aa626cbbcbfa5057398736d1762197:-1395631814</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete display_value="User Visual Cards">d50116ed3bc7b210ebe9c15765e45aa6</sys_audit_delete>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 22:34:00</sys_created_on>
+        <sys_db_object display_value="" name="sp_widget">sp_widget</sys_db_object>
+        <sys_id>23c003d933d442cd8701e77bf84966a9</sys_id>
+        <sys_metadata>84ccdb63931a46b1bd599cdbd1535fdd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>User Visual Cards</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_scope_delete display_value="">c5a83943014f4d11bdd2b6481a92f6d1</sys_scope_delete>
+        <sys_update_name>sp_widget_84ccdb63931a46b1bd599cdbd1535fdd</sys_update_name>
+        <sys_update_version display_value="sp_widget_84ccdb63931a46b1bd599cdbd1535fdd">acd092ed3bc7b210ebe9c15765e45aed</sys_update_version>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 22:34:00</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

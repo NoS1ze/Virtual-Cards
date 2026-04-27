@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition">
+    <sys_ws_definition action="DELETE">
+        <active>true</active>
+        <base_uri>/api/x_konl_visual_card/card_generator</base_uri>
+        <consumes>application/json</consumes>
+        <consumes_customized>true</consumes_customized>
+        <default_version>No active default version</default_version>
+        <doc_link/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <is_versioned>false</is_versioned>
+        <name>Card Generation API</name>
+        <namespace>x_konl_visual_card</namespace>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <service_id>card_generator</service_id>
+        <short_description>API for generating visual cards automatically</short_description>
+        <sys_class_name>sys_ws_definition</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-09 21:51:46</sys_created_on>
+        <sys_id>c11c0822e4c6435ebe93b6b30a4e97bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Card Generation API</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_ws_definition_c11c0822e4c6435ebe93b6b30a4e97bd</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-09 21:51:46</sys_updated_on>
+    </sys_ws_definition>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</application>
+        <file_path/>
+        <instance_id>68ca77753bee5e9ca80ce0bf55e45a97</instance_id>
+        <instance_name>knvldev</instance_name>
+        <name>sys_ws_definition_c11c0822e4c6435ebe93b6b30a4e97bd</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_definition"><sys_ws_definition action="INSERT_OR_UPDATE"><active>true</active><base_uri>/api/x_konl_visual_card/card_generator</base_uri><consumes>application/json</consumes><consumes_customized>true</consumes_customized><default_version>No active default version</default_version><doc_link/><enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl><is_versioned>false</is_versioned><name>Card Generation API</name><namespace>x_konl_visual_card</namespace><produces>application/json</produces><produces_customized>true</produces_customized><service_id>card_generator</service_id><short_description>API for generating visual cards automatically</short_description><sys_class_name>sys_ws_definition</sys_class_name><sys_created_by>dzmitry.peshkur-snadmin</sys_created_by><sys_created_on>2026-02-09 21:51:46</sys_created_on><sys_id>c11c0822e4c6435ebe93b6b30a4e97bd</sys_id><sys_mod_count>0</sys_mod_count><sys_name>Card Generation API</sys_name><sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package><sys_policy/><sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope><sys_update_name>sys_ws_definition_c11c0822e4c6435ebe93b6b30a4e97bd</sys_update_name><sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by><sys_updated_on>2026-02-09 21:51:46</sys_updated_on></sys_ws_definition></record_update>]]></payload>
+        <payload_hash>608201950</payload_hash>
+        <record_name>Card Generation API</record_name>
+        <reverted_from/>
+        <source>efd523993b837210ebe9c15765e45a7b</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 10:06:21</sys_created_on>
+        <sys_id>6de527993b837210ebe9c15765e45aa6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>19c567740c60000001</sys_recorded_at>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 10:06:21</sys_updated_on>
+        <type>Scripted REST API</type>
+        <update_guid>27f0ad98764b3a506e36fb7035d5c17f</update_guid>
+        <update_guid_history>27f0ad98764b3a506e36fb7035d5c17f:-286470518</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 21:26:24</sys_created_on>
+        <sys_db_object display_value="" name="sys_ws_definition">sys_ws_definition</sys_db_object>
+        <sys_id>07182801cbcd43e28079a4003e9d1159</sys_id>
+        <sys_metadata>c11c0822e4c6435ebe93b6b30a4e97bd</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Card Generation API</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_scope_delete display_value="">c5a83943014f4d11bdd2b6481a92f6d1</sys_scope_delete>
+        <sys_update_name>sys_ws_definition_c11c0822e4c6435ebe93b6b30a4e97bd</sys_update_name>
+        <sys_update_version display_value="sys_ws_definition_c11c0822e4c6435ebe93b6b30a4e97bd">6de527993b837210ebe9c15765e45aa6</sys_update_version>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 21:26:24</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>
