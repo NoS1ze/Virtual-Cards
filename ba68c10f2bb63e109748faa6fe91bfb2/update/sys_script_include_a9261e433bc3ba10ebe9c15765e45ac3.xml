@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_konl_visual_card.RecognitionCardUtils</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>RecognitionCardUtils</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var RecognitionCardUtils = Class.create();
+RecognitionCardUtils.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+
+    // ── Constants ──────────────────────────────────────────────
+    RECOGNITION_PARENT_CATEGORY: 'd1cb5c763b4bf610ebe9c15765e45abe',
+    OPERATIONAL_STAGE: 'Operational',
+
+    // ════════════════════════════════════════════════════════════
+    // METHOD 1: Create a recognition card asset (server-callable)
+    // ════════════════════════════════════════════════════════════
+    //
+    // Parameters:
+    //   assignedBy  - sys_id of the user giving the card
+    //   assignedTo  - sys_id of the user receiving the card
+    //   comments    - recognition message text
+    //   modelSysId  - sys_id of the cmdb_model (card type)
+    //
+    // Returns: { success: bool, sys_id: string, message: string }
+    //
+    createRecognitionCard: function (assignedBy, assignedTo, comments, modelSysId) {
+        var result = { success: false, sys_id: '', message: '' };
+
+        // ── Validate inputs ───────────────────────────────────
+        if (!assignedBy || !assignedTo || !modelSysId) {
+            result.message = 'Missing required parameters: assignedBy, assignedTo, modelSysId';
+            return result;
+        }
+
+        if (assignedBy === assignedTo) {
+            result.message = 'Cannot assign a recognition card to yourself';
+            return result;
+        }
+
+        // ── Validate model exists and belongs to a Recognition category ──
+        var modelGr = new GlideRecord('cmdb_model');
+        if (!modelGr.get(modelSysId)) {
+            result.message = 'Product model not found: ' + modelSysId;
+            return result;
+        }
+
+        var modelCategorySysId = modelGr.getValue('cmdb_model_category');
+        if (!this._isRecognitionCategory(modelCategorySysId)) {
+            result.message = 'Model does not belong to a Recognition Cards category';
+            return result;
+        }
+
+        // ── Create the asset ──────────────────────────────────
+        var assetGr = new GlideRecord('alm_information_asset');
+        assetGr.initialize();
+        assetGr.setValue('model', modelSysId);
+        assetGr.setValue('assigned_to', assignedTo);
+        assetGr.setValue('supported_by', assignedBy);
+        assetGr.setValue('comments', comments || '');
+        assetGr.setValue('assigned', new GlideDateTime().getDisplayValue());
+        assetGr.setValue('life_cycle_stage', this.OPERATIONAL_STAGE);
+
+        // Model category from the product model
+        assetGr.setValue('model_category', modelGr.getValue('cmdb_model_category'));
+
+        // Asset tag — unique VCARD prefix
+        assetGr.setValue('asset_tag', 'VCARD' + (Math.floor(Math.random() * 900000) + 1).toString());
+
+        // Display name for readability
+        assetGr.setValue('display_name', modelGr.getDisplayValue('name'));
+
+        // Account — derived from the recipient's company
+        var recipientGr = new GlideRecord('sys_user');
+        if (recipientGr.get(assignedTo) && recipientGr.getValue('company')) {
+            assetGr.setValue('account', recipientGr.getValue('company'));
+        }
+
+        var sysId = assetGr.insert();
+
+        if (sysId) {
+            result.success = true;
+            result.sys_id = sysId;
+            result.message = 'Recognition card created successfully';
+        } else {
+            result.message = 'Failed to insert asset record';
+        }
+
+        return result;
+    },
+
+    // ════════════════════════════════════════════════════════════
+    // METHOD 2: Check recognition status (GlideAjax callable)
+    // ════════════════════════════════════════════════════════════
+    //
+    // Client call:
+    //   var ga = new GlideAjax('RecognitionCardUtils');
+    //   ga.addParam('sysparm_name', 'getRecognitionStatus');
+    //   ga.addParam('sysparm_user_sys_id', userSysId);
+    //   ga.getXMLAnswer(function(answer) { var result = JSON.parse(answer); });
+    //
+    // Returns JSON string:
+    // {
+    //   categories: [
+    //     {
+    //       name: "Kudos Card",
+    //       sys_id: "...",
+    //       last_recognition: "2025-01-15 09:30:00",
+    //       allowed: true/false,
+    //       allowed_after: "" or "2025-02-14"  // date when user can recognise again
+    //     }
+    //   ],
+    //   summary: "Human-readable text"
+    // }
+    //
+    getRecognitionStatus: function () {
+        var userSysId = this.getParameter('sysparm_user_sys_id') || gs.getUserID();
+        var freezeCategories = gs.getProperty('x_konl_visual_card.recognition.freeze_categories', '');
+        var freezeWindowDays = parseInt(gs.getProperty('x_konl_visual_card.recognition.freeze_window_days', '30'), 10);
+
+        var result = {
+            categories: [],
+            summary: ''
+        };
+
+        if (!freezeCategories) {
+            result.summary = 'No recognition categories configured for freeze window.';
+            return JSON.stringify(result);
+        }
+
+        var categoryList = freezeCategories.split(',');
+        var now = new GlideDateTime();
+        var summaryParts = [];
+
+        for (var i = 0; i < categoryList.length; i++) {
+            var catSysId = categoryList[i].trim();
+            if (!catSysId) continue;
+
+            // Get category display name
+            var catName = this._getCategoryName(catSysId);
+
+            // Find the most recent recognition by this user in this category
+            var lastRecognition = this._getLastRecognitionDate(userSysId, catSysId);
+
+            var catResult = {
+                name: catName,
+                sys_id: catSysId,
+                last_recognition: '',
+                allowed: true,
+                allowed_after: ''
+            };
+
+            if (lastRecognition) {
+                catResult.last_recognition = lastRecognition.getDisplayValue();
+
+                // Calculate if within freeze window
+                var windowEnd = new GlideDateTime(lastRecognition);
+                windowEnd.addDaysLocalTime(freezeWindowDays);
+
+                if (now.compareTo(windowEnd) < 0) {
+                    // Still within freeze window
+                    catResult.allowed = false;
+                    catResult.allowed_after = windowEnd.getLocalDate().getDisplayValue();
+                    summaryParts.push(
+                        catName + ': last recognised on ' + lastRecognition.getDisplayValue() +
+                        '. You can recognise again after ' + windowEnd.getLocalDate().getDisplayValue() + '.'
+                    );
+                } else {
+                    // Freeze window expired
+                    summaryParts.push(
+                        catName + ': last recognised on ' + lastRecognition.getDisplayValue() +
+                        '. You are allowed to recognise.'
+                    );
+                }
+            } else {
+                summaryParts.push(
+                    catName + ': no recent recognition. You are allowed to recognise.'
+                );
+            }
+
+            result.categories.push(catResult);
+        }
+
+        result.summary = summaryParts.join('\n');
+        return JSON.stringify(result);
+    },
+
+    // ════════════════════════════════════════════════════════════
+    // METHOD 3: Reference qualifier for available categories
+    // ════════════════════════════════════════════════════════════
+    //
+    // Usage on a reference field's "Reference qual" attribute:
+    //   javascript: new RecognitionCardUtils().getAvailableCategoryFilter();
+    //
+    // Returns an encoded query string for cmdb_model_category:
+    //   - Children of "Recognition Cards"
+    //   - MINUS any categories where the current user is within the freeze window
+    //
+    getAvailableCategoryFilter: function () {
+        var parentCat = this.RECOGNITION_PARENT_CATEGORY;
+        var currentUser = gs.getUserID();
+        var freezeCategories = gs.getProperty('x_konl_visual_card.recognition.freeze_categories', '');
+        var freezeWindowDays = parseInt(gs.getProperty('x_konl_visual_card.recognition.freeze_window_days', '30'), 10);
+        var managerOnlyCategories = gs.getProperty('x_konl_visual_card.recognition.manager_only_categories', '');
+        var isManager = gs.hasRole('x_konl_visual_card.manager');
+
+        // Base filter: children of Recognition Cards
+        var baseFilter = 'parent_cateogry=' + parentCat;
+
+        // Non-managers: exclude manager-only categories (e.g. Unique Card)
+        if (!isManager && managerOnlyCategories) {
+            baseFilter += '^sys_idNOT IN' + managerOnlyCategories;
+        }
+
+        // Managers bypass freeze period entirely
+        if (isManager) {
+            return baseFilter;
+        }
+
+        if (!freezeCategories) {
+            return baseFilter;
+        }
+
+        // Regular users: apply freeze window exclusions
+        var frozenCatList = freezeCategories.split(',');
+        var excludeList = [];
+        var now = new GlideDateTime();
+
+        for (var i = 0; i < frozenCatList.length; i++) {
+            var catSysId = frozenCatList[i].trim();
+            if (!catSysId) continue;
+
+            var lastRecognition = this._getLastRecognitionDate(currentUser, catSysId);
+
+            if (lastRecognition) {
+                var windowEnd = new GlideDateTime(lastRecognition);
+                windowEnd.addDaysLocalTime(freezeWindowDays);
+
+                if (now.compareTo(windowEnd) < 0) {
+                    excludeList.push(catSysId);
+                }
+            }
+        }
+
+        if (excludeList.length > 0) {
+            baseFilter += '^sys_idNOT IN' + excludeList.join(',');
+        }
+
+        return baseFilter;
+    },
+
+	getModelsByCategoryFilter: function (categorySysId) {
+        if (!categorySysId) {
+            return 'cmdb_model_category=NULL';
+        }
+        return 'cmdb_model_categoryIN' + categorySysId + '^life_cycle_stage=' + this.OPERATIONAL_STAGE;
+    },
+
+	// ════════════════════════════════════════════════════════════
+    // METHOD 5: Get card details by model sys_id (GlideAjax)
+    // ════════════════════════════════════════════════════════════
+    //
+    // Client call:
+    //   var ga = new GlideAjax('x_konl_visual_card.RecognitionCardUtils');
+    //   ga.addParam('sysparm_name', 'getCardDetails');
+    //   ga.addParam('sysparm_model_sys_id', modelSysId);
+    //   ga.getXMLAnswer(function(answer) { var result = JSON.parse(answer); });
+    //
+    getCardDetails: function () {
+        var modelSysId = this.getParameter('sysparm_model_sys_id');
+        var result = {
+            success: false,
+            name: '',
+            description: '',
+            comments: '',
+            image_url: ''
+        };
+
+        if (!modelSysId) {
+            return JSON.stringify(result);
+        }
+
+        var modelGr = new GlideRecord('cmdb_model');
+        if (modelGr.get(modelSysId)) {
+            result.success = true;
+            result.name = modelGr.getDisplayValue('name');
+            result.description = modelGr.getDisplayValue('short_description');
+            result.comments = modelGr.getDisplayValue('comments');
+            var picture = modelGr.getValue('picture');
+            if (picture) {
+                result.image_url = '/sys_attachment.do?sys_id=' + picture;
+            }
+        }
+
+        return JSON.stringify(result);
+    },
+
+	// ════════════════════════════════════════════════════════════
+// METHOD 6: Check if user already has asset for given model
+// ════════════════════════════════════════════════════════════
+//
+// Parameters:
+//   userSysId   - sys_id of the user (assigned_to)
+//   modelSysId  - sys_id of the cmdb_model
+//
+// Returns: 
+// {
+//   success: true/false,
+//   exists: true/false,
+//   asset_sys_id: '',
+//   message: ''
+// }
+//
+	userHasRecognitionCard: function (userSysId, modelSysId) {
+		var result = {
+			success: false,
+			exists: false,
+			asset_sys_id: '',
+			message: ''
+		};
+
+		// ── Validate inputs ───────────────────────────────────
+		if (!userSysId || !modelSysId) {
+			result.message = 'Missing required parameters: userSysId, modelSysId';
+			return result;
+		}
+
+		// ── Check for existing asset ───────────────────────────
+		var assetGr = new GlideRecord('alm_information_asset'); // use same table as creation
+		assetGr.addQuery('assigned_to', userSysId);
+		assetGr.addQuery('model', modelSysId);
+		assetGr.addQuery('life_cycle_stage', this.OPERATIONAL_STAGE);
+		assetGr.setLimit(1);
+		assetGr.query();
+
+		if (assetGr.next()) {
+			result.success = true;
+			result.exists = true;
+			result.asset_sys_id = assetGr.getUniqueValue();
+			result.message = 'User already has this recognition card.';
+		} else {
+			result.success = true;
+			result.exists = false;
+			result.message = 'User does not have this recognition card.';
+		}
+
+		return result;
+},
+
+//------------------ flow helpers --------
+
+getExampleCardImages: function( category ) {
+    var OPERATIONAL_STAGE = 'Operational';
+    var MAX_EXAMPLES = 3;
+
+    var exampleImages = [];
+    var gsa = new GlideSysAttachment();
+
+	// Get total count first
+	var modelGr = new GlideRecord('cmdb_model');
+	modelGr.addEncodedQuery("cmdb_model_categoryLIKE" + category);
+	modelGr.addQuery('life_cycle_stage', OPERATIONAL_STAGE);
+	modelGr.addNotNullQuery('picture');
+	modelGr.query();
+	var total = modelGr.getRowCount();
+
+	var offset = total > MAX_EXAMPLES ? Math.floor(Math.random() * (total - MAX_EXAMPLES)) : 0;
+
+	modelGr.chooseWindow(offset, offset + MAX_EXAMPLES);
+	modelGr.query();
+
+    while (modelGr.next()) {
+        var picSysId = modelGr.getValue('picture');
+        var attachGr = new GlideRecord('sys_attachment');
+        if (attachGr.get(picSysId)) {
+            var b64 = gsa.getContentBase64(attachGr);
+            if (b64) {
+                exampleImages.push('{"type":"input_image","image_url":"data:image/png;base64,' + b64 + '"}');
+            }
+        }
+    }
+
+    if (exampleImages.length > 0) {
+        exampleImages.push('{"type":"input_text","text":"The images above are examples of existing cards. Match their visual style, layout, and quality closely."}');
+        return ',' + exampleImages.join(',');
+    }
+
+    return '';
+},
+
+saveGeneratedImage: function(targetSysId, imageBase64) {
+    var gr = new GlideRecord('cmdb_content_product_model');
+    if (!gr.get(targetSysId)) {
+        gs.error('[CardGen] Record not found: ' + targetSysId);
+        return '';
+    }
+
+    var gsa = new GlideSysAttachment();
+    var fileName = 'card_' + targetSysId + '.png';
+    var attachSysId = gsa.writeBase64(gr, fileName, 'image/png', imageBase64);
+
+    if (attachSysId) {
+        gr.setValue('picture', attachSysId + '');
+        gr.update();
+        gs.info('[CardGen] Picture updated: ' + attachSysId);
+    }
+
+    return attachSysId + '';
+},
+
+
+    // ── Private helpers ────────────────────────────────────────
+	
+
+    // Check if a category sys_id is a child of Recognition Cards
+    _isRecognitionCategory: function (categorySysId) {
+        var catGr = new GlideRecord('cmdb_model_category');
+        if (catGr.get(categorySysId)) {
+            return catGr.getValue('parent_cateogry') === this.RECOGNITION_PARENT_CATEGORY;
+        }
+        return false;
+    },
+
+    // Get category display name
+    _getCategoryName: function (categorySysId) {
+        var catGr = new GlideRecord('cmdb_model_category');
+        if (catGr.get(categorySysId)) {
+            return catGr.getDisplayValue('name');
+        }
+        return 'Unknown Category';
+    },
+
+    // Find the most recent recognition date by a user in a category
+    // "Recognition" = an alm_asset created by this user (supported_by)
+    // in a model belonging to the specified category
+    _getLastRecognitionDate: function (userSysId, categorySysId) {
+        var assetGr = new GlideRecord('alm_information_asset');
+        assetGr.addQuery('supported_by', userSysId);
+        assetGr.addQuery('life_cycle_stage', this.OPERATIONAL_STAGE);
+
+        // Join to cmdb_model to filter by category
+        var mj = assetGr.addJoinQuery('cmdb_model', 'model', 'sys_id');
+        mj.addCondition('cmdb_model_category', categorySysId);
+
+        assetGr.orderByDesc('assigned');
+        assetGr.setLimit(1);
+        assetGr.query();
+
+        if (assetGr.next()) {
+            return new GlideDateTime(assetGr.getValue('assigned'));
+        }
+
+        return null;
+    },
+
+    type: 'RecognitionCardUtils'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-18 14:50:04</sys_created_on>
+        <sys_id>a9261e433bc3ba10ebe9c15765e45ac3</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_name>RecognitionCardUtils</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_script_include_a9261e433bc3ba10ebe9c15765e45ac3</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-25 13:59:47</sys_updated_on>
+    </sys_script_include>
+</record_update>

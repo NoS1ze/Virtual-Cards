@@ -1,0 +1,649 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
+    <sp_widget action="INSERT_OR_UPDATE">
+        <category>custom</category>
+        <client_script><![CDATA[api.controller = function ($scope) {
+  var c = this;
+
+  // Respect default view mode from server
+  c.viewMode = c.data.view_mode || "mine";
+
+  // Toggle handler
+  c.toggleView = function (mode) {
+    if (c.viewMode === mode) return;
+
+    c.viewMode = mode;
+    c.data.loading = true;
+
+    c.server.get({
+      action: "toggle_view",
+      view_mode: mode
+    }).then(function (response) {
+      c.data.userCards = response.data.userCards;
+      c.data.loading = false;
+    });
+  };
+
+  // Card click handler — navigates when card_click_url is set
+  c.onCardClick = function () {
+    if (c.data.card_click_url) {
+      window.location.href = c.data.card_click_url;
+    }
+  };
+};]]></client_script>
+        <controller_as>c</controller_as>
+        <css>/* ── Base ───────────────────────────────────────── */
+.vcw {
+  padding: 10px;
+}
+
+/* ── Header ────────────────────────────────────── */
+.vcw-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.vcw-title {
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ── Toggle button group ───────────────────────── */
+.vcw-toggle {
+  display: flex;
+  border: 1px solid #d0d5dd;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.vcw-toggle-btn {
+  padding: 6px 14px;
+  font-size: 13px;
+  font-weight: 500;
+  border: none;
+  background: #fff;
+  color: #667085;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.vcw-toggle-btn:first-child {
+  border-right: 1px solid #d0d5dd;
+}
+
+.vcw-toggle-btn:hover {
+  background: #f2f4f7;
+}
+
+.vcw-toggle-btn.active {
+  background: #1570ef;
+  color: #fff;
+}
+
+/* ── States ────────────────────────────────────── */
+.vcw-status {
+  padding: 10px;
+  color: #556;
+  text-align: center;
+}
+
+.vcw-empty {
+  padding: 24px 12px;
+  border: 1px dashed #d7dbe2;
+  border-radius: 10px;
+  background: #f8f9fb;
+  color: #5b6777;
+  text-align: center;
+}
+
+.vcw-empty i {
+  display: block;
+  font-size: 24px;
+  margin-bottom: 8px;
+  color: #98a2b3;
+}
+
+/* ── Card grid ─────────────────────────────────── */
+.vcw-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 16px;
+}
+
+.vcw-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: visible;
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+.vcw-card:hover {
+  transform: translateY(-2px);
+}
+
+/* ── Unowned card styling (greyed/muted) ───────── */
+.vcw-card--unowned {
+  opacity: 0.55;
+  filter: grayscale(0.6);
+}
+
+.vcw-card--unowned:hover {
+  opacity: 0.8;
+  filter: grayscale(0.3);
+}
+
+/* ── Ownership badges ──────────────────────────── */
+.vcw-badge {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.vcw-badge--owned {
+  background: rgba(16, 185, 129, 0.9);
+  color: #fff;
+}
+
+.vcw-badge--locked {
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+
+/* ── Card image ────────────────────────────────── */
+.vcw-imgwrap {
+  position: relative;
+  width: 100%;
+  background: #f5f6f7;
+}
+
+.vcw-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.vcw-imgplaceholder {
+  height: 140px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #98a2b3;
+  font-size: 28px;
+}
+
+/* ── Card metadata ─────────────────────────────── */
+.vcw-meta {
+  padding: 10px;
+}
+
+.vcw-name {
+  font-weight: 600;
+  font-size: 13px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vcw-desc {
+  margin-top: 4px;
+  font-size: 11px;
+  color: #667085;
+  line-height: 1.3;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.vcw-source {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.vcw-sub {
+  font-size: 11px;
+  color: #667085;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.vcw-category {
+  font-size: 10px;
+  color: #98a2b3;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* ── Category row with info icon ───────────────── */
+.vcw-category-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 6px;
+  gap: 6px;
+}
+
+/* ── Info icon ─────────────────────────────────── */
+.vcw-info {
+  position: relative;
+  flex-shrink: 0;
+  cursor: pointer;
+  color: #98a2b3;
+  font-size: 13px;
+  transition: color 0.15s ease;
+}
+
+.vcw-info:hover {
+  color: #1570ef;
+}
+
+/* ── Tooltip (appears on hover) ────────────────── */
+.vcw-tooltip {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 8px);
+  right: 0;
+  z-index: 10;
+  width: 240px;
+  padding: 8px 10px;
+  background: #1d2939;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 400;
+  line-height: 1.4;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  pointer-events: none;
+  text-transform: none;
+  letter-spacing: normal;
+  white-space: normal;
+  word-wrap: break-word;
+}
+
+/* Tooltip arrow */
+.vcw-tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 8px;
+  border-width: 5px;
+  z-index: 9999;
+  border-style: solid;
+  border-color: #1d2939 transparent transparent transparent;
+}
+
+/* Show tooltip on hover */
+.vcw-info:hover .vcw-tooltip {
+  display: block;
+}
+
+/* ── Clickable card (single card with URL) ───── */
+.vcw-card--clickable {
+  cursor: pointer;
+}
+
+.vcw-card--clickable:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+</css>
+        <data_table>sp_instance</data_table>
+        <demo_data>{
+	"options":{
+		"show_all_cards": false,
+		"all_model_categories": "2f7963993bc37210ebe9c15765e45a16,2118fa339b1a46f6a4eaddba64c9a131",
+		"user_model_categories": "2f7963993bc37210ebe9c15765e45a16,2118fa339b1a46f6a4eaddba64c9a131,d57b58b63b4bf610ebe9c15765e45a7e",
+		"default_view_mode":"all",
+		"show_toggle": true,
+		"card_click_url": "/esc?id=hri_user_profile",
+		"card_limit": 0
+	}
+}</demo_data>
+        <description/>
+        <docs/>
+        <field_list/>
+        <has_preview>true</has_preview>
+        <id>user_cards</id>
+        <internal>false</internal>
+        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <name>User Cards</name>
+        <option_schema>[{"displayValue":"Model Category","name":"all_model_categories","display_value_list":[],"section":"Data","label":"All Model Categories","type":"glide_list","value":"cmdb_model_category","ed":{"reference":"cmdb_model_category"}},{"hint":"Default view when widget loads: mine or all","name":"default_view_mode","section":"Behavior","default_value":"mine","label":"View Mode","type":"choice","choices":[{"label":"mine","value":"mine"},{"label":"all","value":"all"}]},{"hint":"Widget Title","name":"widget_title","section":"Presentation","default_value":"Recognition Cards","label":"Title","type":"string"},{"displayValue":"Model Category","hint":"Model Categories to show in user view","name":"user_model_categories","display_value_list":[],"section":"Data","label":"User Model Categories","type":"glide_list","value":"cmdb_model_category","ed":{"reference":"cmdb_model_category"}},{"hint":"Show the My Cards / All Cards toggle","name":"show_toggle","section":"Behavior","default_value":"true","label":"Show toggle","type":"boolean"},{"hint":"Max cards to display (0 = no limit, 1 = latest only)","name":"card_limit","section":"Behavior","default_value":"0","label":"Card Limit","type":"integer"},{"hint":"URL to navigate when card is clicked (used with card_limit=1)","name":"card_click_url","section":"Behavior","default_value":"/esc?id=hri_user_profile","label":"Card Click URL","type":"string"}]</option_schema>
+        <public>false</public>
+        <roles/>
+        <script><![CDATA[(function () {
+  data.widget_title = options.widget_title || "My Visual Cards";
+  data.show_refresh = options.show_refresh !== false;
+
+  // ── Resolve category options with fallback chain ─────────
+  // Priority: new split options → legacy combined option → empty (no filter)
+  var userCategories = options.user_model_categories 
+                    || options.card_model_categories 
+                    || "";
+  var allCategories  = options.all_model_categories 
+                    || options.card_model_categories 
+                    || "";
+
+  // ── Display options ────────────────────────────────────────
+	var showToggle = options.show_toggle !== "false" && options.show_toggle !== false;
+  var cardLimit  = parseInt(options.card_limit, 10) || 0; // 0 = no limit
+  data.show_toggle = showToggle;
+  data.is_single_card = (cardLimit === 1);
+  data.card_click_url = options.card_click_url || "";
+
+  // ── Target user: URL param (profile page) → logged-in user ──
+  var targetUser = $sp.getParameter('sys_id') || gs.getUserID();
+  data.target_user = targetUser;
+
+  // ── Handle client toggle requests ──────────────────────────
+  if (input && input.action === "toggle_view") {
+    var viewMode = input.view_mode || "mine"; // "mine" or "all"
+    if (viewMode === "all") {
+      data.userCards = getAllCardsWithOwnership();
+    } else {
+      data.userCards = getUserVisualCards();
+    }
+    data.view_mode = viewMode;
+    return;
+  }
+
+// ── Initial load ───────────────────────────────────────────
+  var defaultMode = options.default_view_mode || "mine";
+  data.view_mode = defaultMode;
+  if (defaultMode === "all") {
+    data.userCards = getAllCardsWithOwnership();
+  } else {
+    data.userCards = getUserVisualCards();
+  }
+
+  // ══════════════════════════════════════════════════════════
+  // Get ALL cards from cmdb_model, flagged with ownership
+  // ══════════════════════════════════════════════════════════
+  function getAllCardsWithOwnership() {
+    try {
+      var currentUser = targetUser;
+      var categoryId = allCategories;
+      var cards = [];
+
+      // Step 1: Build a Set of model sys_ids the user owns
+      var ownedModelIds = {};
+      var ownedAssetData = {}; // model_sys_id → asset details
+
+      var assetGr = new GlideRecord("alm_asset");
+      assetGr.addQuery("assigned_to", currentUser);
+      assetGr.addQuery("life_cycle_stage", "Operational");
+
+      if (categoryId) {
+        var mj = assetGr.addJoinQuery("cmdb_model", "model", "sys_id");
+        mj.addCondition("cmdb_model_category", "IN", categoryId);
+      }
+
+      assetGr.query();
+
+      while (assetGr.next()) {
+        var modelId = assetGr.getValue("model");
+        ownedModelIds[modelId] = true;
+        ownedAssetData[modelId] = {
+          asset_sys_id: assetGr.getUniqueValue(),
+          asset_tag: assetGr.getDisplayValue("asset_tag"),
+          supported_by: assetGr.getDisplayValue("supported_by"),
+          assigned_date: assetGr.getDisplayValue("assigned"),
+          comments: assetGr.getDisplayValue("comments")
+        };
+      }
+
+      // Step 2: Query ALL models in configured categories
+      var modelGr = new GlideRecord("cmdb_model");
+      modelGr.addQuery("life_cycle_stage", "Operational");
+
+      if (categoryId) {
+        modelGr.addQuery("cmdb_model_category", "IN", categoryId);
+      }
+
+			modelGr.orderBy("name");
+
+      // Apply card limit if set
+      if (cardLimit > 0) {
+        modelGr.setLimit(cardLimit);
+      }
+
+      modelGr.query();
+
+      while (modelGr.next()) {
+        var mSysId = modelGr.getUniqueValue();
+        var isOwned = ownedModelIds[mSysId] === true;
+        var assetInfo = ownedAssetData[mSysId] || {};
+
+				cards.push({
+          sys_id: mSysId,
+          model_name: modelGr.getDisplayValue("name"),
+          model_description: modelGr.getDisplayValue("short_description"),
+          model_picture: modelGr.getValue("picture"),
+          model_category: modelGr.getDisplayValue("cmdb_model_category"),
+          model_sys_id: mSysId,
+          // Ownership flags
+          owned: isOwned,
+          // Asset-level data (only populated if owned)
+          asset_sys_id: assetInfo.asset_sys_id || "",
+          asset_tag: assetInfo.asset_tag || "",
+          supported_by: assetInfo.supported_by || "",
+          assigned_date: assetInfo.assigned_date || "",
+          comments: assetInfo.comments || "",
+          // Tooltip: "All Cards" view shows product model comments
+          tooltip_comments: modelGr.getDisplayValue("comments") || modelGr.getDisplayValue("short_description") || ""
+        });
+      }
+
+      return cards;
+    } catch (error) {
+      gs.error("User Cards Widget - getAllCardsWithOwnership error: " + error.message);
+      return [];
+    }
+  }
+
+  // ══════════════════════════════════════════════════════════
+  // Get USER's owned cards (via alm_asset) — optimised
+  // ══════════════════════════════════════════════════════════
+  function getUserVisualCards() {
+    try {
+      var currentUser = targetUser;
+      var categoryId = userCategories;
+      var cards = [];
+
+      var assetGr = new GlideRecord("alm_asset");
+      assetGr.addQuery("assigned_to", currentUser);
+      assetGr.addQuery("life_cycle_stage", "Operational");
+
+		if (categoryId) {
+        var modelJoin = assetGr.addJoinQuery("cmdb_model", "model", "sys_id");
+        modelJoin.addCondition("cmdb_model_category", "IN", categoryId);
+      }
+
+      // Sort by assignment date — newest first
+      assetGr.orderByDesc("assigned");
+
+      // Apply card limit at query level if set
+      if (cardLimit > 0) {
+        assetGr.setLimit(cardLimit);
+      }
+
+      assetGr.query();
+
+      while (assetGr.next()) {
+        // Dot-walk instead of inner GlideRecord.get() — eliminates N+1
+        cards.push({
+          sys_id: assetGr.getUniqueValue(),
+          model_name: assetGr.getDisplayValue("model.name"),
+          model_description: assetGr.getDisplayValue("model.short_description"),
+          model_picture: assetGr.model.picture + "",  // raw sys_id value
+          model_category: assetGr.getDisplayValue("model.cmdb_model_category"),
+          model_sys_id: assetGr.getValue("model"),
+          owned: true,
+          asset_sys_id: assetGr.getUniqueValue(),
+          asset_tag: assetGr.getDisplayValue("asset_tag"),
+          supported_by: assetGr.getDisplayValue("supported_by"),
+          assigned_date: assetGr.getDisplayValue("assigned"),
+          comments: assetGr.getDisplayValue("comments"),
+          // Tooltip: "My Cards" view shows asset comments
+          tooltip_comments: assetGr.getDisplayValue("comments") || ""
+        });
+      }
+
+      return cards;
+    } catch (error) {
+      gs.error("User Cards Widget - getUserVisualCards error: " + error.message);
+      return [];
+    }
+  }
+})();]]></script>
+        <servicenow>false</servicenow>
+        <sys_class_name>sp_widget</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 22:36:34</sys_created_on>
+        <sys_id>8391d6213b0bb210ebe9c15765e45a7d</sys_id>
+        <sys_mod_count>70</sys_mod_count>
+        <sys_name>User Cards</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sp_widget_8391d6213b0bb210ebe9c15765e45a7d</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-19 11:57:37</sys_updated_on>
+        <template><![CDATA[<div class="vcw">
+
+	<!-- ── Header with toggle ────────────────────────── -->
+  <div class="vcw-header" ng-if="!c.data.is_single_card">
+    <div class="vcw-title">
+      <i class="fa fa-id-card-o"></i>
+      {{::c.data.widget_title}}
+    </div>
+     <div class="vcw-toggle" ng-if="c.data.show_toggle">
+      <button class="vcw-toggle-btn"
+              ng-class="{'active': c.viewMode === 'mine'}"
+              ng-click="c.toggleView('mine')">
+        <i class="fa fa-user"></i> My Cards
+      </button>
+      <button class="vcw-toggle-btn"
+              ng-class="{'active': c.viewMode === 'all'}"
+              ng-click="c.toggleView('all')">
+        <i class="fa fa-th"></i> All Cards
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Loading state ─────────────────────────────── -->
+  <div class="vcw-status" ng-if="c.data.loading">
+    <i class="fa fa-spinner fa-spin"></i> Loading cards…
+  </div>
+
+  <!-- ── Empty state ───────────────────────────────── -->
+  <div class="vcw-empty" ng-if="!c.data.loading && c.data.userCards.length === 0">
+    <i class="fa fa-inbox"></i>
+    <span ng-if="c.viewMode === 'mine'">
+      You don't own any cards yet. Switch to <strong>All Cards</strong> to see what's available!
+    </span>
+    <span ng-if="c.viewMode === 'all'">
+      No cards found in this collection.
+    </span>
+  </div>
+
+  <!-- ── Card grid ─────────────────────────────────── -->
+  <div class="vcw-grid" ng-if="!c.data.loading && c.data.userCards.length > 0">
+	<div class="vcw-card"
+         ng-repeat="card in c.data.userCards track by card.sys_id"
+         ng-class="{'vcw-card--unowned': !card.owned && c.viewMode === 'all', 'vcw-card--clickable': c.data.is_single_card && c.data.card_click_url}"
+         ng-click="c.data.is_single_card && c.onCardClick()">
+
+      <!-- Ownership badge (All view only) -->
+      <!--
+      <div class="vcw-badge vcw-badge--owned"
+           ng-if="c.viewMode === 'all' && card.owned">
+        <i class="fa fa-check-circle"></i> Owned
+      </div> -->
+      <div class="vcw-badge vcw-badge--locked"
+           ng-if="c.viewMode === 'all' && !card.owned">
+        <i class="fa fa-lock"></i> Not Yet
+      </div>
+
+      <!-- Card image -->
+      <div class="vcw-imgwrap">
+        <img class="vcw-img"
+             ng-if="card.model_picture"
+             ng-src="/sys_attachment.do?sys_id={{::card.model_picture}}"
+             alt="{{::card.model_name}}"
+             onerror="this.style.display='none'" />
+
+        <div class="vcw-imgplaceholder" ng-if="!card.model_picture">
+          <i class="fa fa-picture-o"></i>
+        </div>
+      </div>
+
+			<!-- Card metadata (hidden in single card mode) -->
+      <div class="vcw-meta" ng-if="!c.data.is_single_card">
+        <!--
+        <div class="vcw-name" title="{{::card.model_name}}">
+          {{::card.model_name}}
+        </div>
+        <div class="vcw-desc" ng-if="card.model_description">
+          {{::card.model_description}}
+        </div> -->
+        <div class="vcw-category-row">
+          <div class="vcw-category" ng-if="card.model_category">
+            {{::card.model_category}}
+          </div>
+          <div class="vcw-info" ng-if="card.tooltip_comments">
+            <i class="fa fa-info-circle"></i>
+            <div class="vcw-tooltip">{{::card.tooltip_comments}}</div>
+          </div>
+        </div>
+        <div class="vcw-source">
+          <div class="vcw-sub" ng-if="card.supported_by">
+            <i class="fa fa-user-circle-o"></i> {{::card.supported_by}}
+          </div>
+          <div class="vcw-sub" ng-if="card.assigned_date">
+            {{::card.assigned_date}}
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>]]></template>
+    </sp_widget>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>8391d6213b0bb210ebe9c15765e45a7d</id>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 22:36:34</sys_created_on>
+        <sys_id>4791d6213b0bb210ebe9c15765e45a82</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 22:36:34</sys_updated_on>
+        <table>sp_widget</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>

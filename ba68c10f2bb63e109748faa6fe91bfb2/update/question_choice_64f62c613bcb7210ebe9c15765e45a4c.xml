@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>200</order>
+        <published_ref/>
+        <question display_value="Assignment Method">9451ba6c2b0ffa509748faa6fe91bf06</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 14:50:33</sys_created_on>
+        <sys_id>64f62c613bcb7210ebe9c15765e45a4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>On Condition</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>question_choice_64f62c613bcb7210ebe9c15765e45a4c</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 14:50:33</sys_updated_on>
+        <text>On Condition</text>
+        <value>on_condition</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=64f62c613bcb7210ebe9c15765e45a4c"/>
+</record_update>

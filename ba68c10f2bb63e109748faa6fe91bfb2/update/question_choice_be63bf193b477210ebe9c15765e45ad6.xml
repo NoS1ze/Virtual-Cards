@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="question_choice">
+    <question_choice action="INSERT_OR_UPDATE">
+        <inactive>false</inactive>
+        <order>100</order>
+        <published_ref/>
+        <question display_value="Main Colour">4362bf553b477210ebe9c15765e45a16</question>
+        <sys_class_name>question_choice</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 11:05:26</sys_created_on>
+        <sys_id>be63bf193b477210ebe9c15765e45ad6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Salmon (#f69176)</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>question_choice_be63bf193b477210ebe9c15765e45ad6</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 11:05:26</sys_updated_on>
+        <text>Salmon (#f69176)</text>
+        <value>salmon</value>
+    </question_choice>
+    <fx_price action="delete_multiple" query="id=be63bf193b477210ebe9c15765e45ad6"/>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>misc</field>
+        <id>be63bf193b477210ebe9c15765e45ad6</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="EUR">EUR</reference_currency>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 14:34:39</sys_created_on>
+        <sys_id>7b4324693b8b7210ebe9c15765e45a3a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 14:34:39</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+    <fx_price action="INSERT_OR_UPDATE">
+        <amount>0</amount>
+        <currency display_value="EUR">EUR</currency>
+        <field>rec_misc</field>
+        <id>be63bf193b477210ebe9c15765e45ad6</id>
+        <parent/>
+        <reference_amount>0</reference_amount>
+        <reference_currency display_value="EUR">EUR</reference_currency>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-13 14:34:39</sys_created_on>
+        <sys_id>bb4324693b8b7210ebe9c15765e45a39</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-13 14:34:39</sys_updated_on>
+        <table>question_choice</table>
+        <type>calculated</type>
+    </fx_price>
+</record_update>

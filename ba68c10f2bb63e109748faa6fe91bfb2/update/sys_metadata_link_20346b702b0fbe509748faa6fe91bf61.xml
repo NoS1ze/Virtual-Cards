@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>fc24eb702b0fbe509748faa6fe91bf9e</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_group_has_role">
+    <sys_group_has_role action="INSERT_OR_UPDATE">
+        <granted_by/>
+        <group display_value="Card managers" name="Card managers">9204e7702b0fbe509748faa6fe91bf3f</group>
+        <inherits>true</inherits>
+        <role display_value="x_konl_visual_card.manager" name="x_konl_visual_card.manager">18407c8880504309980847ae937fdc70</role>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-11 20:41:42</sys_created_on>
+        <sys_id>fc24eb702b0fbe509748faa6fe91bf9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-11 20:41:42</sys_updated_on>
+    </sys_group_has_role>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-11 20:41:58</sys_created_on>
+        <sys_id>20346b702b0fbe509748faa6fe91bf61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Created 11/02/2026 20:41:42</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_metadata_link_20346b702b0fbe509748faa6fe91bf61</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-11 20:41:58</sys_updated_on>
+        <tablename>sys_group_has_role</tablename>
+    </sys_metadata_link>
+</record_update>

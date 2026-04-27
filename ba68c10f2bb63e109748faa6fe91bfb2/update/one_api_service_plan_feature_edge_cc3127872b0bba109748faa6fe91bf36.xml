@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="one_api_service_plan_feature_edge">
+    <one_api_service_plan_feature_edge action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability_condition_expression/>
+        <applicability_failed_policy/>
+        <applicability_script><![CDATA[(function(currentInputs, context) {  
+	/* @param {Object} currentInputs - Inputs provided for the current step.*/  
+	/* @param {Object} context - Execution context, which may include:*/     
+	/*         - Previous tool outputs/inputs (e.g., context['ToolName.attributeName'] or context.getValue('ToolName.attributeName')).*/     
+	/*         - Additional context information (e.g., context.getAllValues()).*/  
+	/* @returns {Boolean} - Return 'true' if the condition is met; otherwise 'false'.*/  
+	return true;
+  })(currentInputs, context);]]></applicability_script>
+        <applicability_type/>
+        <error_handler_script><![CDATA[(function handleError() {  
+	// customize condition logic here,  
+	return ;
+})();]]></error_handler_script>
+        <error_policy/>
+        <from_service_plan_feature display_value="___$y$t3m_bu1163r___-cb9e525bffd96210e2ecfffffffffffa, a7298d4a43847110fb6e925caab8f25d-default: cb9e525bffd96210e2ecfffffffffffa">883127872b0bba109748faa6fe91bf33</from_service_plan_feature>
+        <internal_name>TextToFlowCapabilityServiceTool__Text2Flow</internal_name>
+        <name>edge</name>
+        <order>0</order>
+        <sys_class_name>one_api_service_plan_feature_edge</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-18 20:15:08</sys_created_on>
+        <sys_id>cc3127872b0bba109748faa6fe91bf36</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>edge</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>one_api_service_plan_feature_edge_cc3127872b0bba109748faa6fe91bf36</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-18 20:15:08</sys_updated_on>
+        <to_service_plan_feature display_value="___$y$t3m_bu1163r___-cb9e525bffd96210e2ecfffffffffffa, a7298d4a43847110fb6e925caab8f25d-default: a7298d4a43847110fb6e925caab8f25d">483127872b0bba109748faa6fe91bf35</to_service_plan_feature>
+    </one_api_service_plan_feature_edge>
+</record_update>

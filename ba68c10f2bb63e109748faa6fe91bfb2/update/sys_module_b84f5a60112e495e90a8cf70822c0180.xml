@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[import { gs, GlideRecord } from '@servicenow/glide'
+
+export function handleApproval(current, previous) {
+  try {
+    const approvalState = current.getValue('approval')
+    const requestItemId = current.getUniqueValue()
+    
+    if (approvalState === 'approved') {
+      // Get the catalog request details
+      const requestGr = new GlideRecord('sc_req_item')
+      if (!requestGr.get(requestItemId)) {
+        throw new Error('Request item not found')
+      }
+      
+      const variables = getRequestVariables(requestItemId)
+      
+      // Handle new card request
+      if (requestGr.getValue('cat_item') === getNewCardCatalogItemId()) {
+        handleNewCardApproval(requestGr, variables)
+      }
+      // Handle existing card request
+      else if (requestGr.getValue('cat_item') === getExistingCardCatalogItemId()) {
+        handleExistingCardApproval(requestGr, variables)
+      }
+    }
+    
+  } catch (error) {
+    gs.error('Approval handling error: ' + error.message)
+  }
+}
+
+function handleNewCardApproval(requestGr, variables) {
+  try {
+    // Generate card via API
+    const cardData = {
+      cardName: variables.card_name,
+      cardPurpose: variables.card_purpose,
+      expectedContent: variables.expected_content,
+      styleGuidelines: 'Corporate standard with modern design elements',
+      requestId: requestGr.getUniqueValue()
+    }
+    
+    // Call card generation API
+    const response = callCardGenerationAPI(cardData)
+    
+    if (response.success) {
+      // Create review task for managers
+      createReviewTask(response.product_model_id, requestGr.getUniqueValue())
+      
+      // Create implementation task
+      createImplementationTask(response.product_model_id, requestGr.getUniqueValue(), variables)
+      
+      gs.info(`New card approval processed for request ${requestGr.getUniqueValue()}`)
+    } else {
+      throw new Error('Card generation failed: ' + response.message)
+    }
+    
+  } catch (error) {
+    gs.error('New card approval handling error: ' + error.message)
+  }
+}
+
+function handleExistingCardApproval(requestGr, variables) {
+  try {
+    const cardId = variables.selected_card
+    const selectedUsers = variables.selected_users
+    
+    // Validate that the selected card is a visual card
+    if (!isVisualCard(cardId)) {
+      throw new Error('Selected model is not a visual card')
+    }
+    
+    // Assign card to selected users by creating asset records
+    if (selectedUsers && selectedUsers.length > 0) {
+      const userIds = selectedUsers.split(',')
+      
+      userIds.forEach(userId => {
+        // Check if asset already exists
+        const existingAsset = new GlideRecord('alm_asset')
+        existingAsset.addQuery('model', cardId)
+        existingAsset.addQuery('assigned_to', userId)
+        existingAsset.query()
+        
+        if (!existingAsset.next()) {
+          // Create new asset assignment
+          const assetGr = new GlideRecord('alm_asset')
+          assetGr.initialize()
+          assetGr.setValue('model', cardId)
+          assetGr.setValue('assigned_to', userId)
+          assetGr.setValue('install_status', 1) // Installed
+          assetGr.setValue('substatus', 'available')
+          assetGr.setValue('assigned', new Date().toISOString())
+          
+          assetGr.insert()
+          gs.info(`Card ${cardId} assigned to user ${userId}`)
+        }
+      })
+    }
+    
+    gs.info(`Existing card approval processed for request ${requestGr.getUniqueValue()}`)
+    
+  } catch (error) {
+    gs.error('Existing card approval handling error: ' + error.message)
+  }
+}
+
+function createReviewTask(cardId, requestId) {
+  const taskGr = new GlideRecord('task')
+  taskGr.initialize()
+  taskGr.setValue('short_description', 'Review Generated Visual Card')
+  taskGr.setValue('description', `Please review the generated visual card (Product Model: ${cardId}) and approve or request modifications.`)
+  taskGr.setValue('assignment_group', getManagerGroupId())
+  taskGr.setValue('parent', requestId)
+  taskGr.setValue('state', 1) // New
+  taskGr.setValue('priority', 3) // Medium
+  
+  const taskId = taskGr.insert()
+  gs.info(`Review task created: ${taskId} for card ${cardId}`)
+  return taskId
+}
+
+function createImplementationTask(cardId, requestId, variables) {
+  const taskGr = new GlideRecord('task')
+  taskGr.initialize()
+  taskGr.setValue('short_description', 'Implement Card Assignment Logic')
+  taskGr.setValue('assignment_group', getManagerGroupId())
+  taskGr.setValue('parent', requestId)
+  taskGr.setValue('state', 1) // New
+  taskGr.setValue('priority', 3) // Medium
+  
+  if (variables.assignment_type === 'condition') {
+    taskGr.setValue('description', `Implement condition-based assignment for card ${cardId}. Condition: ${variables.assignment_condition}`)
+  } else {
+    taskGr.setValue('description', `Implement user-based assignment for card ${cardId}. Users: ${variables.selected_users}`)
+  }
+  
+  const taskId = taskGr.insert()
+  gs.info(`Implementation task created: ${taskId} for card ${cardId}`)
+  return taskId
+}
+
+function getRequestVariables(requestItemId) {
+  const variables = {}
+  const varGr = new GlideRecord('sc_item_option_mtom')
+  varGr.addQuery('request_item', requestItemId)
+  varGr.query()
+  
+  while (varGr.next()) {
+    const itemOption = varGr.sc_item_option.getRefRecord()
+    if (itemOption) {
+      variables[itemOption.getValue('name')] = varGr.getValue('value')
+    }
+  }
+  
+  return variables
+}
+
+function callCardGenerationAPI(cardData) {
+  // Mock API call - in reality would use REST Message or similar
+  const restMessage = new sn_ws.RESTMessage('Card Generation API', 'POST')
+  restMessage.setEndpoint('/api/x_konl_visual_card/card_generator/generate')
+  restMessage.setRequestBody(JSON.stringify(cardData))
+  
+  const response = restMessage.execute()
+  return JSON.parse(response.getBody())
+}
+
+function getManagerGroupId() {
+  // Get the managers group sys_id
+  const groupGr = new GlideRecord('sys_user_group')
+  groupGr.addQuery('name', 'Managers')
+  groupGr.query()
+  
+  if (groupGr.next()) {
+    return groupGr.getUniqueValue()
+  }
+  return null
+}
+
+function getVisualCardsCategoryId() {
+  try {
+    const categoryGr = new GlideRecord('cmdb_model_category')
+    categoryGr.addQuery('name', 'Visual Cards')
+    categoryGr.query()
+    
+    if (categoryGr.next()) {
+      return categoryGr.getUniqueValue()
+    }
+  } catch (error) {
+    gs.warn('Could not find Visual Cards model category: ' + error.message)
+  }
+  
+  return null
+}
+
+function isVisualCard(modelId) {
+  try {
+    const categoryId = getVisualCardsCategoryId()
+    
+    const modelGr = new GlideRecord('cmdb_model')
+    if (!modelGr.get(modelId)) {
+      return false
+    }
+    
+    // Check if it has the Visual Cards category (handle both reference and string values)
+    const modelCategory = modelGr.getValue('cmdb_model_category')
+    if (categoryId && modelCategory) {
+      if (modelCategory === categoryId || modelCategory === 'visual_cards_category') {
+        return modelGr.getValue('type') === 'Product'
+      }
+    }
+    
+    // Fallback: check if it's a product with card-related description
+    if (modelGr.getValue('type') === 'Product') {
+      const shortDesc = modelGr.getValue('short_description') || ''
+      return shortDesc.toLowerCase().includes('card')
+    }
+    
+    return false
+    
+  } catch (error) {
+    gs.error('Error validating visual card: ' + error.message)
+    return false
+  }
+}
+
+function getNewCardCatalogItemId() {
+  // Would return the sys_id of the "New Card Request" catalog item
+  return 'new_card_request_id' // Placeholder
+}
+
+function getExistingCardCatalogItemId() {
+  // Would return the sys_id of the "Request Existing Card" catalog item  
+  return 'existing_card_request_id' // Placeholder
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_konl_visual_card/x-konl-visual-cards/1.0.0/src/server/approval-handler.js</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-09 21:51:45</sys_created_on>
+        <sys_id>b84f5a60112e495e90a8cf70822c0180</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_konl_visual_card/x-konl-visual-cards/1.0.0/src/server/approval-handler.js</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_module_b84f5a60112e495e90a8cf70822c0180</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-09 21:51:45</sys_updated_on>
+    </sys_module>
+</record_update>

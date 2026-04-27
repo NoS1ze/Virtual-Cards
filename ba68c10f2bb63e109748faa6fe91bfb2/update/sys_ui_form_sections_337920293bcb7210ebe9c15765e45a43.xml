@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_form_sections form_id="337920293bcb7210ebe9c15765e45a43" sys_domain="global" table="alm_information_asset" version="3">
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>0</position>
+            <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+            <sys_created_on>2026-02-13 15:01:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3b7920293bcb7210ebe9c15765e45a6c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
+            <sys_ui_section caption="NULL" display_value="" name="alm_information_asset" sys_domain="global" view="Default view">ff7920293bcb7210ebe9c15765e45a62</sys_ui_section>
+            <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+            <sys_updated_on>2026-02-13 15:01:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>1</position>
+            <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+            <sys_created_on>2026-02-13 15:01:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f37920293bcb7210ebe9c15765e45a80</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
+            <sys_ui_section caption="General" display_value="General" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a6d</sys_ui_section>
+            <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+            <sys_updated_on>2026-02-13 15:01:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>2</position>
+            <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+            <sys_created_on>2026-02-13 15:01:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>737920293bcb7210ebe9c15765e45a59</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
+            <sys_ui_section caption="Financial" display_value="Financial" name="alm_information_asset" sys_domain="global" view="Default view">f37920293bcb7210ebe9c15765e45a50</sys_ui_section>
+            <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+            <sys_updated_on>2026-02-13 15:01:41</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>3</position>
+            <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+            <sys_created_on>2026-02-13 15:01:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f77920293bcb7210ebe9c15765e45a62</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
+            <sys_ui_section caption="Contracts" display_value="Contracts" name="alm_information_asset" sys_domain="global" view="Default view">7b7920293bcb7210ebe9c15765e45a59</sys_ui_section>
+            <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+            <sys_updated_on>2026-02-13 15:01:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>4</position>
+            <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+            <sys_created_on>2026-02-13 15:01:42</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>f77920293bcb7210ebe9c15765e45a85</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
+            <sys_ui_section caption="Activities" display_value="Activities" name="alm_information_asset" sys_domain="global" view="Default view">fb7920293bcb7210ebe9c15765e45a80</sys_ui_section>
+            <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+            <sys_updated_on>2026-02-13 15:01:42</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form_section action="INSERT_OR_UPDATE">
+            <position>5</position>
+            <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+            <sys_created_on>2026-02-13 15:01:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>fb7920293bcb7210ebe9c15765e45a4f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_overrides/>
+            <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
+            <sys_ui_section caption="Depreciation" display_value="Depreciation" name="alm_information_asset" sys_domain="global" view="Default view">b37920293bcb7210ebe9c15765e45a46</sys_ui_section>
+            <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+            <sys_updated_on>2026-02-13 15:01:41</sys_updated_on>
+        </sys_ui_form_section>
+        <sys_ui_form action="INSERT_OR_UPDATE">
+            <name>alm_information_asset</name>
+            <roles/>
+            <sys_class_name>sys_ui_form</sys_class_name>
+            <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+            <sys_created_on>2026-02-13 15:01:41</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>337920293bcb7210ebe9c15765e45a43</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>alm_information_asset</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+            <sys_update_name>sys_ui_form_sections_337920293bcb7210ebe9c15765e45a43</sys_update_name>
+            <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+            <sys_updated_on>2026-02-13 15:01:41</sys_updated_on>
+            <sys_user/>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_form>
+    </sys_ui_form_sections>
+</record_update>
