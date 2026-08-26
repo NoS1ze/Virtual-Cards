@@ -3,6 +3,7 @@
         <access>public</access>
         <acls/>
         <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
         <annotation/>
         <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,intermediateFlowVersion=true,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=1792449000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>27800</authored_on_release_version>
@@ -36,19 +37,19 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8879fee02b8ffa509748faa6fe91bf32</sys_id>
-        <sys_mod_count>41</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>New Card Request</sys_name>
         <sys_overrides/>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name>sys_hub_flow_8879fee02b8ffa509748faa6fe91bf32</sys_update_name>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-03-03 16:50:58</sys_updated_on>
+        <sys_updated_by>sdk.user</sys_updated_by>
+        <sys_updated_on>2026-08-26 01:11:15</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record>3c2f6d133b577210ebe9c15765e45a43</version_record>
+        <version_record/>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=8879fee02b8ffa509748faa6fe91bf32"/>
     <sys_variable_value action="delete_multiple" query="document_key=8879fee02b8ffa509748faa6fe91bf32"/>
@@ -273,6 +274,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -357,6 +359,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="sc_req_item">sc_req_item</reference>
         <reference_cascade_rule/>
@@ -963,6 +966,7 @@
         <ui_id>fca9322a-a4df-455f-ad05-6f9787ac2212</ui_id>
     </sys_hub_pill_compound>
     <sys_hub_flow_variable action="delete_multiple" query="model=8879fee02b8ffa509748faa6fe91bf32"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_8879fee02b8ffa509748faa6fe91bf32"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>request_item</element>
         <help/>
@@ -976,11 +980,11 @@
         <sys_created_on>2026-02-10 22:56:41</sys_created_on>
         <sys_id>5079fee02b8ffa509748faa6fe91bfc9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Request Item</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_8879fee02b8ffa509748faa6fe91bf32_request_item_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-10 22:56:41</sys_updated_on>
         <url/>
@@ -999,11 +1003,11 @@
         <sys_created_on>2026-02-10 22:56:41</sys_created_on>
         <sys_id>ec79fee02b8ffa509748faa6fe91bfd0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_8879fee02b8ffa509748faa6fe91bf32_table_name_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-10 22:56:41</sys_updated_on>
         <url/>
@@ -1015,6 +1019,7 @@
         <access>public</access>
         <acls/>
         <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
         <annotation/>
         <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,intermediateFlowVersion=true,labelCacheCleanUpExecuted=true,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>27800</authored_on_release_version>
@@ -1257,6 +1262,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference display_value="" name="sc_req_item">sc_req_item</reference>
         <reference_cascade_rule/>
@@ -1341,6 +1347,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>true</read_only>
+        <read_only_option>instance_configured</read_only_option>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1947,6 +1954,7 @@
         <ui_id>fca9322a-a4df-455f-ad05-6f9787ac2212</ui_id>
     </sys_hub_pill_compound>
     <sys_hub_flow_variable action="delete_multiple" query="model=82c2bff82b8fbe509748faa6fe91bf9d"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_82c2bff82b8fbe509748faa6fe91bf9d"/>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>request_item</element>
         <help/>
@@ -1960,11 +1968,11 @@
         <sys_created_on>2026-02-11 21:45:42</sys_created_on>
         <sys_id>92c2bff82b8fbe509748faa6fe91bfcf</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Request Item</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_82c2bff82b8fbe509748faa6fe91bf9d_request_item_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-11 21:45:42</sys_updated_on>
         <url/>
@@ -1983,11 +1991,11 @@
         <sys_created_on>2026-02-11 21:45:42</sys_created_on>
         <sys_id>dec2bff82b8fbe509748faa6fe91bfc2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Table Name</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_82c2bff82b8fbe509748faa6fe91bf9d_table_name_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-11 21:45:42</sys_updated_on>
         <url/>

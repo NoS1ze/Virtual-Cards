@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "serialNumber": "urn:uuid:853ccfc2-6794-46c8-9310-25d363188c31",
+  "metadata": {
+    "timestamp": "2026-08-25T23:06:29.594Z",
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "sdk-build-plugins",
+          "group": "@servicenow",
+          "version": "4.11.0",
+          "author": "ServiceNow"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "team-recognition",
+      "version": "1.0.0",
+      "bom-ref": "pkg:servicenow/team-recognition@1.0.0?sys_scope_id=ba68c10f2bb63e109748faa6fe91bfb2",
+      "description": "[BUILD AGENT GENERATED]:  Application for managing visual cards that can be requested, approved, generated, and assigned to users either directly or based on conditions. Includes portal components for displaying cards in carousel format.",
+      "licenses": [
+        {
+          "license": {
+            "id": "ISC"
+          }
+        }
+      ],
+      "purl": "pkg:servicenow/team-recognition@1.0.0?sys_scope_id=ba68c10f2bb63e109748faa6fe91bfb2"
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "pkg:servicenow/team-recognition@1.0.0?sys_scope_id=ba68c10f2bb63e109748faa6fe91bfb2"
+    }
+  ]
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_konl_visual_card/team-recognition/1.0.0/bom.json</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>sdk.user</sys_created_by>
+        <sys_created_on>2026-08-25 23:07:33</sys_created_on>
+        <sys_id>22e5ca3d21e9427c86a31a3303bbe359</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_konl_visual_card/team-recognition/1.0.0/bom.json</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_module_22e5ca3d21e9427c86a31a3303bbe359</sys_update_name>
+        <sys_updated_by>sdk.user</sys_updated_by>
+        <sys_updated_on>2026-08-25 23:07:33</sys_updated_on>
+    </sys_module>
+</record_update>

@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_content_product_model" name="cmdb_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">173928e53bcb7210ebe9c15765e45a42</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="cmdb_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">633928e53bcb7210ebe9c15765e45a67</sys_ui_section>
+            <sys_ui_section display_value="">633928e53bcb7210ebe9c15765e45a67</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 15:00:35</sys_updated_on>
         </sys_ui_form_section>
@@ -38,7 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_content_product_model" name="cmdb_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">173928e53bcb7210ebe9c15765e45a42</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="cmdb_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">1f3928e53bcb7210ebe9c15765e45a45</sys_ui_section>
+            <sys_ui_section display_value="">1f3928e53bcb7210ebe9c15765e45a45</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 15:00:34</sys_updated_on>
         </sys_ui_form_section>

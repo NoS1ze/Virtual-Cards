@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_content_product_model" name="cmdb_content_product_model" sys_domain="global" view="da32ccce2b2212105356fa97d891bffb">eb3928e53bcb7210ebe9c15765e45a72</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="cmdb_content_product_model" sys_domain="global" view="da32ccce2b2212105356fa97d891bffb">af3928e53bcb7210ebe9c15765e45a75</sys_ui_section>
+            <sys_ui_section display_value="">af3928e53bcb7210ebe9c15765e45a75</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 15:00:35</sys_updated_on>
         </sys_ui_form_section>

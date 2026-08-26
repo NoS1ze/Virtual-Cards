@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">603c5de62b07b6109748faa6fe91bf92</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">ec3c5de62b07b6109748faa6fe91bf95</sys_ui_section>
+            <sys_ui_section display_value="">ec3c5de62b07b6109748faa6fe91bf95</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:08</sys_updated_on>
         </sys_ui_form_section>
@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">603c5de62b07b6109748faa6fe91bf92</sys_ui_form>
-            <sys_ui_section caption="General" display_value="General" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">a83c5de62b07b6109748faa6fe91bf9f</sys_ui_section>
+            <sys_ui_section display_value="">a83c5de62b07b6109748faa6fe91bf9f</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:08</sys_updated_on>
         </sys_ui_form_section>
@@ -38,7 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">603c5de62b07b6109748faa6fe91bf92</sys_ui_form>
-            <sys_ui_section caption="Compatibles" display_value="Compatibles" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">343c5de62b07b6109748faa6fe91bfb7</sys_ui_section>
+            <sys_ui_section display_value="">343c5de62b07b6109748faa6fe91bfb7</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:08</sys_updated_on>
         </sys_ui_form_section>
@@ -52,7 +52,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">603c5de62b07b6109748faa6fe91bf92</sys_ui_form>
-            <sys_ui_section caption="Assets" display_value="Assets" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">b83c5de62b07b6109748faa6fe91bfb2</sys_ui_section>
+            <sys_ui_section display_value="">b83c5de62b07b6109748faa6fe91bfb2</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:08</sys_updated_on>
         </sys_ui_form_section>
@@ -66,7 +66,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">603c5de62b07b6109748faa6fe91bf92</sys_ui_form>
-            <sys_ui_section caption="Configuration items" display_value="Configuration items" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">f03c5de62b07b6109748faa6fe91bfc1</sys_ui_section>
+            <sys_ui_section display_value="">f03c5de62b07b6109748faa6fe91bfc1</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:08</sys_updated_on>
         </sys_ui_form_section>
@@ -80,7 +80,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">603c5de62b07b6109748faa6fe91bf92</sys_ui_form>
-            <sys_ui_section caption="Specification" display_value="Specification" name="cmdb_ai_content_product_model" sys_domain="global" view="Default view">bc3c5de62b07b6109748faa6fe91bfbb</sys_ui_section>
+            <sys_ui_section display_value="">bc3c5de62b07b6109748faa6fe91bfbb</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:08</sys_updated_on>
         </sys_ui_form_section>

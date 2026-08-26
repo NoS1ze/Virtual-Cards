@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="sanitised_scene" label="Sanitised Scene" language="en" table="var__m_sys_hub_step_ext_output_2edefd703b57b650ebe9c15765e45a4f">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>sanitised_scene</element>
+            <help/>
+            <hint/>
+            <label>Sanitised Scene</label>
+            <language>en</language>
+            <name>var__m_sys_hub_step_ext_output_2edefd703b57b650ebe9c15765e45a4f</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+            <sys_created_on>2026-02-25 11:09:30</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Sanitised Scene</sys_name>
+            <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_2edefd703b57b650ebe9c15765e45a4f_sanitised_scene_en</sys_update_name>
+            <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+            <sys_updated_on>2026-02-25 11:09:30</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
