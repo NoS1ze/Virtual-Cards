@@ -16,13 +16,15 @@
         <logo/>
         <menu/>
         <name>Visual Cards</name>
-        <package_json display_value="x_konl_visual_card/x-konl-visual-cards/1.0.0/package.json" path="x_konl_visual_card/x-konl-visual-cards/1.0.0/package.json">x_konl_visual_card/x-konl-visual-cards/1.0.0/package.json</package_json>
+        <package_json display_value="x_konl_visual_card/visual-cards/1.0.3/package.json" path="x_konl_visual_card/visual-cards/1.0.3/package.json">x_konl_visual_card/visual-cards/1.0.3/package.json</package_json>
+        <package_resolver_version>1.0.0</package_resolver_version>
         <private>false</private>
         <restrict_table_access>false</restrict_table_access>
         <runtime_access_tracking>permissive</runtime_access_tracking>
         <scope>x_konl_visual_card</scope>
         <scoped_administration>false</scoped_administration>
         <short_description>[BUILD AGENT GENERATED]:  Application for managing visual cards that can be requested, approved, generated, and assigned to users either directly or based on conditions. Includes portal components for displaying cards in carousel format.</short_description>
+        <sn_managed>false</sn_managed>
         <source>x_konl_visual_card</source>
         <store_correlation_id>REPOAPP0002452767</store_correlation_id>
         <store_url/>
@@ -32,16 +34,16 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-05 22:51:59</sys_created_on>
         <sys_id>ba68c10f2bb63e109748faa6fe91bfb2</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-03-03 16:54:28</sys_updated_on>
+        <sys_updated_on>2026-08-25 23:31:50</sys_updated_on>
         <template/>
         <trackable>true</trackable>
         <uninstall_blocked>false</uninstall_blocked>
         <user_role/>
         <vendor/>
         <vendor_prefix/>
-        <version>1.0.2</version>
+        <version>1.0.3</version>
     </sys_app>
     <sys_translated_text action="delete_multiple" query="documentkey=ba68c10f2bb63e109748faa6fe91bfb2"/>
 </record_update>
