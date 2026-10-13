@@ -2,12 +2,14 @@
     <sc_cat_item action="INSERT_OR_UPDATE">
         <access_type>restricted</access_type>
         <active>true</active>
+        <additional_review>false</additional_review>
         <availability>on_desktop</availability>
         <billable>false</billable>
         <category/>
-        <cc_render_type/>
+        <cc_render_type>web</cc_render_type>
         <checked_out>false</checked_out>
         <cost>0</cost>
+        <create_universal_request>false</create_universal_request>
         <custom_cart/>
         <delivery_plan/>
         <delivery_plan_script/>
@@ -61,6 +63,7 @@
         <sc_ic_item_staging/>
         <sc_ic_version/>
         <sc_template/>
+        <secondary_owners/>
         <short_description>Use this card to formally submit a request for a new recognition card to honor a colleague, providing a thoughtful method to celebrate their valuable contributions and positive influence within the te</short_description>
         <show_variable_help_on_load>false</show_variable_help_on_load>
         <start_closed>false</start_closed>
@@ -84,7 +87,7 @@
         <type>item</type>
         <use_sc_layout>true</use_sc_layout>
         <vendor/>
-        <version>14</version>
+        <version>15</version>
         <visible_bundle>true</visible_bundle>
         <visible_guide>true</visible_guide>
         <visible_standalone>true</visible_standalone>

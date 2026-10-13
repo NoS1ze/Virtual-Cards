@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="alm_information_asset" sys_domain="global" view="Default view">ff7920293bcb7210ebe9c15765e45a62</sys_ui_section>
+            <sys_ui_section display_value="">ff7920293bcb7210ebe9c15765e45a62</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 15:01:42</sys_updated_on>
         </sys_ui_form_section>
@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
-            <sys_ui_section caption="General" display_value="General" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a6d</sys_ui_section>
+            <sys_ui_section display_value="">337920293bcb7210ebe9c15765e45a6d</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 15:01:42</sys_updated_on>
         </sys_ui_form_section>
@@ -38,7 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
-            <sys_ui_section caption="Financial" display_value="Financial" name="alm_information_asset" sys_domain="global" view="Default view">f37920293bcb7210ebe9c15765e45a50</sys_ui_section>
+            <sys_ui_section display_value="">f37920293bcb7210ebe9c15765e45a50</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 15:01:41</sys_updated_on>
         </sys_ui_form_section>
@@ -52,7 +52,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
-            <sys_ui_section caption="Contracts" display_value="Contracts" name="alm_information_asset" sys_domain="global" view="Default view">7b7920293bcb7210ebe9c15765e45a59</sys_ui_section>
+            <sys_ui_section display_value="">7b7920293bcb7210ebe9c15765e45a59</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 15:01:42</sys_updated_on>
         </sys_ui_form_section>
@@ -66,7 +66,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
-            <sys_ui_section caption="Activities" display_value="Activities" name="alm_information_asset" sys_domain="global" view="Default view">fb7920293bcb7210ebe9c15765e45a80</sys_ui_section>
+            <sys_ui_section display_value="">fb7920293bcb7210ebe9c15765e45a80</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 15:01:42</sys_updated_on>
         </sys_ui_form_section>
@@ -80,7 +80,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_information_asset" name="alm_information_asset" sys_domain="global" view="Default view">337920293bcb7210ebe9c15765e45a43</sys_ui_form>
-            <sys_ui_section caption="Depreciation" display_value="Depreciation" name="alm_information_asset" sys_domain="global" view="Default view">b37920293bcb7210ebe9c15765e45a46</sys_ui_section>
+            <sys_ui_section display_value="">b37920293bcb7210ebe9c15765e45a46</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 15:01:41</sys_updated_on>
         </sys_ui_form_section>

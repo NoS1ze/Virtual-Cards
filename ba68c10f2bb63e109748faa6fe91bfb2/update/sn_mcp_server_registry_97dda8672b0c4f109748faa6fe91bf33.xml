@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sn_mcp_server_registry">
     <sn_mcp_server_registry action="INSERT_OR_UPDATE">
+        <added_tools>0</added_tools>
         <label>testsetwset</label>
         <name>x_konl_visual_card.testsetwset</name>
         <short_description>alksjf;laksdjf</short_description>
+        <source>custom</source>
         <status>draft</status>
         <sys_class_name>sn_mcp_server_registry</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>

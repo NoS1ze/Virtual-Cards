@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">243c95e62b07b6109748faa6fe91bf1e</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="cmdb_ai_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">e83c5de62b07b6109748faa6fe91bf49</sys_ui_section>
+            <sys_ui_section display_value="">e83c5de62b07b6109748faa6fe91bf49</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:07</sys_updated_on>
         </sys_ui_form_section>
@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">243c95e62b07b6109748faa6fe91bf1e</sys_ui_form>
-            <sys_ui_section caption="General" display_value="General" name="cmdb_ai_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">e03c5de62b07b6109748faa6fe91bf39</sys_ui_section>
+            <sys_ui_section display_value="">e03c5de62b07b6109748faa6fe91bf39</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:07</sys_updated_on>
         </sys_ui_form_section>
@@ -38,7 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">243c95e62b07b6109748faa6fe91bf1e</sys_ui_form>
-            <sys_ui_section caption="New Section" display_value="New Section" name="cmdb_ai_content_product_model" sys_domain="global" view="c7edb57b0fa31010036a83fa68767ec5">683c5de62b07b6109748faa6fe91bf30</sys_ui_section>
+            <sys_ui_section display_value="">683c5de62b07b6109748faa6fe91bf30</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:07</sys_updated_on>
         </sys_ui_form_section>

@@ -1,17 +1,117 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sp_widget">
     <sp_widget action="INSERT_OR_UPDATE">
         <category>custom</category>
-        <client_script><![CDATA[api.controller = function ($scope) {
+        <client_script><![CDATA[api.controller = function ($scope, $window, $timeout) {
   var c = this;
 
   // Respect default view mode from server
   c.viewMode = c.data.view_mode || "mine";
+
+  // Expanded stacks, keyed by stack_key so state survives a re-render
+  c.openStacks = {};
+
+  // ── Column layout ──────────────────────────────────────────
+  // The grid is a set of independent vertical columns rather than a wrapping
+  // row of cells. In a row-based grid every cell in a row grows to match the
+  // tallest one, so expanding a single stack padded out all of its neighbours
+  // with dead space. With columns, expanding a stack only pushes down the
+  // cards beneath it in its own column.
+  var MIN_COL_WIDTH = 260;
+  var COL_GAP = 22;
+  var MAX_COLS = 6;
+
+  var root = null;
+  var observer = null;
+  var pending = null;
+  var lastWidth = -1;
+
+  c.columns = [];
+  c.colCount = 1;
+
+  // Width actually available to the columns. Measure the grid itself where
+  // possible; the widget root includes .vcw's padding, which is enough to
+  // trip a breakpoint a column early.
+  function availableWidth() {
+    if (!root) return 0;
+    var grid = root.querySelector(".vcw-grid");
+    if (grid && grid.clientWidth) return grid.clientWidth;
+    var el = root.querySelector(".vcw") || root;
+    var width = el.clientWidth;
+    if (!width) return 0;
+    var cs = $window.getComputedStyle(el);
+    return width - (parseFloat(cs.paddingLeft) || 0) - (parseFloat(cs.paddingRight) || 0);
+  }
+
+  function columnCount() {
+    var width = availableWidth();
+    if (!width) return c.colCount || 1; // not measurable yet — keep what we have
+    var n = Math.floor((width + COL_GAP) / (MIN_COL_WIDTH + COL_GAP));
+    return Math.max(1, Math.min(MAX_COLS, n));
+  }
+
+  function layout() {
+    var cards = c.data.userCards || [];
+    var n = columnCount();
+    var cols = [];
+    for (var i = 0; i < n; i++) cols.push([]);
+    // Round-robin, so the newest cards still read left-to-right across the
+    // top and the columns stay within one card of each other in length.
+    for (var j = 0; j < cards.length; j++) cols[j % n].push(cards[j]);
+    c.colCount = n;
+    c.columns = cols;
+  }
+
+  function relayout(force) {
+    if (pending) $timeout.cancel(pending);
+    pending = $timeout(function () {
+      pending = null;
+      if (force || columnCount() !== c.colCount) layout();
+    }, 80);
+  }
+
+  c.bindElement = function (el) {
+    root = el;
+    layout();
+
+    if ($window.ResizeObserver) {
+      // Catches container resizes the window event never sees (nav rail
+      // collapsing, the widget's own column changing width).
+      observer = new $window.ResizeObserver(function (entries) {
+        var w = entries && entries[0] ? entries[0].contentRect.width : (root ? root.clientWidth : 0);
+        if (Math.abs(w - lastWidth) < 1) return; // height-only change (a stack opening)
+        lastWidth = w;
+        relayout(false);
+      });
+      observer.observe(el);
+    } else {
+      angular.element($window).on("resize", onWindowResize);
+    }
+
+    // The element may not have been measurable during link; settle on the
+    // next tick once it is laid out.
+    $timeout(function () {
+      if (columnCount() !== c.colCount) layout();
+    });
+  };
+
+  function onWindowResize() {
+    relayout(false);
+  }
+
+  $scope.$on("$destroy", function () {
+    if (observer) observer.disconnect();
+    angular.element($window).off("resize", onWindowResize);
+    if (pending) $timeout.cancel(pending);
+  });
+
+  layout();
 
   // Toggle handler
   c.toggleView = function (mode) {
     if (c.viewMode === mode) return;
 
     c.viewMode = mode;
+    c.openStacks = {};
     c.data.loading = true;
 
     c.server.get({
@@ -20,16 +120,48 @@
     }).then(function (response) {
       c.data.userCards = response.data.userCards;
       c.data.loading = false;
+      layout();
     });
   };
 
-  // Card click handler — navigates when card_click_url is set
-  c.onCardClick = function () {
-    if (c.data.card_click_url) {
-      window.location.href = c.data.card_click_url;
+  // ── Stack expansion ────────────────────────────────────────
+  // Only stacks (received more than once) expand, and only in list
+  // view — the single-card view is already the detail view.
+  c.canExpand = function (card) {
+    return !c.data.is_single_card && !!card && card.is_stack === true;
+  };
+
+  c.isOpen = function (card) {
+    return !!(card && c.openStacks[card.stack_key]);
+  };
+
+  c.toggleStack = function (card) {
+    if (!c.canExpand(card)) return;
+    c.openStacks[card.stack_key] = !c.openStacks[card.stack_key];
+  };
+
+  // Card click handler — navigates in single-card mode when
+  // card_click_url is set, otherwise expands the stack.
+  c.onCardClick = function (card) {
+    if (c.data.is_single_card) {
+      if (c.data.card_click_url) {
+        window.location.href = c.data.card_click_url;
+      }
+      return;
+    }
+    c.toggleStack(card);
+  };
+
+  c.onCardKey = function (card, $event) {
+    if (!$event) return;
+    // Enter / Space activate the tile like a button
+    if ($event.keyCode === 13 || $event.keyCode === 32) {
+      $event.preventDefault();
+      c.onCardClick(card);
     }
   };
-};]]></client_script>
+};
+]]></client_script>
         <controller_as>c</controller_as>
         <css>/* ── Base ───────────────────────────────────────── */
 .vcw {
@@ -113,10 +245,24 @@
 }
 
 /* ── Card grid ─────────────────────────────────── */
+/* The grid is a row of independent columns, filled round-robin by the
+   controller. A cell grid would stretch every card in a row to match the
+   tallest, so opening one stack padded out all of its neighbours; columns
+   confine the growth to the cards below the one that opened.
+   The gap is roomier than the tiles need so stacked tiles can cast their
+   offset plates without crowding the neighbour. */
 .vcw-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 16px;
+  display: flex;
+  align-items: flex-start;
+  gap: 22px;
+}
+
+.vcw-col {
+  flex: 1 1 0;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
 .vcw-card {
@@ -125,7 +271,7 @@
   overflow: visible;
   background: #fff;
   box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-  transition: transform 0.15s ease, opacity 0.15s ease;
+  transition: transform 0.15s ease, opacity 0.15s ease, box-shadow 0.15s ease;
 }
 
 .vcw-card:hover {
@@ -141,6 +287,98 @@
 .vcw-card--unowned:hover {
   opacity: 0.8;
   filter: grayscale(0.3);
+}
+
+/* ══════════════════════════════════════════════════
+   Stacked cards — one tile per card type, layered
+   deeper and lit brighter the more times it was earned.
+   Everything is painted with box-shadow so the deck
+   effect costs no extra nodes and no layout space.
+   ══════════════════════════════════════════════════ */
+.vcw-card--stack {
+  --vcw-accent: #2e90fa;
+  --vcw-glow: rgba(46,144,250,0.28);
+  --vcw-plate: #ffffff;
+  --vcw-edge: rgba(16,24,40,0.13);
+  box-shadow: var(--vcw-shadow);
+}
+
+/* The portal's accessibility stylesheet replaces box-shadow outright on any
+   focused [tabindex] element, which would flatten the deck. Hold the deck and
+   express focus with an outline instead (see .vcw-card--clickable:focus). */
+.vcw-card--stack:focus {
+  box-shadow: var(--vcw-shadow) !important;
+}
+
+/* x2 — one plate behind, cool blue */
+.vcw-stack--t1 {
+  --vcw-accent: #2e90fa;
+  --vcw-glow: rgba(46,144,250,0.30);
+  --vcw-shadow:
+    0 0 0 1px var(--vcw-accent),
+    4px 4px 0 -1px var(--vcw-plate),
+    4px 4px 0 0 var(--vcw-edge),
+    0 4px 14px var(--vcw-glow);
+}
+
+/* x3 — two plates, violet */
+.vcw-stack--t2 {
+  --vcw-accent: #7a5af8;
+  --vcw-glow: rgba(122,90,248,0.34);
+  --vcw-shadow:
+    0 0 0 1.5px var(--vcw-accent),
+    4px 4px 0 -1px var(--vcw-plate),
+    4px 4px 0 0 var(--vcw-edge),
+    8px 8px 0 -2px var(--vcw-plate),
+    8px 8px 0 -1px var(--vcw-edge),
+    0 6px 18px var(--vcw-glow);
+}
+
+/* x4–x5 — two plates, amber */
+.vcw-stack--t3 {
+  --vcw-accent: #f79009;
+  --vcw-glow: rgba(247,144,9,0.40);
+  --vcw-shadow:
+    0 0 0 2px var(--vcw-accent),
+    4px 4px 0 -1px var(--vcw-plate),
+    4px 4px 0 0 var(--vcw-edge),
+    8px 8px 0 -2px var(--vcw-plate),
+    8px 8px 0 -1px var(--vcw-edge),
+    0 8px 24px var(--vcw-glow);
+}
+
+/* x6+ — three plates, deep gold, strongest glow */
+.vcw-stack--t4 {
+  --vcw-accent: #dc6803;
+  --vcw-glow: rgba(220,104,3,0.50);
+  --vcw-shadow:
+    0 0 0 2.5px var(--vcw-accent),
+    4px 4px 0 -1px var(--vcw-plate),
+    4px 4px 0 0 var(--vcw-edge),
+    8px 8px 0 -2px var(--vcw-plate),
+    8px 8px 0 -1px var(--vcw-edge),
+    12px 12px 0 -3px var(--vcw-plate),
+    12px 12px 0 -2px var(--vcw-edge),
+    0 10px 30px var(--vcw-glow);
+}
+
+/* ── Repeat count chip ─────────────────────────── */
+.vcw-count {
+  position: absolute;
+  top: 8px;
+  left: 8px;
+  z-index: 3;
+  min-width: 26px;
+  padding: 3px 8px;
+  border-radius: 999px;
+  background: var(--vcw-accent, #1570ef);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  letter-spacing: 0.3px;
+  box-shadow: 0 1px 4px rgba(16,24,40,0.30), 0 0 0 2px rgba(255,255,255,0.85);
 }
 
 /* ── Ownership badges ──────────────────────────── */
@@ -173,6 +411,8 @@
   position: relative;
   width: 100%;
   background: #f5f6f7;
+  border-radius: 12px 12px 0 0;
+  overflow: hidden;
 }
 
 .vcw-img {
@@ -221,7 +461,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-top: 6px;
+  gap: 8px;
 }
 
 .vcw-sub {
@@ -246,6 +486,150 @@
   align-items: center;
   margin-top: 6px;
   gap: 6px;
+}
+
+/* ── Latest assignment summary (collapsed tile) ── */
+.vcw-latest {
+  margin-top: 6px;
+}
+
+.vcw-comment {
+  margin-top: 4px;
+  font-size: 11.5px;
+  line-height: 1.4;
+  color: #475467;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* ── Expand affordance ─────────────────────────── */
+.vcw-card--expandable {
+  cursor: pointer;
+}
+
+.vcw-card--clickable:focus,
+.vcw-expand:focus {
+  outline: 2px solid var(--vcw-accent, #1570ef);
+  outline-offset: 2px;
+}
+
+.vcw-expand {
+  width: 100%;
+  background: transparent;
+  border: 0;
+  border-top: 1px dashed #e4e7ec;
+  padding: 8px 0 0;
+  cursor: pointer;
+  text-align: left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 6px;
+  margin-top: 8px;
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  color: var(--vcw-accent, #1570ef);
+}
+
+.vcw-card--expandable:hover .vcw-expand {
+  opacity: 0.75;
+}
+
+/* ── Stack history (expanded) ──────────────────── */
+/* 0fr -&gt; 1fr animates to the content's natural height, so the cards below
+   this one in the column slide instead of jumping. Browsers that can't
+   interpolate the track simply snap open, which is still correct. */
+.vcw-histwrap {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.vcw-histwrap.is-open {
+  grid-template-rows: 1fr;
+}
+
+/* Padding and border live on .vcw-history, not here, so a closed stack
+   collapses to exactly nothing. */
+.vcw-histclip {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.vcw-history {
+  margin-top: 10px;
+  padding: 2px 0 2px 12px;
+  border-left: 2px solid var(--vcw-accent, #1570ef);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.vcw-histwrap.is-open .vcw-history {
+  opacity: 1;
+  transition-delay: 0.08s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .vcw-histwrap,
+  .vcw-history {
+    transition: none;
+  }
+}
+
+.vcw-hist-item {
+  position: relative;
+}
+
+.vcw-hist-item::before {
+  content: "";
+  position: absolute;
+  left: -17px;
+  top: 4px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--vcw-accent, #1570ef);
+  box-shadow: 0 0 0 2px #fff;
+}
+
+.vcw-hist-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+}
+
+.vcw-hist-by {
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #1d2939;
+}
+
+.vcw-hist-when {
+  font-size: 10.5px;
+  color: #98a2b3;
+  white-space: nowrap;
+}
+
+.vcw-hist-comment {
+  margin-top: 2px;
+  font-size: 11.5px;
+  line-height: 1.45;
+  color: #475467;
+}
+
+.vcw-hist-none {
+  margin-top: 2px;
+  font-size: 11px;
+  font-style: italic;
+  color: #98a2b3;
 }
 
 /* ── Info icon ─────────────────────────────────── */
@@ -309,6 +693,11 @@
 
 .vcw-card--clickable:hover {
   transform: translateY(-3px);
+}
+
+/* Plain (non-stacked) clickable tiles lift with a soft shadow; stacked
+   tiles keep their deck + glow so the intensity cue survives hover. */
+.vcw-card--clickable:not(.vcw-card--stack):hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
 }
 </css>
@@ -330,7 +719,15 @@
         <has_preview>true</has_preview>
         <id>user_cards</id>
         <internal>false</internal>
-        <link><![CDATA[function link(scope, element, attrs, controller) {  }]]></link>
+        <link><![CDATA[function link(scope, element, attrs, controller) {
+  // The controller sizes the card grid from the widget's own width, which is
+  // only knowable once the element exists — hand it over here.
+  var c = controller || scope.c;
+  if (c && c.bindElement) {
+    c.bindElement(element[0]);
+  }
+}
+]]></link>
         <name>User Cards</name>
         <option_schema>[{"displayValue":"Model Category","name":"all_model_categories","display_value_list":[],"section":"Data","label":"All Model Categories","type":"glide_list","value":"cmdb_model_category","ed":{"reference":"cmdb_model_category"}},{"hint":"Default view when widget loads: mine or all","name":"default_view_mode","section":"Behavior","default_value":"mine","label":"View Mode","type":"choice","choices":[{"label":"mine","value":"mine"},{"label":"all","value":"all"}]},{"hint":"Widget Title","name":"widget_title","section":"Presentation","default_value":"Recognition Cards","label":"Title","type":"string"},{"displayValue":"Model Category","hint":"Model Categories to show in user view","name":"user_model_categories","display_value_list":[],"section":"Data","label":"User Model Categories","type":"glide_list","value":"cmdb_model_category","ed":{"reference":"cmdb_model_category"}},{"hint":"Show the My Cards / All Cards toggle","name":"show_toggle","section":"Behavior","default_value":"true","label":"Show toggle","type":"boolean"},{"hint":"Max cards to display (0 = no limit, 1 = latest only)","name":"card_limit","section":"Behavior","default_value":"0","label":"Card Limit","type":"integer"},{"hint":"URL to navigate when card is clicked (used with card_limit=1)","name":"card_click_url","section":"Behavior","default_value":"/esc?id=hri_user_profile","label":"Card Click URL","type":"string"}]</option_schema>
         <public>false</public>
@@ -381,6 +778,53 @@
   }
 
   // ══════════════════════════════════════════════════════════
+  // Stacking helpers
+  //
+  // A "stack" is every assignment of the same card type (cmdb_model)
+  // held by the target user, collapsed into a single tile. The tile
+  // surfaces the latest assignment; the whole run lives in .history.
+  // ══════════════════════════════════════════════════════════
+
+  // Visual intensity tier — grows with how many times the card was earned.
+  function stackTier(count) {
+    if (count <= 1) return 0;
+    if (count === 2) return 1;
+    if (count === 3) return 2;
+    if (count <= 5) return 3;
+    return 4;
+  }
+
+  // Build one history entry from the asset record on the cursor.
+  function assignmentEntry(assetGr) {
+    return {
+      asset_sys_id: assetGr.getUniqueValue(),
+      asset_tag: assetGr.getDisplayValue("asset_tag"),
+      supported_by: assetGr.getDisplayValue("supported_by"),
+      assigned_date: assetGr.getDisplayValue("assigned"),
+      comments: assetGr.getDisplayValue("comments")
+    };
+  }
+
+  // Promote the latest assignment onto the tile and stamp the stack meta.
+  // history is expected newest-first (the queries order by assigned desc).
+  function decorateStack(card) {
+    var history = card.history || [];
+    var latest = history[0] || {};
+
+    card.count = history.length;
+    card.is_stack = history.length > 1;
+    card.stack_tier = stackTier(history.length);
+
+    card.asset_sys_id = latest.asset_sys_id || "";
+    card.asset_tag = latest.asset_tag || "";
+    card.supported_by = latest.supported_by || "";
+    card.assigned_date = latest.assigned_date || "";
+    card.comments = latest.comments || "";
+
+    return card;
+  }
+
+  // ══════════════════════════════════════════════════════════
   // Get ALL cards from cmdb_model, flagged with ownership
   // ══════════════════════════════════════════════════════════
   function getAllCardsWithOwnership() {
@@ -389,9 +833,8 @@
       var categoryId = allCategories;
       var cards = [];
 
-      // Step 1: Build a Set of model sys_ids the user owns
-      var ownedModelIds = {};
-      var ownedAssetData = {}; // model_sys_id → asset details
+      // Step 1: Collect every assignment the user holds, keyed by model
+      var ownedHistory = {}; // model_sys_id → [assignment, …] newest-first
 
       var assetGr = new GlideRecord("alm_asset");
       assetGr.addQuery("assigned_to", currentUser);
@@ -402,18 +845,18 @@
         mj.addCondition("cmdb_model_category", "IN", categoryId);
       }
 
+      // Newest first — "latest" and history order both rely on this.
+      assetGr.orderByDesc("assigned");
+      assetGr.orderByDesc("sys_created_on");
       assetGr.query();
 
       while (assetGr.next()) {
         var modelId = assetGr.getValue("model");
-        ownedModelIds[modelId] = true;
-        ownedAssetData[modelId] = {
-          asset_sys_id: assetGr.getUniqueValue(),
-          asset_tag: assetGr.getDisplayValue("asset_tag"),
-          supported_by: assetGr.getDisplayValue("supported_by"),
-          assigned_date: assetGr.getDisplayValue("assigned"),
-          comments: assetGr.getDisplayValue("comments")
-        };
+        if (!modelId)
+          continue;
+        if (!ownedHistory[modelId])
+          ownedHistory[modelId] = [];
+        ownedHistory[modelId].push(assignmentEntry(assetGr));
       }
 
       // Step 2: Query ALL models in configured categories
@@ -435,11 +878,12 @@
 
       while (modelGr.next()) {
         var mSysId = modelGr.getUniqueValue();
-        var isOwned = ownedModelIds[mSysId] === true;
-        var assetInfo = ownedAssetData[mSysId] || {};
+        var history = ownedHistory[mSysId] || [];
+        var isOwned = history.length > 0;
 
-				cards.push({
+				cards.push(decorateStack({
           sys_id: mSysId,
+          stack_key: mSysId,
           model_name: modelGr.getDisplayValue("name"),
           model_description: modelGr.getDisplayValue("short_description"),
           model_picture: modelGr.getValue("picture"),
@@ -447,15 +891,11 @@
           model_sys_id: mSysId,
           // Ownership flags
           owned: isOwned,
-          // Asset-level data (only populated if owned)
-          asset_sys_id: assetInfo.asset_sys_id || "",
-          asset_tag: assetInfo.asset_tag || "",
-          supported_by: assetInfo.supported_by || "",
-          assigned_date: assetInfo.assigned_date || "",
-          comments: assetInfo.comments || "",
+          // Every time this card type was given to the user (newest first)
+          history: history,
           // Tooltip: "All Cards" view shows product model comments
           tooltip_comments: modelGr.getDisplayValue("comments") || modelGr.getDisplayValue("short_description") || ""
-        });
+        }));
       }
 
       return cards;
@@ -466,13 +906,14 @@
   }
 
   // ══════════════════════════════════════════════════════════
-  // Get USER's owned cards (via alm_asset) — optimised
+  // Get USER's owned cards (via alm_asset) — grouped into stacks
   // ══════════════════════════════════════════════════════════
   function getUserVisualCards() {
     try {
       var currentUser = targetUser;
       var categoryId = userCategories;
       var cards = [];
+      var byStack = {}; // stack_key → card
 
       var assetGr = new GlideRecord("alm_asset");
       assetGr.addQuery("assigned_to", currentUser);
@@ -483,34 +924,52 @@
         modelJoin.addCondition("cmdb_model_category", "IN", categoryId);
       }
 
-      // Sort by assignment date — newest first
+      // Sort by assignment date — newest first. Grouping below relies on
+      // this ordering for both stack order and "latest assignment".
       assetGr.orderByDesc("assigned");
+      assetGr.orderByDesc("sys_created_on");
 
-      // Apply card limit at query level if set
-      if (cardLimit > 0) {
-        assetGr.setLimit(cardLimit);
-      }
-
+      // NOTE: no query-level limit any more — the limit applies to stacks,
+      // which can only be counted once every assignment has been read.
       assetGr.query();
 
       while (assetGr.next()) {
-        // Dot-walk instead of inner GlideRecord.get() — eliminates N+1
-        cards.push({
-          sys_id: assetGr.getUniqueValue(),
-          model_name: assetGr.getDisplayValue("model.name"),
-          model_description: assetGr.getDisplayValue("model.short_description"),
-          model_picture: assetGr.model.picture + "",  // raw sys_id value
-          model_category: assetGr.getDisplayValue("model.cmdb_model_category"),
-          model_sys_id: assetGr.getValue("model"),
-          owned: true,
-          asset_sys_id: assetGr.getUniqueValue(),
-          asset_tag: assetGr.getDisplayValue("asset_tag"),
-          supported_by: assetGr.getDisplayValue("supported_by"),
-          assigned_date: assetGr.getDisplayValue("assigned"),
-          comments: assetGr.getDisplayValue("comments"),
-          // Tooltip: "My Cards" view shows asset comments
-          tooltip_comments: assetGr.getDisplayValue("comments") || ""
-        });
+        var entry = assignmentEntry(assetGr);
+        var modelId = assetGr.getValue("model") || "";
+        // Assets with no model can't be grouped — keep them standalone.
+        var stackKey = modelId || ("asset:" + entry.asset_sys_id);
+
+        var card = byStack[stackKey];
+        if (!card) {
+          // Dot-walk instead of inner GlideRecord.get() — eliminates N+1
+          card = {
+            sys_id: entry.asset_sys_id,
+            stack_key: stackKey,
+            model_name: assetGr.getDisplayValue("model.name"),
+            model_description: assetGr.getDisplayValue("model.short_description"),
+            model_picture: assetGr.model.picture + "",  // raw sys_id value
+            model_category: assetGr.getDisplayValue("model.cmdb_model_category"),
+            model_sys_id: modelId,
+            owned: true,
+            history: [],
+            // Tooltip: "My Cards" view shows asset comments
+            tooltip_comments: entry.comments || ""
+          };
+          byStack[stackKey] = card;
+          cards.push(card);
+        }
+
+        card.history.push(entry);
+      }
+
+      for (var i = 0; i < cards.length; i++) {
+        decorateStack(cards[i]);
+      }
+
+      // Apply the card limit to stacks, so a single-card view still knows
+      // the full count and history of the card type it is showing.
+      if (cardLimit > 0 && cards.length > cardLimit) {
+        cards = cards.slice(0, cardLimit);
       }
 
       return cards;
@@ -519,20 +978,21 @@
       return [];
     }
   }
-})();]]></script>
+})();
+]]></script>
         <servicenow>false</servicenow>
         <sys_class_name>sp_widget</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-13 22:36:34</sys_created_on>
         <sys_id>8391d6213b0bb210ebe9c15765e45a7d</sys_id>
-        <sys_mod_count>70</sys_mod_count>
+        <sys_mod_count>71</sys_mod_count>
         <sys_name>User Cards</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name>sp_widget_8391d6213b0bb210ebe9c15765e45a7d</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-19 11:57:37</sys_updated_on>
+        <sys_updated_on>2026-08-25 23:31:39</sys_updated_on>
         <template><![CDATA[<div class="vcw">
 
 	<!-- ── Header with toggle ────────────────────────── -->
@@ -571,19 +1031,30 @@
     </span>
   </div>
 
-  <!-- ── Card grid ─────────────────────────────────── -->
+  <!-- ── Card grid — independent vertical columns, so expanding one
+       stack only moves the cards below it in its own column ───── -->
   <div class="vcw-grid" ng-if="!c.data.loading && c.data.userCards.length > 0">
+   <div class="vcw-col" ng-repeat="col in c.columns track by $index">
 	<div class="vcw-card"
-         ng-repeat="card in c.data.userCards track by card.sys_id"
-         ng-class="{'vcw-card--unowned': !card.owned && c.viewMode === 'all', 'vcw-card--clickable': c.data.is_single_card && c.data.card_click_url}"
-         ng-click="c.data.is_single_card && c.onCardClick()">
+         ng-repeat="card in col track by card.stack_key"
+         ng-class="[
+           card.is_stack ? 'vcw-card--stack vcw-stack--t' + card.stack_tier : '',
+           (!card.owned && c.viewMode === 'all') ? 'vcw-card--unowned' : '',
+           (c.data.is_single_card && c.data.card_click_url) ? 'vcw-card--clickable' : '',
+           c.data.is_single_card ? 'vcw-card--single' : '',
+           c.canExpand(card) ? 'vcw-card--expandable' : '',
+           c.isOpen(card) ? 'vcw-card--open' : ''
+         ]"
+         ng-click="c.onCardClick(card)"
+         ng-keydown="c.onCardKey(card, $event)"
+         ng-attr-tabindex="{{ (c.data.is_single_card && c.data.card_click_url) ? 0 : undefined }}"
+         ng-attr-role="{{ (c.data.is_single_card && c.data.card_click_url) ? 'link' : undefined }}">
 
-      <!-- Ownership badge (All view only) -->
-      <!--
-      <div class="vcw-badge vcw-badge--owned"
-           ng-if="c.viewMode === 'all' && card.owned">
-        <i class="fa fa-check-circle"></i> Owned
-      </div> -->
+      <!-- Repeat count — how many times this card type was received -->
+      <div class="vcw-count"
+           ng-if="card.count > 1"
+           title="Received {{card.count}} times">&times;{{card.count}}</div>
+
       <div class="vcw-badge vcw-badge--locked"
            ng-if="c.viewMode === 'all' && !card.owned">
         <i class="fa fa-lock"></i> Not Yet
@@ -602,38 +1073,70 @@
         </div>
       </div>
 
-			<!-- Card metadata (hidden in single card mode) -->
-      <div class="vcw-meta" ng-if="!c.data.is_single_card">
-        <!--
-        <div class="vcw-name" title="{{::card.model_name}}">
-          {{::card.model_name}}
-        </div>
-        <div class="vcw-desc" ng-if="card.model_description">
-          {{::card.model_description}}
-        </div> -->
+			<!-- Card metadata -->
+      <div class="vcw-meta">
         <div class="vcw-category-row">
           <div class="vcw-category" ng-if="card.model_category">
             {{::card.model_category}}
           </div>
-          <div class="vcw-info" ng-if="card.tooltip_comments">
+          <div class="vcw-info" ng-if="card.tooltip_comments && !card.comments">
             <i class="fa fa-info-circle"></i>
             <div class="vcw-tooltip">{{::card.tooltip_comments}}</div>
           </div>
         </div>
-        <div class="vcw-source">
-          <div class="vcw-sub" ng-if="card.supported_by">
-            <i class="fa fa-user-circle-o"></i> {{::card.supported_by}}
+
+        <!-- Latest assignment at a glance (both views) -->
+        <div class="vcw-latest" ng-if="card.owned">
+          <div class="vcw-source">
+            <div class="vcw-sub" ng-if="card.supported_by">
+              <i class="fa fa-user-circle-o"></i> {{card.supported_by}}
+            </div>
+            <div class="vcw-sub" ng-if="card.assigned_date">
+              {{card.assigned_date}}
+            </div>
           </div>
-          <div class="vcw-sub" ng-if="card.assigned_date">
-            {{::card.assigned_date}}
-          </div>
+          <div class="vcw-comment" ng-if="card.comments">{{card.comments}}</div>
         </div>
 
+        <!-- Expand affordance — list view only -->
+        <button type="button" class="vcw-expand"
+                ng-if="c.canExpand(card)"
+                ng-click="c.toggleStack(card); $event.stopPropagation()"
+                aria-expanded="{{ c.isOpen(card) ? 'true' : 'false' }}">
+          <span ng-if="!c.isOpen(card)">Show all {{card.count}}</span>
+          <span ng-if="c.isOpen(card)">Hide history</span>
+          <i class="fa" ng-class="c.isOpen(card) ? 'fa-chevron-up' : 'fa-chevron-down'"></i>
+        </button>
+
+        <!-- Full history for the stack. Kept in the DOM and collapsed to a
+             zero-height row so opening it animates, letting the cards below
+             slide down rather than jump. -->
+        <div class="vcw-histwrap"
+             ng-if="c.canExpand(card)"
+             ng-class="{'is-open': c.isOpen(card)}">
+          <div class="vcw-histclip">
+            <div class="vcw-history">
+              <div class="vcw-hist-item"
+                   ng-repeat="h in card.history track by h.asset_sys_id">
+                <div class="vcw-hist-top">
+                  <span class="vcw-hist-by">
+                    <i class="fa fa-user-circle-o"></i> {{h.supported_by || 'Unknown'}}
+                  </span>
+                  <span class="vcw-hist-when">{{h.assigned_date}}</span>
+                </div>
+                <div class="vcw-hist-comment" ng-if="h.comments">{{h.comments}}</div>
+                <div class="vcw-hist-none" ng-if="!h.comments">No comment left</div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+   </div>
   </div>
 
-</div>]]></template>
+</div>
+]]></template>
     </sp_widget>
     <sys_es_latest_script action="INSERT_OR_UPDATE">
         <id>8391d6213b0bb210ebe9c15765e45a7d</id>

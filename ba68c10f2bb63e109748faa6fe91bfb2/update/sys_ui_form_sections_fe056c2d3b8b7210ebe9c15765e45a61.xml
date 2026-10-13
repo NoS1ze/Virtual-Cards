@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">fe056c2d3b8b7210ebe9c15765e45a61</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">c3056c2d3b8b7210ebe9c15765e45a86</sys_ui_section>
+            <sys_ui_section display_value="">c3056c2d3b8b7210ebe9c15765e45a86</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:15</sys_updated_on>
         </sys_ui_form_section>
@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">fe056c2d3b8b7210ebe9c15765e45a61</sys_ui_form>
-            <sys_ui_section caption="General" display_value="General" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">07056c2d3b8b7210ebe9c15765e45a90</sys_ui_section>
+            <sys_ui_section display_value="">07056c2d3b8b7210ebe9c15765e45a90</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:15</sys_updated_on>
         </sys_ui_form_section>
@@ -38,7 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">fe056c2d3b8b7210ebe9c15765e45a61</sys_ui_form>
-            <sys_ui_section caption="Financial" display_value="Financial" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">c3056c2d3b8b7210ebe9c15765e45a71</sys_ui_section>
+            <sys_ui_section display_value="">c3056c2d3b8b7210ebe9c15765e45a71</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:15</sys_updated_on>
         </sys_ui_form_section>
@@ -52,7 +52,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">fe056c2d3b8b7210ebe9c15765e45a61</sys_ui_form>
-            <sys_ui_section caption="Contracts" display_value="Contracts" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">83056c2d3b8b7210ebe9c15765e45a7c</sys_ui_section>
+            <sys_ui_section display_value="">83056c2d3b8b7210ebe9c15765e45a7c</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:15</sys_updated_on>
         </sys_ui_form_section>
@@ -66,7 +66,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">fe056c2d3b8b7210ebe9c15765e45a61</sys_ui_form>
-            <sys_ui_section caption="Activities" display_value="Activities" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">87056c2d3b8b7210ebe9c15765e45ab0</sys_ui_section>
+            <sys_ui_section display_value="">87056c2d3b8b7210ebe9c15765e45ab0</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:15</sys_updated_on>
         </sys_ui_form_section>
@@ -80,7 +80,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">fe056c2d3b8b7210ebe9c15765e45a61</sys_ui_form>
-            <sys_ui_section caption="Depreciation" display_value="Depreciation" name="alm_ai_system_digital_asset" sys_domain="global" view="Default view">f6056c2d3b8b7210ebe9c15765e45a65</sys_ui_section>
+            <sys_ui_section display_value="">f6056c2d3b8b7210ebe9c15765e45a65</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:15</sys_updated_on>
         </sys_ui_form_section>

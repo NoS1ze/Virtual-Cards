@@ -30,15 +30,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>8197d9b02b93b6509748faa6fe91bf13</sys_id>
-        <sys_mod_count>102</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Create Card Response - OpenAI</sys_name>
         <sys_overrides/>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_8197d9b02b93b6509748faa6fe91bf13</sys_update_name>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-25 11:19:52</sys_updated_on>
+        <sys_updated_by>sdk.user</sys_updated_by>
+        <sys_updated_on>2026-08-26 01:11:13</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -150,18 +150,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=6caf59302bd3b6509748faa6fe91bf5a"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>6caf59302bd3b6509748faa6fe91bf5a</id>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-23 21:18:28</sys_created_on>
-        <sys_id>6caf59302bd3b6509748faa6fe91bf6e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-23 21:18:28</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>category</field>
         <id>6caf59302bd3b6509748faa6fe91bf5a</id>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
@@ -172,18 +160,6 @@
         <sys_updated_on>2026-02-24 00:35:10</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_6caf59302bd3b6509748faa6fe91bf5a</table>
         <value>{{action.category}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>6caf59302bd3b6509748faa6fe91bf5a</id>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-23 21:18:28</sys_created_on>
-        <sys_id>60af59302bd3b6509748faa6fe91bf6f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-23 21:18:28</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>story</field>
@@ -249,6 +225,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -332,6 +309,7 @@
         <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -416,6 +394,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -499,6 +478,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -582,6 +562,7 @@
         <order>6</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -665,6 +646,7 @@
         <order>3</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -748,6 +730,7 @@
         <order>5</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -831,6 +814,7 @@
         <order>4</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -880,11 +864,11 @@
         <sys_created_on>2026-02-23 21:18:28</sys_created_on>
         <sys_id>20af59302bd3b6509748faa6fe91bf64</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Logo</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_6caf59302bd3b6509748faa6fe91bf5a_logo_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 21:18:28</sys_updated_on>
         <url/>
@@ -903,11 +887,11 @@
         <sys_created_on>2026-02-25 11:19:25</sys_created_on>
         <sys_id>70b969dd3b5f7a50ebe9c15765e45a63</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Model</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_6caf59302bd3b6509748faa6fe91bf5a_model_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-25 11:19:25</sys_updated_on>
         <url/>
@@ -926,11 +910,11 @@
         <sys_created_on>2026-02-25 11:08:07</sys_created_on>
         <sys_id>db17a9d53b5f7a50ebe9c15765e45a3f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Sanitised Scene</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_6caf59302bd3b6509748faa6fe91bf5a_sanitised_scene_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-25 11:08:07</sys_updated_on>
         <url/>
@@ -949,11 +933,11 @@
         <sys_created_on>2026-02-23 21:18:28</sys_created_on>
         <sys_id>e0af59302bd3b6509748faa6fe91bf68</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Characters</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_6caf59302bd3b6509748faa6fe91bf5a_characters_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 21:18:28</sys_updated_on>
         <url/>
@@ -972,11 +956,11 @@
         <sys_created_on>2026-02-23 21:53:06</sys_created_on>
         <sys_id>ef8721b43b93b650ebe9c15765e45a5a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Instruction</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_6caf59302bd3b6509748faa6fe91bf5a_instruction_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 21:53:06</sys_updated_on>
         <url/>
@@ -995,11 +979,11 @@
         <sys_created_on>2026-02-23 23:15:43</sys_created_on>
         <sys_id>f57a39783b17b650ebe9c15765e45ac9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>References</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_6caf59302bd3b6509748faa6fe91bf5a_references_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:15:43</sys_updated_on>
         <url/>
@@ -1083,18 +1067,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=6d97d9b02b93b6509748faa6fe91bf88"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>6d97d9b02b93b6509748faa6fe91bf88</id>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-23 20:43:18</sys_created_on>
-        <sys_id>e197d9b02b93b6509748faa6fe91bf9f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-23 20:43:18</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>body</field>
         <id>6d97d9b02b93b6509748faa6fe91bf88</id>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
@@ -1105,18 +1077,6 @@
         <sys_updated_on>2026-02-23 20:43:18</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_6d97d9b02b93b6509748faa6fe91bf88</table>
         <value>{{step[1c4a6ed0-f4dc-4674-b1a3-cacdcdcc639b].response_body}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>6d97d9b02b93b6509748faa6fe91bf88</id>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-23 20:43:18</sys_created_on>
-        <sys_id>e597d9b02b93b6509748faa6fe91bf9f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-23 20:43:18</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>target_sys_id</field>
@@ -1194,6 +1154,7 @@
         <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1277,6 +1238,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1361,6 +1323,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1444,6 +1407,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -1493,11 +1457,11 @@
         <sys_created_on>2026-02-23 21:53:43</sys_created_on>
         <sys_id>3cb765b43b93b650ebe9c15765e45a40</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>attachment_sys_id</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_6d97d9b02b93b6509748faa6fe91bf88_attachment_sys_id_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 21:53:43</sys_updated_on>
         <url/>
@@ -1516,11 +1480,11 @@
         <sys_created_on>2026-02-23 22:21:38</sys_created_on>
         <sys_id>fd1ee9703bd3b650ebe9c15765e45a57</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>success</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_6d97d9b02b93b6509748faa6fe91bf88_success_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 22:21:38</sys_updated_on>
         <url/>
@@ -1960,6 +1924,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -2035,11 +2000,11 @@
         <sys_created_on>2026-02-23 20:43:18</sys_created_on>
         <sys_id>9d97d9b02b93b6509748faa6fe91bf6f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Credential Value</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_d597d9b02b93b6509748faa6fe91bf5f_sn_auth_token_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 20:43:18</sys_updated_on>
         <url/>
@@ -2094,6 +2059,7 @@
         <order>3</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -2178,6 +2144,7 @@
         <order>4</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -2262,6 +2229,7 @@
         <order>6</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -2346,6 +2314,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -2430,6 +2399,7 @@
         <order>5</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -2514,6 +2484,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -2601,6 +2572,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -2711,6 +2683,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -2807,11 +2780,11 @@
         <sys_created_on>2026-02-23 21:53:05</sys_created_on>
         <sys_id>1787ed743b93b650ebe9c15765e45ad8</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Target Sys_id</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_8197d9b02b93b6509748faa6fe91bf13_target_sys_id_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 21:53:05</sys_updated_on>
         <url/>
@@ -2830,11 +2803,11 @@
         <sys_created_on>2026-02-23 20:58:21</sys_created_on>
         <sys_id>310b1d382b93b6509748faa6fe91bf89</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Card Description</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_8197d9b02b93b6509748faa6fe91bf13_card_description_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 20:58:21</sys_updated_on>
         <url/>
@@ -2853,11 +2826,11 @@
         <sys_created_on>2026-02-23 20:58:21</sys_created_on>
         <sys_id>350b1d382b93b6509748faa6fe91bf93</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Main Colour</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_8197d9b02b93b6509748faa6fe91bf13_main_colour_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 20:58:21</sys_updated_on>
         <url/>
@@ -2876,11 +2849,11 @@
         <sys_created_on>2026-02-23 20:58:21</sys_created_on>
         <sys_id>b10b1d382b93b6509748faa6fe91bf8e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Visual Story</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_8197d9b02b93b6509748faa6fe91bf13_visual_story_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 20:58:21</sys_updated_on>
         <url/>
@@ -2899,11 +2872,11 @@
         <sys_created_on>2026-02-23 20:58:21</sys_created_on>
         <sys_id>bd0b1d382b93b6509748faa6fe91bf83</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Card Name</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_8197d9b02b93b6509748faa6fe91bf13_card_name_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 20:58:21</sys_updated_on>
         <url/>
@@ -2922,11 +2895,11 @@
         <sys_created_on>2026-02-24 00:35:09</sys_created_on>
         <sys_id>edac4afc3b97b650ebe9c15765e45a26</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>category</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_8197d9b02b93b6509748faa6fe91bf13_category_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-24 00:35:09</sys_updated_on>
         <url/>
@@ -2946,11 +2919,11 @@
         <sys_created_on>2026-02-23 20:43:19</sys_created_on>
         <sys_id>2597d9b02b93b6509748faa6fe91bfda</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_8197d9b02b93b6509748faa6fe91bf13___action_status___en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 20:43:19</sys_updated_on>
         <url/>
@@ -2969,11 +2942,11 @@
         <sys_created_on>2026-02-23 20:43:19</sys_created_on>
         <sys_id>a597d9b02b93b6509748faa6fe91bfe2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_8197d9b02b93b6509748faa6fe91bf13___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 20:43:19</sys_updated_on>
         <url/>
@@ -3143,18 +3116,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=2edefd703b57b650ebe9c15765e45a4f"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>2edefd703b57b650ebe9c15765e45a4f</id>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-23 23:34:53</sys_created_on>
-        <sys_id>f6defd703b57b650ebe9c15765e45a68</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-23 23:34:53</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>category</field>
         <id>2edefd703b57b650ebe9c15765e45a4f</id>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
@@ -3165,18 +3126,6 @@
         <sys_updated_on>2026-02-24 00:35:27</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_2edefd703b57b650ebe9c15765e45a4f</table>
         <value>{{action.category}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>2edefd703b57b650ebe9c15765e45a4f</id>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-23 23:34:53</sys_created_on>
-        <sys_id>fadefd703b57b650ebe9c15765e45a68</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-23 23:34:53</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>story</field>
@@ -3242,6 +3191,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -3325,6 +3275,7 @@
         <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -3409,6 +3360,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -3492,6 +3444,7 @@
         <order>3</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -3575,6 +3528,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -3658,6 +3612,7 @@
         <order>4</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -3741,6 +3696,7 @@
         <order>6</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -3824,6 +3780,7 @@
         <order>5</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -3873,11 +3830,11 @@
         <sys_created_on>2026-02-25 11:19:51</sys_created_on>
         <sys_id>47c9eddd3b5f7a50ebe9c15765e45a23</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Model</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_2edefd703b57b650ebe9c15765e45a4f_model_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-25 11:19:51</sys_updated_on>
         <url/>
@@ -3896,11 +3853,11 @@
         <sys_created_on>2026-02-23 23:34:53</sys_created_on>
         <sys_id>66defd703b57b650ebe9c15765e45a57</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Logo</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_2edefd703b57b650ebe9c15765e45a4f_logo_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:53</sys_updated_on>
         <url/>
@@ -3919,11 +3876,11 @@
         <sys_created_on>2026-02-23 23:34:53</sys_created_on>
         <sys_id>7edefd703b57b650ebe9c15765e45a5a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Characters</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_2edefd703b57b650ebe9c15765e45a4f_characters_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:53</sys_updated_on>
         <url/>
@@ -3942,11 +3899,11 @@
         <sys_created_on>2026-02-25 11:09:30</sys_created_on>
         <sys_id>ab6769193b5f7a50ebe9c15765e45a71</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Sanitised Scene</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_2edefd703b57b650ebe9c15765e45a4f_sanitised_scene_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-25 11:09:30</sys_updated_on>
         <url/>
@@ -3965,11 +3922,11 @@
         <sys_created_on>2026-02-23 23:34:53</sys_created_on>
         <sys_id>b6defd703b57b650ebe9c15765e45a5e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Instruction</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_2edefd703b57b650ebe9c15765e45a4f_instruction_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:53</sys_updated_on>
         <url/>
@@ -3988,11 +3945,11 @@
         <sys_created_on>2026-02-23 23:34:53</sys_created_on>
         <sys_id>fedefd703b57b650ebe9c15765e45a61</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>References</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_2edefd703b57b650ebe9c15765e45a4f_references_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:53</sys_updated_on>
         <url/>
@@ -4021,20 +3978,6 @@
         <sys_updated_on>2026-02-25 11:19:51</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3edefd703b57b650ebe9c15765e45a6b"/>
-    <sys_variable_value action="INSERT_OR_UPDATE">
-        <document>sys_hub_step_instance</document>
-        <document_key>3edefd703b57b650ebe9c15765e45a6b</document_key>
-        <order>100</order>
-        <sys_class_name>sys_variable_value</sys_class_name>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-23 23:34:54</sys_created_on>
-        <sys_id>fadefd703b57b650ebe9c15765e45a91</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-23 23:34:54</sys_updated_on>
-        <value>1</value>
-        <variable display_value="Honor Duplicate Headers">15288f755bd24110ab933520b881c713</variable>
-    </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
         <document>sys_hub_step_instance</document>
         <document_key>3edefd703b57b650ebe9c15765e45a6b</document_key>
@@ -4188,6 +4131,20 @@
         <sys_updated_on>2026-02-23 23:34:54</sys_updated_on>
         <value/>
         <variable display_value="Connection Timeout">7a59009bc7522010820469467ec260c0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>3edefd703b57b650ebe9c15765e45a6b</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-23 23:34:54</sys_created_on>
+        <sys_id>fadefd703b57b650ebe9c15765e45a91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-02-23 23:34:54</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Headers">15288f755bd24110ab933520b881c713</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_3edefd703b57b650ebe9c15765e45a6b^id=3edefd703b57b650ebe9c15765e45a6b"/>
     <sys_element_mapping action="delete_multiple" query="id=3edefd703b57b650ebe9c15765e45a6b"/>
@@ -4432,6 +4389,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -4507,11 +4465,11 @@
         <sys_created_on>2026-02-23 23:34:54</sys_created_on>
         <sys_id>7adefd703b57b650ebe9c15765e45a83</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Credential Value</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_3edefd703b57b650ebe9c15765e45a6b_sn_auth_token_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:54</sys_updated_on>
         <url/>
@@ -4595,18 +4553,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=bedefd703b57b650ebe9c15765e45a98"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>bedefd703b57b650ebe9c15765e45a98</id>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-23 23:34:54</sys_created_on>
-        <sys_id>8fdefd703b57b650ebe9c15765e45ab2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-23 23:34:54</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>body</field>
         <id>bedefd703b57b650ebe9c15765e45a98</id>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
@@ -4617,18 +4563,6 @@
         <sys_updated_on>2026-02-23 23:34:54</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_bedefd703b57b650ebe9c15765e45a98</table>
         <value>{{step[1c4a6ed0-f4dc-4674-b1a3-cacdcdcc639b].response_body}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>bedefd703b57b650ebe9c15765e45a98</id>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-23 23:34:54</sys_created_on>
-        <sys_id>83defd703b57b650ebe9c15765e45ab3</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-23 23:34:54</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>target_sys_id</field>
@@ -4694,6 +4628,7 @@
         <order>100</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -4777,6 +4712,7 @@
         <order>0</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -4861,6 +4797,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -4944,6 +4881,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -4993,11 +4931,11 @@
         <sys_created_on>2026-02-23 23:34:54</sys_created_on>
         <sys_id>43defd703b57b650ebe9c15765e45aa8</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>attachment_sys_id</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_bedefd703b57b650ebe9c15765e45a98_attachment_sys_id_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:54</sys_updated_on>
         <url/>
@@ -5016,11 +4954,11 @@
         <sys_created_on>2026-02-23 23:34:54</sys_created_on>
         <sys_id>8bdefd703b57b650ebe9c15765e45aab</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>success</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_bedefd703b57b650ebe9c15765e45a98_success_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:54</sys_updated_on>
         <url/>
@@ -5075,6 +5013,7 @@
         <order>6</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -5159,6 +5098,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -5243,6 +5183,7 @@
         <order>3</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -5327,6 +5268,7 @@
         <order>5</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -5411,6 +5353,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -5495,6 +5438,7 @@
         <order>4</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -5582,6 +5526,7 @@
         <order>1</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -5669,6 +5614,7 @@
         <order>2</order>
         <primary>false</primary>
         <read_only>false</read_only>
+        <read_only_option/>
         <read_roles/>
         <reference/>
         <reference_cascade_rule/>
@@ -5765,11 +5711,11 @@
         <sys_created_on>2026-02-23 23:34:52</sys_created_on>
         <sys_id>a6defd703b57b650ebe9c15765e45a2d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Card Description</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aadefd703b57b650ebe9c15765e45a14_card_description_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:52</sys_updated_on>
         <url/>
@@ -5788,11 +5734,11 @@
         <sys_created_on>2026-02-23 23:34:52</sys_created_on>
         <sys_id>a6defd703b57b650ebe9c15765e45a36</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Target Sys_id</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aadefd703b57b650ebe9c15765e45a14_target_sys_id_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:52</sys_updated_on>
         <url/>
@@ -5811,11 +5757,11 @@
         <sys_created_on>2026-02-23 23:34:52</sys_created_on>
         <sys_id>aedefd703b57b650ebe9c15765e45a28</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Card Name</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aadefd703b57b650ebe9c15765e45a14_card_name_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:52</sys_updated_on>
         <url/>
@@ -5834,11 +5780,11 @@
         <sys_created_on>2026-02-23 23:34:52</sys_created_on>
         <sys_id>aedefd703b57b650ebe9c15765e45a31</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Visual Story</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aadefd703b57b650ebe9c15765e45a14_visual_story_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:52</sys_updated_on>
         <url/>
@@ -5857,11 +5803,11 @@
         <sys_created_on>2026-02-23 23:34:53</sys_created_on>
         <sys_id>aedefd703b57b650ebe9c15765e45a3a</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Main Colour</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aadefd703b57b650ebe9c15765e45a14_main_colour_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:53</sys_updated_on>
         <url/>
@@ -5880,11 +5826,11 @@
         <sys_created_on>2026-02-24 00:35:26</sys_created_on>
         <sys_id>f1bc0efc3b97b650ebe9c15765e45a53</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>category</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aadefd703b57b650ebe9c15765e45a14_category_en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-24 00:35:26</sys_updated_on>
         <url/>
@@ -5904,11 +5850,11 @@
         <sys_created_on>2026-02-23 23:34:55</sys_created_on>
         <sys_id>07defd703b57b650ebe9c15765e45abc</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_aadefd703b57b650ebe9c15765e45a14___action_status___en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:55</sys_updated_on>
         <url/>
@@ -5927,11 +5873,11 @@
         <sys_created_on>2026-02-23 23:34:55</sys_created_on>
         <sys_id>8fdefd703b57b650ebe9c15765e45acf</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_aadefd703b57b650ebe9c15765e45a14___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:34:55</sys_updated_on>
         <url/>

@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">e2052c2d3b8b7210ebe9c15765e45a07</sys_ui_form>
-            <sys_ui_section caption="Asset Details" display_value="Asset Details" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">32056c2d3b8b7210ebe9c15765e45a3f</sys_ui_section>
+            <sys_ui_section display_value="">32056c2d3b8b7210ebe9c15765e45a3f</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:14</sys_updated_on>
         </sys_ui_form_section>
@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">e2052c2d3b8b7210ebe9c15765e45a07</sys_ui_form>
-            <sys_ui_section caption="Financial" display_value="Financial" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">f2056c2d3b8b7210ebe9c15765e45a33</sys_ui_section>
+            <sys_ui_section display_value="">f2056c2d3b8b7210ebe9c15765e45a33</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:14</sys_updated_on>
         </sys_ui_form_section>
@@ -38,7 +38,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">e2052c2d3b8b7210ebe9c15765e45a07</sys_ui_form>
-            <sys_ui_section caption="Contracts" display_value="Contracts" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">3a052c2d3b8b7210ebe9c15765e45a0c</sys_ui_section>
+            <sys_ui_section display_value="">3a052c2d3b8b7210ebe9c15765e45a0c</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:14</sys_updated_on>
         </sys_ui_form_section>
@@ -52,7 +52,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">e2052c2d3b8b7210ebe9c15765e45a07</sys_ui_form>
-            <sys_ui_section caption="Activities" display_value="Activities" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">7a056c2d3b8b7210ebe9c15765e45a57</sys_ui_section>
+            <sys_ui_section display_value="">7a056c2d3b8b7210ebe9c15765e45a57</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:15</sys_updated_on>
         </sys_ui_form_section>
@@ -66,7 +66,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="alm_ai_system_digital_asset" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">e2052c2d3b8b7210ebe9c15765e45a07</sys_ui_form>
-            <sys_ui_section caption="Depreciation" display_value="Depreciation" name="alm_ai_system_digital_asset" sys_domain="global" view="e53c64d153c230108125ddeeff7b12e3">32056c2d3b8b7210ebe9c15765e45a10</sys_ui_section>
+            <sys_ui_section display_value="">32056c2d3b8b7210ebe9c15765e45a10</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-13 14:42:14</sys_updated_on>
         </sys_ui_form_section>

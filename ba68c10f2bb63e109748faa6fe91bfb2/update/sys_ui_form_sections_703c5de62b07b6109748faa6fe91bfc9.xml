@@ -10,7 +10,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="da32ccce2b2212105356fa97d891bffb">703c5de62b07b6109748faa6fe91bfc9</sys_ui_form>
-            <sys_ui_section caption="NULL" display_value="" name="cmdb_ai_content_product_model" sys_domain="global" view="da32ccce2b2212105356fa97d891bffb">fc3c5de62b07b6109748faa6fe91bfdb</sys_ui_section>
+            <sys_ui_section display_value="">fc3c5de62b07b6109748faa6fe91bfdb</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:08</sys_updated_on>
         </sys_ui_form_section>
@@ -24,7 +24,7 @@
             <sys_mod_count>0</sys_mod_count>
             <sys_overrides/>
             <sys_ui_form display_value="cmdb_ai_content_product_model" name="cmdb_ai_content_product_model" sys_domain="global" view="da32ccce2b2212105356fa97d891bffb">703c5de62b07b6109748faa6fe91bfc9</sys_ui_form>
-            <sys_ui_section caption="General" display_value="General" name="cmdb_ai_content_product_model" sys_domain="global" view="da32ccce2b2212105356fa97d891bffb">f03c5de62b07b6109748faa6fe91bfcc</sys_ui_section>
+            <sys_ui_section display_value="">f03c5de62b07b6109748faa6fe91bfcc</sys_ui_section>
             <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
             <sys_updated_on>2026-02-16 21:17:08</sys_updated_on>
         </sys_ui_form_section>

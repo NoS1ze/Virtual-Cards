@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="target_sys_id" label="Target Sys_id" language="en" table="var__m_sys_hub_action_input_aadefd703b57b650ebe9c15765e45a14">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>target_sys_id</element>
+            <help/>
+            <hint/>
+            <label>Target Sys_id</label>
+            <language>en</language>
+            <name>var__m_sys_hub_action_input_aadefd703b57b650ebe9c15765e45a14</name>
+            <plural/>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+            <sys_created_on>2026-02-23 23:34:52</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Target Sys_id</sys_name>
+            <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+            <sys_update_name>sys_documentation_var__m_sys_hub_action_input_aadefd703b57b650ebe9c15765e45a14_target_sys_id_en</sys_update_name>
+            <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+            <sys_updated_on>2026-02-23 23:34:52</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
