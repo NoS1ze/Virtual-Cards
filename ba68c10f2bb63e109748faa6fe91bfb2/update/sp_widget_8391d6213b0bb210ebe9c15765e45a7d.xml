@@ -699,20 +699,9 @@
    tiles keep their deck + glow so the intensity cue survives hover. */
 .vcw-card--clickable:not(.vcw-card--stack):hover {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
-}
-</css>
+}</css>
         <data_table>sp_instance</data_table>
-        <demo_data>{
-	"options":{
-		"show_all_cards": false,
-		"all_model_categories": "2f7963993bc37210ebe9c15765e45a16,2118fa339b1a46f6a4eaddba64c9a131",
-		"user_model_categories": "2f7963993bc37210ebe9c15765e45a16,2118fa339b1a46f6a4eaddba64c9a131,d57b58b63b4bf610ebe9c15765e45a7e",
-		"default_view_mode":"all",
-		"show_toggle": true,
-		"card_click_url": "/esc?id=hri_user_profile",
-		"card_limit": 0
-	}
-}</demo_data>
+        <demo_data>{"options":{"show_all_cards":false,"all_model_categories":"2f7963993bc37210ebe9c15765e45a16,2118fa339b1a46f6a4eaddba64c9a131","user_model_categories":"2f7963993bc37210ebe9c15765e45a16,2118fa339b1a46f6a4eaddba64c9a131,d57b58b63b4bf610ebe9c15765e45a7e","default_view_mode":"all","show_toggle":true,"card_click_url":"/esc?id=hri_user_profile","card_limit":0}}</demo_data>
         <description/>
         <docs/>
         <field_list/>
@@ -729,7 +718,7 @@
 }
 ]]></link>
         <name>User Cards</name>
-        <option_schema>[{"displayValue":"Model Category","name":"all_model_categories","display_value_list":[],"section":"Data","label":"All Model Categories","type":"glide_list","value":"cmdb_model_category","ed":{"reference":"cmdb_model_category"}},{"hint":"Default view when widget loads: mine or all","name":"default_view_mode","section":"Behavior","default_value":"mine","label":"View Mode","type":"choice","choices":[{"label":"mine","value":"mine"},{"label":"all","value":"all"}]},{"hint":"Widget Title","name":"widget_title","section":"Presentation","default_value":"Recognition Cards","label":"Title","type":"string"},{"displayValue":"Model Category","hint":"Model Categories to show in user view","name":"user_model_categories","display_value_list":[],"section":"Data","label":"User Model Categories","type":"glide_list","value":"cmdb_model_category","ed":{"reference":"cmdb_model_category"}},{"hint":"Show the My Cards / All Cards toggle","name":"show_toggle","section":"Behavior","default_value":"true","label":"Show toggle","type":"boolean"},{"hint":"Max cards to display (0 = no limit, 1 = latest only)","name":"card_limit","section":"Behavior","default_value":"0","label":"Card Limit","type":"integer"},{"hint":"URL to navigate when card is clicked (used with card_limit=1)","name":"card_click_url","section":"Behavior","default_value":"/esc?id=hri_user_profile","label":"Card Click URL","type":"string"}]</option_schema>
+        <option_schema>[{"display_value":"Model Category","name":"all_model_categories","display_value_list":[],"section":"Data","label":"All Model Categories","type":"glide_list","value":"cmdb_model_category","ed":{"reference":"cmdb_model_category"}},{"hint":"Default view when widget loads: mine or all","name":"default_view_mode","section":"Behavior","default_value":"mine","label":"View Mode","type":"choice","choices":[{"label":"mine","value":"mine"},{"label":"all","value":"all"}]},{"hint":"Widget Title","name":"widget_title","section":"Presentation","default_value":"Recognition Cards","label":"Title","type":"string"},{"display_value":"Model Category","hint":"Model Categories to show in user view","name":"user_model_categories","display_value_list":[],"section":"Data","label":"User Model Categories","type":"glide_list","value":"cmdb_model_category","ed":{"reference":"cmdb_model_category"}},{"hint":"Show the My Cards / All Cards toggle","name":"show_toggle","section":"Behavior","default_value":"true","label":"Show toggle","type":"boolean"},{"hint":"Max cards to display (0 = no limit, 1 = latest only)","name":"card_limit","section":"Behavior","default_value":"0","label":"Card Limit","type":"integer"},{"hint":"URL to navigate when card is clicked (used with card_limit=1)","name":"card_click_url","section":"Behavior","default_value":"/esc?id=hri_user_profile","label":"Card Click URL","type":"string"}]</option_schema>
         <public>false</public>
         <roles/>
         <script><![CDATA[(function () {

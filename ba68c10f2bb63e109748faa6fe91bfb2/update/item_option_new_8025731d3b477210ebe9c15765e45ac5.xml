@@ -32,7 +32,7 @@
         <include_none>false</include_none>
         <instructions><![CDATA[<p>Kudos Cards - are typically used as an form of recognition from one employee to another;<br />Achievement Cards - are used to recognise some Personal, Company, Project milestones; Ideally this type of card should be avaliable to almost any employee if right condition met, rather limited to unique subset of users;</p>]]></instructions>
         <layout>normal</layout>
-        <list_table>cmdb_model_category</list_table>
+        <list_table/>
         <lookup_dependent_question/>
         <lookup_label>name</lookup_label>
         <lookup_price/>
@@ -45,7 +45,7 @@
         <mandatory>true</mandatory>
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
-        <mask_use_encryption>true</mask_use_encryption>
+        <mask_use_encryption>false</mask_use_encryption>
         <name>card_type</name>
         <no_auto_populate_also_request_for>false</no_auto_populate_also_request_for>
         <not_available_conversation>false</not_available_conversation>

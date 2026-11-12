@@ -7,7 +7,7 @@
         <choice_direction>down</choice_direction>
         <choice_field/>
         <choice_table/>
-        <conversational_label/>
+        <conversational_label>Who would you like to recognise? You can pick several people.</conversational_label>
         <create_roles/>
         <default_html_value/>
         <default_value/>
@@ -32,7 +32,7 @@
         <include_none>false</include_none>
         <instructions/>
         <layout>normal</layout>
-        <list_table/>
+        <list_table>sys_user</list_table>
         <lookup_dependent_question/>
         <lookup_label/>
         <lookup_price/>
@@ -45,7 +45,7 @@
         <mandatory>true</mandatory>
         <map_to_field>false</map_to_field>
         <mask_use_confirmation>false</mask_use_confirmation>
-        <mask_use_encryption>true</mask_use_encryption>
+        <mask_use_encryption>false</mask_use_encryption>
         <name>to</name>
         <no_auto_populate_also_request_for>false</no_auto_populate_also_request_for>
         <not_available_conversation>false</not_available_conversation>
@@ -62,11 +62,9 @@
         <rec_price_if_checked>0</rec_price_if_checked>
         <record/>
         <record_producer_table/>
-        <reference>sys_user</reference>
+        <reference/>
         <reference_qual>active=true^emailLIKEkonversational</reference_qual>
-        <reference_qual_condition table="sys_user">active=true^emailLIKEkonversational<item endquery="false" field="active" goto="false" newquery="false" operator="=" or="false" value="true"/>
-            <item endquery="false" field="email" goto="false" newquery="false" operator="LIKE" or="false" value="konversational"/>
-        </reference_qual_condition>
+        <reference_qual_condition/>
         <rich_text/>
         <roles_to_use_also_request_for/>
         <save_script><![CDATA[/** This script is executed before the Record is generated
@@ -92,22 +90,22 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 16:46:44</sys_created_on>
         <sys_id>0c1136473b87ba10ebe9c15765e45a1f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>I want to recognise</sys_name>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name>item_option_new_0c1136473b87ba10ebe9c15765e45a1f</sys_update_name>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 17:27:50</sys_updated_on>
+        <sys_updated_by>Solomon.Oyewole-snadmin</sys_updated_by>
+        <sys_updated_on>2026-10-19 15:43:51</sys_updated_on>
         <table/>
         <tooltip/>
         <topic_block/>
-        <type>8</type>
+        <type>21</type>
         <ui_page/>
         <unique>false</unique>
         <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
+        <use_reference_qualifier>advanced</use_reference_qualifier>
         <validate_regex/>
         <variable_name/>
         <variable_set/>

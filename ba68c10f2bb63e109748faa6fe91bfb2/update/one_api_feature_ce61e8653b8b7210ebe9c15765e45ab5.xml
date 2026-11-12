@@ -3,7 +3,7 @@
         <input_processor display_value="OneExtendGenericCapabilityRequestProcessor">a7eb538353111110c271ddeeff7b12a8</input_processor>
         <name>f066b237a3c3d2107104255a161e619c</name>
         <output_processor display_value="OneExtendCapabilityResponseProcessor">3a90ff027f50121032d293f10d866518</output_processor>
-        <short_description>Auto Generated </short_description>
+        <short_description>Auto Generated</short_description>
         <sys_class_name>one_api_feature</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-13 14:26:20</sys_created_on>

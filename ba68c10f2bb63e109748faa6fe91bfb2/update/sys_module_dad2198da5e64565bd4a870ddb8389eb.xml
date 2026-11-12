@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[{
+  "name": "visual-cards",
+  "version": "1.0.7",
+  "description": "[BUILD AGENT GENERATED]:  Application for managing visual cards that can be requested, approved, generated, and assigned to users either directly or based on conditions. Includes portal components for displaying cards in carousel format.",
+  "license": "UNLICENSED",
+  "imports": {
+    "#now:*": "./@types/servicenow/fluent/*/index.js"
+  },
+  "scripts": {
+    "build": "now-sdk build",
+    "deploy": "now-sdk install",
+    "transform": "now-sdk transform",
+    "types": "now-sdk dependencies"
+  },
+  "devDependencies": {
+    "@servicenow/sdk": "4.13.6",
+    "@servicenow/glide": "27.0.5"
+  }
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_konl_visual_card/visual-cards/1.0.7/package.json</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-11-11 15:08:26</sys_created_on>
+        <sys_id>dad2198da5e64565bd4a870ddb8389eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_konl_visual_card/visual-cards/1.0.7/package.json</sys_name>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name>sys_module_dad2198da5e64565bd4a870ddb8389eb</sys_update_name>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:08:26</sys_updated_on>
+    </sys_module>
+</record_update>

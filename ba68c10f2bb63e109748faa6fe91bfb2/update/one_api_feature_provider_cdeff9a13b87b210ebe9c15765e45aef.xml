@@ -5,7 +5,7 @@
         <feature_service display_value="OneExtendGenericProvider">5233278353111110c271ddeeff7b129b</feature_service>
         <feature_service_factory><![CDATA[(function() { return new global.OneExtendGenericProvider(); })()]]></feature_service_factory>
         <name>Build Agent provider</name>
-        <short_description>Auto Generated </short_description>
+        <short_description>Auto Generated</short_description>
         <sys_class_name>one_api_feature_provider</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-13 21:19:09</sys_created_on>

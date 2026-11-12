@@ -5,7 +5,7 @@
         <active>true</active>
         <allow_high_security_roles>false</allow_high_security_roles>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,intermediateFlowVersion=1.3,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=16285658000,viewActivatedIn=naturalLanguage</attributes>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,intermediateFlowVersion=1.3,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=22964554000,viewActivatedIn=naturalLanguage</attributes>
         <authored_on_release_version>27800</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -14,9 +14,9 @@
         <description/>
         <display_name_after_preview>Assign Recognition cards=</display_name_after_preview>
         <flow_priority>MEDIUM</flow_priority>
-        <generation_source>text2flow</generation_source>
+        <generation_source>fluent</generation_source>
         <internal_name>assign_recognition_cards013</internal_name>
-        <label_cache>[{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.card","label":"3 - Get Catalog Variables➛card","reference":"cmdb_content_product_model","reference_display":"card","type":"reference","base_type":"reference","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["model"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.reason","label":"3 - Get Catalog Variables➛reason","reference":"","reference_display":"reason","type":"string","base_type":"string","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["comments"]},"attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.to","label":"3 - Get Catalog Variables➛to","reference":"sys_user","reference_display":"to","type":"reference","base_type":"reference","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["assigned_to"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.card_type","label":"3 - Get Catalog Variables➛card_type","reference":"cmdb_model_category","reference_display":"card_type","type":"reference","base_type":"reference","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["model_category"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.to.company","label":"3 - Get Catalog Variables➛to➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"company","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["account"]}},{"name":"Service Catalog_1.request_item.opened_by","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"opened_by","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["supported_by"]}},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["supported_by"]}},{"name":"7af1dca6-b1e6-4b59-9120-c315fa672b55.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"d9312787-b60b-ba10-85b6-a8793af55ede":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"{{static.9204e7702b0fbe509748faa6fe91bf3f}}","label":"Recognition Card Managers","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"7af1dca6-b1e6-4b59-9120-c315fa672b55":["approval_conditions"]}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{"7af1dca6-b1e6-4b59-9120-c315fa672b55":["record"],"15312787-8c0b-ba10-818d-a582aeda5fe3":["supported_by"],"6bb06dd4-5697-474a-9f57-92852948de52":["catalog_item"],"1137ea05-67c9-4526-ac65-fd6c0b020c75":["requested_item"]},"attributes":{"default_search_field":"number"}},{"name":"Service Catalog_1.request_item.request","label":"Trigger - Service Catalog➛Requested Item Record➛Request","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"request","usedInstances":{"8d312787-7a0b-ba10-84d1-198520aab0dc":["request"]}},{"name":"Service Catalog_1.request_item.opened_at","label":"Trigger - Service Catalog➛Requested Item Record➛Opened","reference":"","reference_display":"Opened","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sc_req_item","column_name":"opened_at","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["assigned"]}}]</label_cache>
+        <label_cache>[{"name":"static.9204e7702b0fbe509748faa6fe91bf3f","label":"static➛9204e7702b0fbe509748faa6fe91bf3f","usedInstances":{"7af1dca6-b1e6-4b59-9120-c315fa672b55":["approval_conditions"]},"attributes":{}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Request Item","type":"reference","base_type":"reference","usedInstances":{"7af1dca6-b1e6-4b59-9120-c315fa672b55":["record"],"1137ea05-67c9-4526-ac65-fd6c0b020c75":["requested_item"]},"attributes":{}},{"name":"7af1dca6-b1e6-4b59-9120-c315fa672b55.approval_state","label":"7af1dca6-b1e6-4b59-9120-c315fa672b55➛approval_state","type":"choice","base_type":"choice","usedInstances":{"d9312787-b60b-ba10-85b6-a8793af55ede":["condition"]},"attributes":{}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.to","label":"1137ea05-67c9-4526-ac65-fd6c0b020c75➛to","type":"string","base_type":"string","usedInstances":{"77bc7331-fe35-4487-811b-ba6b40e33b39":["conditions"]},"attributes":{}},{"name":"77bc7331-fe35-4487-811b-ba6b40e33b39.Records","label":"77bc7331-fe35-4487-811b-ba6b40e33b39➛Records","type":"array.object","base_type":"array.object","column_name":"Records","usedInstances":{"b8e0b639-8fd4-4582-a2e2-cbac2819d3ee":["items"]},"attributes":{}},{"name":"b8e0b639-8fd4-4582-a2e2-cbac2819d3ee.item","label":"5 - For Each - ➛item","type":"reference","base_type":"reference","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["recipient"]},"attributes":{}},{"name":"Service Catalog_1.request_item.opened_by","label":"Trigger - Service Catalog➛Request Item","type":"reference","base_type":"reference","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["given_by"]},"attributes":{}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.card","label":"1137ea05-67c9-4526-ac65-fd6c0b020c75➛card","type":"reference","base_type":"reference","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["card"]},"attributes":{}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.card_type","label":"1137ea05-67c9-4526-ac65-fd6c0b020c75➛card_type","type":"reference","base_type":"reference","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["card_category"]},"attributes":{}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.reason","label":"1137ea05-67c9-4526-ac65-fd6c0b020c75➛reason","type":"string","base_type":"string","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["reason"]},"attributes":{}}]</label_cache>
         <master_snapshot>be08af432b4bba109748faa6fe91bf6f</master_snapshot>
         <master_snapshot_digest/>
         <name>Assign Recognition card</name>
@@ -29,7 +29,7 @@
         <sc_callable>false</sc_callable>
         <show_draft_actions>false</show_draft_actions>
         <show_triggered_flows>false</show_triggered_flows>
-        <status>draft</status>
+        <status>published</status>
         <substatus/>
         <sys_class_name>sys_hub_flow</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
@@ -37,7 +37,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>853127872b0bba109748faa6fe91bfb0</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>Assign Recognition card</sys_name>
         <sys_overrides/>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
@@ -45,11 +45,11 @@
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name>sys_hub_flow_853127872b0bba109748faa6fe91bfb0</sys_update_name>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:03:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:50</sys_updated_on>
         <type>flow</type>
         <updation_source/>
         <version>2</version>
-        <version_record>0bdb96bb3b720714ebe9c15765e45afe</version_record>
+        <version_record/>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=853127872b0bba109748faa6fe91bfb0"/>
     <sys_variable_value action="delete_multiple" query="document_key=853127872b0bba109748faa6fe91bfb0"/>
@@ -58,18 +58,18 @@
         <catalog_item/>
         <name/>
         <published_version/>
-        <run_flow_in/>
+        <run_flow_in>background</run_flow_in>
         <sys_class_name>sys_flow_catalog_trigger</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:45:07</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9708af432b4bba109748faa6fe91bfe3</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:54</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:55</sys_updated_on>
         <trigger_definition/>
     </sys_flow_catalog_trigger>
     <sys_trigger_runner_mapping action="delete_multiple" query="identifier=853127872b0bba109748faa6fe91bfb0"/>
@@ -84,14 +84,14 @@
         <duration>1970-01-02 00:00:00</duration>
         <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
         <label>Waiting for Approval</label>
-        <order>1</order>
-        <stage_id>4465ca75-be58-40fc-a1a9-d80cfd9f19e1</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <order>0</order>
+        <stage_id>28e3678b-2b0b-ba10-9748-faa6fe91bf1b</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:26:55</sys_created_on>
         <sys_id>28e3678b2b0bba109748faa6fe91bf1b</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-18 20:44:53</sys_updated_on>
         <type>standard</type>
@@ -103,18 +103,18 @@
         <ancestor_component_id/>
         <ancestor_stage_id/>
         <ancestral_if_else_logic/>
-        <component_indexes>6</component_indexes>
+        <component_indexes>8</component_indexes>
         <duration>1970-01-01 00:00:00</duration>
         <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
         <label>Request Cancelled</label>
-        <order>0</order>
-        <stage_id>933e21f9-8782-4e73-a69d-30839b142e2e</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <order>4</order>
+        <stage_id>28e3678b-2b0b-ba10-9748-faa6fe91bf1c</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:26:55</sys_created_on>
         <sys_id>28e3678b2b0bba109748faa6fe91bf1c</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-18 20:44:53</sys_updated_on>
         <type>standard</type>
@@ -131,13 +131,13 @@
         <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
         <label>Fulfillment</label>
         <order>2</order>
-        <stage_id>1336d616-d863-4e24-ae84-ec5ca4ab1505</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <stage_id>60e3678b-2b0b-ba10-9748-faa6fe91bf1d</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:26:55</sys_created_on>
         <sys_id>60e3678b2b0bba109748faa6fe91bf1d</sys_id>
         <sys_mod_count>5</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>Solomon.Oyewole-snadmin</sys_updated_by>
         <sys_updated_on>2026-07-20 14:42:47</sys_updated_on>
         <type>standard</type>
@@ -153,14 +153,14 @@
         <duration>1970-01-03 00:00:00</duration>
         <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
         <label>Delivery</label>
-        <order>3</order>
-        <stage_id>e4e0631d-bda9-44aa-9e66-134e22a55dd5</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <order>5</order>
+        <stage_id>64e3678b-2b0b-ba10-9748-faa6fe91bf1c</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:26:55</sys_created_on>
         <sys_id>64e3678b2b0bba109748faa6fe91bf1c</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-18 20:26:55</sys_updated_on>
         <type>standard</type>
@@ -176,14 +176,14 @@
         <duration>1970-01-01 00:00:00</duration>
         <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
         <label>Request Approved</label>
-        <order>5</order>
-        <stage_id>1e998f2d-b367-4658-8ca5-2e62fa68b2e3</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <order>1</order>
+        <stage_id>ace3678b-2b0b-ba10-9748-faa6fe91bf1c</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:26:55</sys_created_on>
         <sys_id>ace3678b2b0bba109748faa6fe91bf1c</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-18 20:44:53</sys_updated_on>
         <type>standard</type>
@@ -195,18 +195,18 @@
         <ancestor_component_id/>
         <ancestor_stage_id/>
         <ancestral_if_else_logic/>
-        <component_indexes>4</component_indexes>
+        <component_indexes>6</component_indexes>
         <duration>1970-01-01 00:00:00</duration>
         <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
         <label>Completed</label>
-        <order>4</order>
-        <stage_id>58e7a3ac-bba4-4876-a613-e2d4495f2793</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <order>3</order>
+        <stage_id>e8e3678b-2b0b-ba10-9748-faa6fe91bf1c</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:26:55</sys_created_on>
         <sys_id>e8e3678b2b0bba109748faa6fe91bf1c</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-18 20:44:53</sys_updated_on>
         <type>standard</type>
@@ -225,12 +225,12 @@
         <sys_updated_on>2026-02-18 20:15:12</sys_updated_on>
     </sys_flow_cat_variable_model>
     <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=013127872b0bba109748faa6fe91bfb3"/>
-    <sys_hub_flow_input action="delete_multiple" query="model=853127872b0bba109748faa6fe91bfb0^sys_idNOT IN153127872b0bba109748faa6fe91bff9,d53127872b0bba109748faa6fe91bfe9"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=853127872b0bba109748faa6fe91bfb0^sys_idNOT IN1904d87c2be89f109748faa6fe91bf44,5904d87c2be89f109748faa6fe91bf2f"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -273,7 +273,7 @@
         <next_element/>
         <order>100</order>
         <primary>false</primary>
-        <read_only>false</read_only>
+        <read_only>true</read_only>
         <read_only_option/>
         <read_roles/>
         <reference/>
@@ -288,16 +288,16 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_flow_input</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:15:13</sys_created_on>
-        <sys_id>153127872b0bba109748faa6fe91bff9</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_created_on>2026-11-11 15:17:45</sys_created_on>
+        <sys_id>1904d87c2be89f109748faa6fe91bf44</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:03:05</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -310,12 +310,12 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=153127872b0bba109748faa6fe91bff9"/>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1904d87c2be89f109748faa6fe91bf44"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference,uiTypeLabel=Reference</attributes>
+        <attributes>default_search_field=number,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=reference</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -373,16 +373,16 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_flow_input</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:15:13</sys_created_on>
-        <sys_id>d53127872b0bba109748faa6fe91bfe9</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2026-11-11 15:17:45</sys_created_on>
+        <sys_id>5904d87c2be89f109748faa6fe91bf2f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:44:52</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:45</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -395,7 +395,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d53127872b0bba109748faa6fe91bfe9"/>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5904d87c2be89f109748faa6fe91bf2f"/>
     <sys_hub_flow_output action="delete_multiple" query="model=853127872b0bba109748faa6fe91bfb0"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=853127872b0bba109748faa6fe91bfb0"/>
     <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=853127872b0bba109748faa6fe91bfb0^sys_idNOT INdd3127872b0bba109748faa6fe91bfe6"/>
@@ -410,44 +410,20 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:15:13</sys_created_on>
         <sys_id>dd3127872b0bba109748faa6fe91bfe6</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_scope/>
-        <sys_updated_by>Solomon.Oyewole-snadmin</sys_updated_by>
-        <sys_updated_on>2026-07-20 15:32:19</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
         <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
-        <trigger_inputs>H4sIAAAAAAAA/81UTW/bMAz9K4ZOK5AATrI2i29DgQIFunZoul2CwlAkyhEmS64ku82C/PdRsR07rVfssENv5ofI98hHr3ZE0TUokpD7UkdXyjxH15qMiNQerKbqYVsABtnGSAbo51CA5qA9OtGs/TfSob3aEbGEpxI0ZibjyYiIn1SVUGeKm6bPeBzdGg3ReBy81znN2owlKGAeOEkEVQ7Q88P1rW/SOamzxrEf/b3fmrJfmTWl5v3OgaEIDKWOuozoEwdBS+XPXuP5Ti3NAefgSLIjGr8x4LYuDUVSC8xYnnorswxsfzRpFWDgoxUhj/v/SkwYC+8TO834CHQeRySnmlNv7LZLsiZ/gLxQ1MPRiQCwdTKJ41GLz5a6xieDKqtOT0XLJpBhG6m4BY0YsZtELOQiXsRsPl3M59N4Notjcb4WTDA2/zKJLybnCywxrPzBxv7VGfSRwosPg+oG8JatBcrvtOocG9leUE5fnPyNxT/HIU+ArdceYkcz5dLhqLb9o3OHi1P/ru1q6DhaIkF0Q7VO5FQNqbCpMA17brpdfliA9ejuCi8NioXMwmrpWr1/CcyoMte3Q7po0Pf+c6XDbXU/yVbuy415vm/XeSX1AVITVIZRdbSox87r0sPhTCmvKL4IivYWe+wPqkifyvCCnJzpgVFIcMzKwn9lXlZwPMI/9Tv4qOoFAAA=</trigger_inputs>
+        <trigger_inputs>H4sIAAAAAAAA/7VTTW/CMAz9K1VOm9QDu3LbBakS0yRgu6AJmcQt0VKnywfQIf77nJUVxmCXabf4I37P9vN8J4LTVYWuIB+AJE5bXygxFCIXBpZo+DmJlJXGbrKC2KspoCMws7ZBDsqV1RLZr7BBUkih+9z5x9qzPd+JcopvEbm+GA5yUT6Diek3UMu55fgcSVPGoUxaBtuGlFLUUGFXmmsZlAGZZgnGI3ue/Kn1oL3XVB0c+/wq/BLka+VsJHWNxTEju1FYQjTh9t/olNbh73S+Z/yBxEsuaiAFwbr2mORsPcO6MRCwd1qn0Inh3YCZEtQJz0VaJEYLnQSxvjRMpT2XaS8OWq60UQ6JhcE0GnBcNSSM3RXJXYQNZ/o78GSWrJikxGPzPzt1COqRTHuSsvX6vdtH9Lg4UfPXcKYru5lgiS4tbqTpE+4QNFaC6S0IfFTLGNCnnkCt02GlowqOp7Hf9+MZaTSHY/PS6Sbcy6DX2C/pA/WoHfafAwAA</trigger_inputs>
         <trigger_outputs/>
         <trigger_type>service_catalog</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=853127872b0bba109748faa6fe91bfb0^sys_idNOT IN77f72f432b4bba109748faa6fe91bf6f,f3f72f432b4bba109748faa6fe91bf77,1d3167872b0bba109748faa6fe91bf51"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
-        <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
-        <attributes/>
-        <comment/>
-        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
-        <display_text/>
-        <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
-        <generation_source>text2flow</generation_source>
-        <order>1</order>
-        <parent_ui_id/>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:44:53</sys_created_on>
-        <sys_id>77f72f432b4bba109748faa6fe91bf6f</sys_id>
-        <sys_mod_count>11</sys_mod_count>
-        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_updated_by>Solomon.Oyewole-snadmin</sys_updated_by>
-        <sys_updated_on>2026-07-20 15:32:19</sys_updated_on>
-        <ui_id>7af1dca6-b1e6-4b59-9120-c315fa672b55</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1Y32/iOBD+V1CeKecQEgJv1VU99XR3K9HevpQqcpwJeGWcbOx0l0P87ztOHEihzaIuq96u9gXJ4/nxzcw3js39xuGJM3XGYTqEyWRIYpcQj5DQZyT0IPbGwdijjDh9R9IVoGYBLCsSXD9SURrBZnMLxSNn0PudaiqyReQOCvhYgtIR17DablE54SoXdP3e2qCELblICpDO9P6h7+S0QPcaCme6OdjS6xwiQWMQaHiVsXIFUvdurtDHqdAb61mD/TAXEwPXifUecSPELYOH9B34rEEmgNFSKhT0nRWVCdVZsXamuihRUABN3kmx3mksudR1oiv6WfH/0L03NHopYGbMFmG3jGyBmtpkWM93ueaZrCWaxqIpXCbKlfynzsCUFlJaCt0qbanQH+QGsgFRI0xvl9mnWRPvmssqOYtWZIyK3YpqXfC41KBMN0BAVZMVzXMuF1FeZI+8MkYoq8FC4GKQiuwTxlR8IQeUGdwDLBAdXKP8qhK/pwU3SfyNbtB4WyUffSxN3DoNCziqcq4TRi3FCp7rS/T5CBbhtm9ZG7PO1rN9p2t3e9IqFiFHK34es3NWsxeS3k29/zqu3pmYvapR/ZPxPjE+xm+JWi0jWbu2PHW7eWolpxA1JG9DVIvoB2Pq10gKo8Dz8WecesQduiSEIAzZhFAWBoE/8vZNxniImAqkJlXoe0/XM56gt1gxuWgYeQK4xvDSouvNGnQvwrYsVU0oy9Dh2RjqBj8oRUt+d1CbWvLXYXe+D5dNuH8lx+PtxnQ/GMbBhITJRZKS+GIUev4FZUAuIHB98JOA+a73zfwnbtehl4TPECnlINpXjGbjeAxaO68bh2sT6skhfQLeo5G4toBfSsQORLU8OLbPNxQhIW80FT/vDYN1kgFah/eHrCxkB3ejJVdVS1/kcEvjXFw+AX5j/GeN/5DKh2l1MNn7xeT/MZNHficV4JnTi2Uy4QafavG5PvNAzeADMK0u5fqP+81Gaao5G6D7EYzHZBiTNAafTMajMKU0SGHixqmXbrcPx/w/g8fXzcv+RlMKUM3MnFCo3XvS2nUWzk7M/pZkjezUjM71vHy7ofk57+2skwfpZN/3pMRyUN1+X27mTg1y7kznjswkzJ3+3DFakSFEJUYNBLfbqGSbzXZbS8qCWgdua7m3TuhaVZqKLSFBUlXSJ5Ka6VZ+zr9hbm2A3hXi/u2Ot744X6/a7r+csrZ/tpDNE6LJpK4cb39v/LN9b0a/BufgkRDtLtb4ecEj6NXT9PAF83207GIUAAA=</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=77f72f432b4bba109748faa6fe91bf6f"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=853127872b0bba109748faa6fe91bfb0^sys_idNOT INf3f72f432b4bba109748faa6fe91bf77,77f72f432b4bba109748faa6fe91bf6f,77bc7331fe354487811bba6b40e33b39,ce93810fe3154561883e7253afabbf3e"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
-        <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <action_type_parent display_value="">330ba3abc31013002841b63b12d3aee8</action_type_parent>
         <attributes/>
         <comment/>
         <compiled_snapshot>330ba3abc31013002841b63b12d3aee8</compiled_snapshot>
@@ -460,68 +436,89 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:44:53</sys_created_on>
         <sys_id>f3f72f432b4bba109748faa6fe91bf77</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>13</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_updated_by>Solomon.Oyewole-snadmin</sys_updated_by>
-        <sys_updated_on>2026-07-20 15:32:19</sys_updated_on>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
         <ui_id>1137ea05-67c9-4526-ac65-fd6c0b020c75</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+VVUW/aMBD+KyjPCMUECOWt21RpD1ulMvWlmizHuYA1x0ltB8oQ/33nxAEKhaKqlabtMec73/d9vvvysA5EGkyCJAsTFrGERyQkURj2xwOSjKKE9NOIAbCgGyiWA2ZqeKzAWEipsJBjfMFk5Q7W6ynoheDQ+cwsk8WMkp5PrlM3G0xOhSklW937GozwuZCpBhVMHn52g5JpbGNBB5P1wZFdlUAlS0Bi4R1kgCcc8IZLCbS10yrJhUUGnbsG3hlyrmkd37UrdOrghd0AniyoFLB9xqSBbpAzlTJb6FUwsbrCgAaW3iq52mbMhbIN75w9GfEbL4/63b37J4HhFGG0ALYn1EtXk/coO1+bJD4vUPfb0opCNbdblshW4EJWufreEHRPABmrpN17gsrg7VA6Lg6dh5pN58Vyq/ONUDVtfygLzuT2i1mrRVJZMO7ZQEKOF9GclaVQM1rqYiHqYsSS92YSP3qZLJbY1IiZ6jHugPdQOta7wfiXOnzPtHAsvuE1WIzCo5A01UVZenJO42BTa0QfK4en4eeZ0EYMTDBci9JeY5sFeNCbbjv5ybnBychuOFBrfAALlPv5PliA4RgICeN+hDdmIxJCAlecDOPREAZDNhofj/+1cURxDHkxU8KJgLuj03fcitfJtbU/PLt2e+vZMh2c6E77Ep0pWPO6Hqd3hnzYzlhqVuYZEEPxYrrw0KlpoL+0Tq8T/j/2Sxg0nrzAB63Z0X2B61XDRULIKCXTfL4LzrEf1ZWyIgdaLwMVihalWQhYvteaxucnOd6NZTsE7dObvRUNOSHRaBBHyThO2OGKkmziJgehO72ogmU3i69IBicLoqMCksb9DManCgZHBXA1HmR9nrxcELPDgmMX+TdIvc3xprIy886niv8C25reBaPSlrerf783K2fGyDubcU2Ttqf3tv55b/ORS8yN9MMwfO5vJ5zrr7MmtJAMfwkow043fF+oRQnqEmz6UQZ2kRHhkCguK8zMUQqhscsWqnP7bZqTZg8EaLrUTadtSqmxRi/c30UCtzXJ1imLSnPvpBg9nPe32uHPP+atZTOxCwAA</values>
+        <values>H4sIAAAAAAAA/91VUW/aMBD+KyjPCMWEEspb16rSpG2VytSXarIc5wLWHCe1HShD/PedEydAaWknrZPWR5/vfN/dd5/vfhMolkMwDTizTBZzumRasESCCfrBksnK3YWckGg8iqNkEieMhJDAOSdn8fgMRmeMZFNhIadFaUWhqIJVP4vPSQYvBkRHASSNhxlMXgoYHQXA+WSUDXnyfEDMngZgNakwpWTruw9VVMk08mdBB9NNwBdCphpUML3/0Q9EilXGSZiwiCU8IiGJwnA4GZFkHCVkmEYMshifkCwBia6XzQT07vYm4MRw2HXproyszCKp+E+w3vjFvzdzN71P7VWhU4dy2A/g0YJKAeFlTBroBzlTKbOFXncWDSy9UXJnWAhl8c3AOT8a8QtTk2EYhs41A6yZQ3PdHannuzFnV1jCzOqK20p7V74oBMda6m6lkLFK2st9W+NwU/e7CbGueh9dyCpX35oGBd0D7XihpTIIAkpXqwPvK8lmi2J126K8Fqpui7+UBWeyOzFrtUgq6/BsAmFoJtEEascDTgHUnQzqEEwKEnJMR3NWlkLNaamLpahTIOJ8MJd4GGSyWCE0I+ZqwLgrb4AEsME12q9qczsEX/EZDHYEpEB1pazIgdYfAxUKZ9EsBQ7iNMDWuvRCcVmhZ46tEBqzdFDBmp2ba80eCNB0pZtMnUupMUYvgRosidu6SH9likojwS0ZT1WxRY+1uZTMmB09OBf0oXLNbcjytNCGWRfCtSjtBXZjCZ6Bbb/7HjU8VGAQBXXZ9v7GzWaGKHFMel4/lAy8c+263R5/PW/QbZKd0i2wPd3OqiQXOBZp77bJu9PtEWov2p1mDiV7u2f3eg1P69Ux8ja5RsNDrRpOEV4L7DnZ3rboe58bp/9SxNkMmOaLawHSEauqPKkFdSju95JtgazQVBdl6YuuJfQeCkGKkDcLtF0WT4RyNgFCwngY4UbKxk+X23hyLJML40rCqebFXAlXLmpMp29Rz+mtR/bU893DbuVbz5rp4YR3i7A3c39X/7VC/1xb5N20ZSnyewDQUHy4+42paUp6TnavN+JD6NDl+lcqxNWtIS+s31l0n6t2p2EhyIqDuDO+aen+PTH/+A0NvYVODwwAAA==</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=f3f72f432b4bba109748faa6fe91bf77"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
-        <action_type_parent/>
+        <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
+        <action_type_parent display_value="">f8f2e9920b10030085c083eb37673abd</action_type_parent>
         <attributes/>
-        <comment>create new Information Asset record based on catalogue item input</comment>
-        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <comment/>
+        <compiled_snapshot>f8f2e9920b10030085c083eb37673abd</compiled_snapshot>
         <display_text/>
         <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
-        <generation_source>text2flow</generation_source>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-18 20:44:53</sys_created_on>
+        <sys_id>77f72f432b4bba109748faa6fe91bf6f</sys_id>
+        <sys_mod_count>14</sys_mod_count>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
+        <ui_id>7af1dca6-b1e6-4b59-9120-c315fa672b55</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Y0W7bOgz9lUDPaa4cx47Tt6JBhw33bkDb7aUpDFmiEw2OnVlyt1wj/z7akh03adOtyIBu3UtRUSR1SJ0js70pScqWQE4JW63y7I4lYSwhEaRP8Peiu4EmIdUqYetP+zsrlmMaDTk5LQlfyETkkJLTm9s+kQJdqRMPYTIZ0sih1KU08DgNXIjcsT92mQgwRcIiSND1zGbtXVggjwHU61Vlr5dh7WRs/9pEdXzvvdnIclGBG/YJfNOQCkBUMUsU9MmSpYLpLF+3lhyY+JAmW8NCphozksr5m5L/47kBpbTyjAEr5WB222VoW2XM8ZRpdqXzgusit658kUkOyvRIQMyKRJ93bcbhw0rLLDUhmkVJE50lxTJ9bzpD2gTNzaClUAgCVlWpFXY8HOuIrxbZ18sG5IVM66bYIpOM4102K6Z1LqNCV3BKAgksMU+4xFuQ6TysrkLWwQhlOZgnuBjESfYVz1Ryng4Yr3APsLFscIH2aW3+xHJZFfEfpsHgTZ+otTpPmFLbUrCH4ZeiQmIKsyWEdRdMC6o4nsuVPsNT7sBi3vRbMn/Oijw9wOVwIVV9449yuuPxFLf5QW6D2+H2O4Nrl9q7cJ/DbPcvs18Ds0WBxTMNHVKXM2IwzcjpjKRZCjPSn5HKK6xYU5vRA09uN2pbWW42xlLkzCZwOstttGBrVXsqvgBRJMZ6zxLWHLf2zb6wfkRI3iEhxZOOkKYF9KamDfuNsfJpkZlOyD0ZXVmHOtM/17IrJ+9ochr9TmKyZbwwNSFMGbbTBmoFJf8MiT2trvb151kqZIVMdYRmJhNQl/AZuFZn6frNTVkqjWLhA6TtCMZjOoxoHIFHJ+NREDPmxzBxotiNN5vbfVEcIeNTohodFBVAR1SXqAX1wMB1rxlWXO1mboO6wmpHuCajFdXosKjMS/4HfqJepqp+hYBMl7aSUTzM4UsoNSz32X9/8ykiR/wQkTnvEPnaotgBZalbLx8aq+qwnbHK+cnvgOHwg5T9S9gXSNgcON50d5oqryC/w172zhFMks1DZ4AsLUDpmqmb58024+Age2n3GW4g7UK0/BUZL+ruSrFD4Knd6b2dbhlMj/XousPfiMGv66+C7dcYmMLALZ2fRVYY+a6HP8axS52hQwPwg4BPKOOB73uj7l+02099c/KjkJqxHPuczndH8cZ49P/TOP5rengLeb3TZWPZ6/OvG9Q/phJfy7cVj/xh5E9oIE5ETKOTUeB6J4wDPQHf8cATPvcc94iv+u13SgVY3s4UAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=77f72f432b4bba109748faa6fe91bf6f"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="">43400a1587003300663ca1bb36cb0b4b</action_type_parent>
+        <attributes/>
+        <comment>resolve the users selected in the "I want to recognise" list collector</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
+        <generation_source/>
         <order>4</order>
         <parent_ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</parent_ui_id>
         <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:15:14</sys_created_on>
-        <sys_id>1d3167872b0bba109748faa6fe91bf51</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_updated_by>Solomon.Oyewole-snadmin</sys_updated_by>
-        <sys_updated_on>2026-07-20 15:32:19</sys_updated_on>
-        <ui_id>15312787-8c0b-ba10-818d-a582aeda5fe3</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1WS2/bOBD+K4JOSdcWJNuSY/cUNMiihzZA082lbglKHNkEKFIlKaduoP++Q1FysnGySRYLFAXigyHO85sXOV9uQs7CZZglEKeLJCumyXQ6iePJySzJs2meTNiUAszCUShpBShpaS6AdIdRuKWicUQqKsJlqXRFLVeSUGPAIp9xUwu6u+rF3t+KBKe9SLHhgmmQ4fLL11FYU42WLehweXOPZXc1EEFzEGjps0MRfPQonhvBP5Qfich5uU9TmjlA8SiEHxYkA/RXUmFgFFZUMmqV3oVLqxskaKDsQordXmLDpUWDoZP9YfhPtH4SO7kSMLQCPG9/JH3KPLnYKF7ARe0y5ikdsJ6pRFPJjz4Il2woaSPskGykNAbtQe0gOxA9ovJyo64/DQ7Pueyi65lCFVTsT9RazfPGgnH1AAEVGiIVrWsu16TWass7ZcRSRWuBh6gU6hqdGr6WES0c8AgzRKNzpJ915CuquYviA5pB5baLnnxvnF8fR4+Y+KBRwBSa1/YUzW2hB9eOhtZlEC8eLXyS3xa661Zzp21NU9dKW2Ak362aOJ6ym5tL0FvMefAOQQu1Jkmk4TuqWcItVJFCbJ18236jRaEaaQfNJJnOgcbpOJsXi/EsnWRjWmTpuGRZEefxJC7maWRVhLmqqXQGKsVAkIJaWGMLvchOQTUjrlkdDuPSiqiseiEWVEY0rqjmRZrY5UbJIYIXA/eYwRJL1165ZGNfY2DfBC+BFLsCB9CgAPTmV8NtsgqXq/ACW6e7SKhYhaOVL2nHSafpySxL03yeYTckMUDMpsl8DpAkdDEvO/FujDrxA2+ObXaGcPZMc+0BYvdvG/Mg8Pcy+MvAPcwwWyziyeIRJyx/AvPg7x70p63e9s5BGQ5v79dpeZ2W12l5dFr+4yIDFQZrIfBTNnr2mzYYOOcgmHngkRs2md4B2fYO+m0m+b+2mSSLu9+v2Wk8zt9spbmzXR4sNz4gT3MI96PvDv8mii5to2XgenMyv3p3+unMfwZ/BEcfqN24OJT2nxorraqj4+BNsOiqd4xSyTFecpeYHrk+On6LsA3dAtvnHqEO/f8kli3VAZdbfAQIs4Efl0DCdfCny+gZ9uNnXgF6WcmV7IHv5aM12LM7b88DYJ778lDbtmHbtl//Bg1/QhnpDAAA</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1d3167872b0bba109748faa6fe91bf51"/>
-    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=853127872b0bba109748faa6fe91bfb0"/>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=853127872b0bba109748faa6fe91bfb0^sys_idNOT INed3167872b0bba109748faa6fe91bf52,113167872b0bba109748faa6fe91bf4f,213167872b0bba109748faa6fe91bf54,613167872b0bba109748faa6fe91bf55"/>
-    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
-        <attributes/>
-        <block display_value="">07225d403bde4710ebe9c15765e45a1b</block>
-        <comment>end of the flow</comment>
-        <connected_to/>
-        <decision_table/>
-        <display_text/>
-        <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
-        <flow_variables_assigned/>
-        <generation_source>text2flow</generation_source>
-        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>5</order>
-        <outputs_assigned/>
-        <parent_ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</parent_ui_id>
-        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:15:14</sys_created_on>
-        <sys_id>ed3167872b0bba109748faa6fe91bf52</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_created_on>2026-11-11 15:08:23</sys_created_on>
+        <sys_id>77bc7331fe354487811bba6b40e33b39</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:03:06</sys_updated_on>
-        <ui_id>99312787-4e0b-ba10-500d-6c274dca19e4</ui_id>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
+        <ui_id>77bc7331-fe35-4487-811b-ba6b40e33b39</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
-        <workflow_reference/>
-    </sys_hub_flow_logic_instance_v2>
+        <values>H4sIAAAAAAAA/+VX207jMBD9lSrPaeU0bQq8rUBISAtIgHhBK8txnNZaN8naTkup+u87jp0Q2nBbigTax8z1zPjM2LlbexmZM+/Io3mWcM3zTHm+tyCiNEK1UpgnZxfrdRCEE0bQuB9N6GF/NB5GfUKjcT9NIopiNER0Mh7ofLMB74SrQpDV7YeCFEQCMM2kd7T26IyLRLLMO7r75Xs8gagH6QghEowPJgiFIUJRFFISxHEY0RjFYwQhBImZANPjdmld5epV0Sn72RUgl4kBFfgeu9csSxigSYlQzPfmJEuIzuWqkUhGkstMPApmPNMQ0TPG94o/QF6oAxnLlEGFlFlt84ldN604PSGaXGtZUl1KZ0pnOadM2d4kLCWl0MdtmTW4LEwF1kWTWNTeuSjn2YXtitcEqA8PJKUCEKwwpRrskBzqSK9n+fKqBnnKs6oprkiRUyKaL6K15HGpDZy1xwSbQxw8J0XBsykuZL7glTNAmQ+mAj4GqciXkFPxaTYg1OAeQGPJ4BTkJ5X4lkhuijiHMOC88Q3NjgVR6rEU6CH+UxoktjBXAq66YFtg/Kjkhf4BWRbMYd74zVhYs6cTAQ2R3TR3mo9xdxS3uHvj8m/BcYytPnGle8rYyq13YRWOsWhvjD34Tnx1ZXwxwgIgLoAh2B6hyktZtXKBqShVpZAkUzbWP9D7dWarXGpc8ajFbiMjiu6ym/R03nt4A7fRy3v5sMXta8jWu7EIOkDVW7liw/ZGroWO2+HeuB0O98PtdVNm07qOLtejac6ltn8w9mTbHsjVcgg2XbPzrpzBe3MON7uzGb5rONv0spqTZ1i25xlOE5xyJhLMM8GzanPCLQZ5Pm24EzwDV5cP20nES55MmX7MXlsluV4S8btL7xiH64OqyvuUfQATgCVTcCjtF+AQod1lYIWvbYLRi5sgClqb4Jzc966a3J2A3DaAgWXTqsXtdXDWSB1XR3t8nX3Zuy5A9nA6RynwrfZb3Iafdr/ZDu4y+A30pZMXL7Jxi76XhnS9eLV1jzXJHXftCup4rZ0axdZrbfh/vta+5N+F/9wFsuffjl9/AZKVL4GPDwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=77bc7331fe354487811bba6b40e33b39"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Recognition Card">c4f190382be89f109748faa6fe91bf70</action_type>
+        <action_type_parent display_value="Create Recognition Card">3629340645f043d281f96e7b3852e822</action_type_parent>
+        <attributes/>
+        <comment>create Information Asset record for this recipient</comment>
+        <compiled_snapshot>c4f190382be89f109748faa6fe91bf70</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>b8e0b639-8fd4-4582-a2e2-cbac2819d3ee</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-11-11 15:08:23</sys_created_on>
+        <sys_id>ce93810fe3154561883e7253afabbf3e</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:18:36</sys_updated_on>
+        <ui_id>ce93810f-e315-4561-883e-7253afabbf3e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2WXW/aMBSG/wrK1SaFKAlfCXcTVXezrlPZelNVkWOfgCXno45DyxD/fceJoSlt2UDrpKFecnw+3vfYj8LNyspICtbYkkB5wSFTlm0tiKh0bLWKA3DjYS/sBgnrd/uDwO8SH/wujQn1Ay9kPQCHK0jXa6xjvCwEWV6bcowURGJ7BdIaryw654JJyKzxza1tcYYpbj/xQrcX+DEEYeK54agfJIQMEwi9OBkNsIUgMQhMvWoJfEGzWhZNKAEcQcGEvmyrH+O5ZFqQZ1vwoCBjgEoSIkqwrZRkjKhcLq2xkhUGJBB2mYnlNmPOcVztLSUPJf+JQ3u+3Zo7tsplGVUljmiFI7MbPP7RHCVnRJEpTqGqkmZddJ5zCmWzIAYJqYSatGNNwmWheJ41JYrEYlOdiyrNvja7sbYNWteBqiIGhfasXRhLyXSe328XdM6zej3mUOSUiFYqEEnn5xyEvr76HmyLKCV5XCmtcmWBgBTbRykpCp7NokLmC163RIWpMxP4w0lEfo9SSj7LHEK1HQcXT5xzjJ/V4WsiufZ2gW3qhVX8++4dr2297IkgZfloG4+ju0qLbpZg7EbNxnQJlbxQn3DqAoyztb0FYYbRLIqXTziYglzg4jsT1CjyWeQ5Eu4qKFWkH7+T4wxgWHQkBkGwFwNoYfBZy+vU8p4LPhwC/x2CdwieQ0CJZE8A8LzeCIg76A5HNMQPgT/sEjocdBM2pG7s+i4dDRxddSwB7j4CgvaHYIJTOh9woQxfTSfNGYiPjzQY5YeT0HsrEmjK4ojmmdL7N7KjWvYrbEya3M43Y/HC5J4CLMZldKrQRJQomOkXcxQ9kX6kRyLU34tQGOwi1FL6ioHDIeq/KUQ1NG2BL9FT06I/1JukU8DmFHHBZ1Bi6sGcNHUvQXJ4g98ytfePWdj+Y3a1sbNrz1BU4tVlsx2Eppug4Wewnx8T+ROA+q7rPkXoFV7+V0L+MQvm+v4eCLe/ACSdIfR8DwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=ce93810fe3154561883e7253afabbf3e"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=853127872b0bba109748faa6fe91bfb0"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=853127872b0bba109748faa6fe91bfb0^sys_idNOT IN113167872b0bba109748faa6fe91bf4f,213167872b0bba109748faa6fe91bf54,613167872b0bba109748faa6fe91bf55,b8e0b6398fd44582a2e2cbac2819d3ee,ed3167872b0bba109748faa6fe91bf52"/>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
         <block display_value="">8b225d403bde4710ebe9c15765e45a17</block>
@@ -540,13 +537,13 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:15:14</sys_created_on>
         <sys_id>113167872b0bba109748faa6fe91bf4f</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>20</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:03:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
         <ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1VTYvbMBD9K8XnxEh27HzclpaFwLYLzbKXdjFjWUpEZcm15GTTkP/ekT+S0GZpKTn2Zj9pZt57nocPgWlc1Tj7ZO6slWsdLL68jAKpPYbPh0Aos3swa8mW2jrQjK/2dlkEi4DSmKbT2TTKSZ4DJfPpZCYAUsHnNBcTEYwCDSXHm8zoQjppdNYCo2ALqvEH+FhIWynYP58RtpGqqHnPpIIaaxyvg8XhlyO3r3imIOcKC1eulnqN5dJzEwQEnTPK4iiNI0Ki2YTmaZzTqIiBQ4z3hsL3A7l3Dy3yNms/D3E7TDJ14WlRMgr4q+O64DhagLJ8FJSgC3Cm3p+QmkPxqNUZ2EjtOsUlvFr5A3tHSeIvCo4aWW/H6TXrrRpcMpLxx8oT7BAHuRosNKop9adOhzeZC2iUuzC5sdiPV560Z9FTEquN2X0eBt5L3QrsD5VhoE5v4NCGvHHc+g/DFS+xUVZCVaE5WVWbrWyLkUsZrhW+hH6TcKjfshCYJx6iRxDeI/6hhZ+hll7FR2yDxR3NHKxkWbuR2M7VKOHY2pJ9bzyhTmAvJevcwAuW1bJydzhny3vWx9Ft1/likw+HKW5cwSAd55Sn40mezMdzGpExi2kiIMW+SRKiLnQGVIazHT8evzaExEWH4vb8Fodbtb1FpuaQiISS5HqmJum1TF037Y0gRX8Ikv/0f5kjQsj/IF0GSdqsC0SvrR3+zzl68YvfTbDd3hScSYtEnjy2HP4e/mCPC+DTdoZ2pv7mJZyx408yQ8LEhwYAAA==</values>
+        <values>H4sIAAAAAAAA/+1VXU/bMBT9K5Of2ypOmpT2DYGQkNiQBuJlQ9GNP1prjp3FDpBF/e+7TtIWQSfYx+Pe6mPf63OO72k6YhtfNd7d2lPn1NqQ1Zf7CVEmYPi7I4qTFSETYqAU+ItZw5VX1iD0ALoJWNctQFLOIJsWVGTTeZEup0saR1OW0FRCtoiLNJ1BVdUWa3LnwYvt9msTRQkfUMGxH1eu0tDe/eO2bKM0r8UorYIalXhRk1X3YquXuoRUpjRKWRJnSRxF8cmcFllS0JgnIOYZNtRQCI1Hz555ccQe31YBcr5WZj2ur8bSmx1oax6oxNGEiCcvDEfKKwnaiQkpwXDwtm7JytcNArUAfm10uz+xUcYPz1PCk1M/ROgUReGkFKiLiWF3v8xHjwdYnoMHpNIw39TjUbaxigk3OMKFhEb7s+fYcOC66lX2JR4Kvau2uinNp8EMsm+we1JEGockRBWUBu6jEHmzsY+fdywvlOldGTe1ZaD3K/DoXdH4wKcjQosSG+UlPjg6modXV30xcilna42LmdT2ES8N8z0DFojP0FiYXSB+3sN3UKug4iO2wWKcBZc7Vqtqp62/nGwnxLXuTINzB41obv69CQwHxaO2fLAnlPSNTvHiBzHK2E46Elhd2bVilwZHF2XftO4yjCClCc0WJzjeUVEAjZaL+YkEyKRY0kLOJRlHVUaYjyWjx0cVkiNjmffAIbqvU0fejsg77n0VkQ/D5P+a0e+khb6RlhF5V1zS9H9a/jotgWYBTrG8/3Jgu/CH9YdxGU2/UELzoyN0LE/3YaYHVvvXYMph2W3ALncftLDR4siF1B2gR1t/C7IP2PYnYPqqERoHAAA=</values>
         <workflow_reference/>
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
@@ -560,17 +557,17 @@
         <flow_variables_assigned/>
         <generation_source>text2flow</generation_source>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>6</order>
+        <order>8</order>
         <outputs_assigned/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:15:14</sys_created_on>
         <sys_id>213167872b0bba109748faa6fe91bf54</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:03:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
         <ui_id>d1312787-ae0b-ba10-1b57-ac457990e2e5</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
@@ -587,18 +584,72 @@
         <flow_variables_assigned/>
         <generation_source>text2flow</generation_source>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>7</order>
+        <order>9</order>
         <outputs_assigned/>
         <parent_ui_id>d1312787-ae0b-ba10-1b57-ac457990e2e5</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:15:14</sys_created_on>
         <sys_id>613167872b0bba109748faa6fe91bf55</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:03:06</sys_updated_on>
-        <ui_id>99312787-c20b-ba10-240d-3153fd175ee5</ui_id>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
+        <ui_id>61316787-2b0b-ba10-9748-faa6fe91bf55</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e6f154382be89f109748faa6fe91bf9a</block>
+        <comment>one card asset per selected user</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-11-11 15:08:23</sys_created_on>
+        <sys_id>b8e0b6398fd44582a2e2cbac2819d3ee</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
+        <ui_id>b8e0b639-8fd4-4582-a2e2-cbac2819d3ee</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51Ty27bMBD8F55lQQ/Hr1uQIECAtAGcIJciMFbkyiZKkSpJ2VEF/3uXpqwEOfYk7XB3dmZEDcx0vu28ezW3zsm9Zptf7wmTOmD0PjAp2IaxhGlokN6kx8ZReQTVhXoYlsuKL8syn9VY3szm89VytsrzalbBoppnWJZVuU63yI0V7nymUSFdq6B/+3+GFiyp8WjZZmD8IJWweFUe5OZrUa/zbM3LYlEWWVas5nm1KKu8ECWgWBCFggoVtT6Ofr7Z830bShuXjsDTOLOdUHoEEUWWMPzwqAXS+hqUw4Q1oAV4Y3u28bYjwCKIZ636qeMgtY/hNvDh5F/amGdZaKyRDHGMh1O5G5OLcH0PHl6ImvvOjq38YCRHF6MQWEOn/N1XLDY8t14aHUc8VOo6bVTX6J8xCTYRXD8UIZ0jEdgGo0H66KN+OZjT9qryQepLKOOhMhzUVIH3VladD3oGhgobIto10LZS73etNUd5GSYtTbpXVKS1MidaGi5nCjwITylXSB8Iv7/Ab2BlcPGDaGj4nDDXuzsFzn16oRB3f7qgJDobPexiDGGEW9n6W1pwxFHu+T3c88g9ZcqlIwmvAXu8/iXhoKcbJPlX6GTs7yD+Ezv/A9O6jBJvAwAA</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">07225d403bde4710ebe9c15765e45a1b</block>
+        <comment>end of the flow</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Assign Recognition card">853127872b0bba109748faa6fe91bfb0</flow>
+        <flow_variables_assigned/>
+        <generation_source>text2flow</generation_source>
+        <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
+        <order>7</order>
+        <outputs_assigned/>
+        <parent_ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-02-18 20:15:14</sys_created_on>
+        <sys_id>ed3167872b0bba109748faa6fe91bf52</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:17:46</sys_updated_on>
+        <ui_id>ed316787-2b0b-ba10-9748-faa6fe91bf52</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
@@ -606,29 +657,6 @@
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=853127872b0bba109748faa6fe91bfb0"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=853127872b0bba109748faa6fe91bfb0"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_853127872b0bba109748faa6fe91bfb0"/>
-    <sys_documentation action="INSERT_OR_UPDATE">
-        <element>table_name</element>
-        <help/>
-        <hint/>
-        <label>Table Name</label>
-        <language>en</language>
-        <name>var__m_sys_hub_flow_input_853127872b0bba109748faa6fe91bfb0</name>
-        <plural/>
-        <sys_class_name>sys_documentation</sys_class_name>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:15:13</sys_created_on>
-        <sys_id>1d3167872b0bba109748faa6fe91bf00</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
-        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
-        <sys_policy/>
-        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:15:13</sys_updated_on>
-        <url/>
-        <url_target/>
-    </sys_documentation>
     <sys_documentation action="INSERT_OR_UPDATE">
         <element>request_item</element>
         <help/>
@@ -639,8 +667,8 @@
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:15:13</sys_created_on>
-        <sys_id>993127872b0bba109748faa6fe91bff7</sys_id>
+        <sys_created_on>2026-11-11 15:17:45</sys_created_on>
+        <sys_id>1904d87c2be89f109748faa6fe91bf40</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
@@ -648,7 +676,30 @@
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:15:13</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:45</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_853127872b0bba109748faa6fe91bfb0</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-11-11 15:17:45</sys_created_on>
+        <sys_id>d104d87c2be89f109748faa6fe91bf75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:17:45</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -657,10 +708,10 @@
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
-        <active>true</active>
+        <active>false</active>
         <allow_high_security_roles>false</allow_high_security_roles>
         <annotation/>
-        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,intermediateFlowVersion=1.3,labelCacheCleanUpExecuted=true,viewActivatedIn=diagramming</attributes>
+        <attributes/>
         <authored_on_release_version>27800</authored_on_release_version>
         <callable_by_client_api>false</callable_by_client_api>
         <category/>
@@ -669,7 +720,7 @@
         <description/>
         <flow_priority>MEDIUM</flow_priority>
         <internal_name>assign_recognition_cards013</internal_name>
-        <label_cache>[{"name":"Service Catalog_1.request_item.opened_at","label":"Trigger - Service Catalog➛Requested Item Record➛Opened","reference":"","reference_display":"Opened","type":"glide_date_time","base_type":"glide_date_time","parent_table_name":"sc_req_item","column_name":"opened_at","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["assigned"]}},{"name":"Service Catalog_1.request_item.request","label":"Trigger - Service Catalog➛Requested Item Record➛Request","reference":"sc_request","reference_display":"Request","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"request","usedInstances":{"8d312787-7a0b-ba10-84d1-198520aab0dc":["request"]}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Requested Item Record","reference":"sc_req_item","reference_display":"Requested Item","type":"reference","base_type":"reference","usedInstances":{"7af1dca6-b1e6-4b59-9120-c315fa672b55":["record"],"15312787-8c0b-ba10-818d-a582aeda5fe3":["supported_by"],"6bb06dd4-5697-474a-9f57-92852948de52":["catalog_item"],"1137ea05-67c9-4526-ac65-fd6c0b020c75":["requested_item"]},"attributes":{"default_search_field":"number"}},{"name":"{{static.9204e7702b0fbe509748faa6fe91bf3f}}","label":"Recognition Card Managers","reference":"sys_user_group","reference_display":"Group","type":"reference","base_type":"reference","usedInstances":{"7af1dca6-b1e6-4b59-9120-c315fa672b55":["approval_conditions"]}},{"name":"7af1dca6-b1e6-4b59-9120-c315fa672b55.approval_state","label":"1 - Ask For Approval➛Approval State","reference_display":"Approval State","type":"choice","base_type":"choice","choices":[{"label":"-- None --","value":"","order":0.0},{"label":"Not Yet Requested","value":"not requested","order":1.0},{"label":"Requested","value":"requested","order":2.0},{"label":"Approved","value":"approved","order":3.0},{"label":"Rejected","value":"rejected","order":4.0},{"label":"Cancelled","value":"cancelled","order":5.0},{"label":"No Longer Required","value":"not_required","order":6.0},{"label":"Skipped","value":"skipped","order":7.0}],"usedInstances":{"d9312787-b60b-ba10-85b6-a8793af55ede":["condition"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Service Catalog_1.request_item.requested_for","label":"Trigger - Service Catalog➛Requested Item Record➛Requested for","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"requested_for","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["supported_by"]}},{"name":"Service Catalog_1.request_item.opened_by","label":"Trigger - Service Catalog➛Requested Item Record➛Opened by","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sc_req_item","column_name":"opened_by","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["supported_by"]}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.to.company","label":"3 - Get Catalog Variables➛to➛Company","reference":"core_company","reference_display":"Company","type":"reference","base_type":"reference","parent_table_name":"sys_user","column_name":"company","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["account"]}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.card_type","label":"3 - Get Catalog Variables➛card_type","reference":"cmdb_model_category","reference_display":"Model Category","type":"reference","base_type":"reference","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["model_category"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.to","label":"3 - Get Catalog Variables➛to","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["assigned_to"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.reason","label":"3 - Get Catalog Variables➛reason","reference":"","reference_display":"reason","type":"string","base_type":"string","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["comments"]},"attributes":{"catalogType":"6","catalogTypeLabel":"Single Line Text"}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.card","label":"3 - Get Catalog Variables➛card","reference":"cmdb_content_product_model","reference_display":"Content Product Model","type":"reference","base_type":"reference","usedInstances":{"15312787-8c0b-ba10-818d-a582aeda5fe3":["model"]},"attributes":{"catalogType":"8","catalogTypeLabel":"Reference"}}]</label_cache>
+        <label_cache>[{"name":"static.9204e7702b0fbe509748faa6fe91bf3f","label":"static➛9204e7702b0fbe509748faa6fe91bf3f","usedInstances":{"7af1dca6-b1e6-4b59-9120-c315fa672b55":["approval_conditions"]},"attributes":{}},{"name":"Service Catalog_1.request_item","label":"Trigger - Service Catalog➛Request Item","type":"reference","base_type":"reference","usedInstances":{"7af1dca6-b1e6-4b59-9120-c315fa672b55":["record"],"1137ea05-67c9-4526-ac65-fd6c0b020c75":["requested_item"]},"attributes":{}},{"name":"7af1dca6-b1e6-4b59-9120-c315fa672b55.approval_state","label":"7af1dca6-b1e6-4b59-9120-c315fa672b55➛approval_state","type":"choice","base_type":"choice","usedInstances":{"d9312787-b60b-ba10-85b6-a8793af55ede":["condition"]},"attributes":{}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.to","label":"1137ea05-67c9-4526-ac65-fd6c0b020c75➛to","type":"string","base_type":"string","usedInstances":{"77bc7331-fe35-4487-811b-ba6b40e33b39":["conditions"]},"attributes":{}},{"name":"77bc7331-fe35-4487-811b-ba6b40e33b39.Records","label":"77bc7331-fe35-4487-811b-ba6b40e33b39➛Records","type":"array.object","base_type":"array.object","column_name":"Records","usedInstances":{"b8e0b639-8fd4-4582-a2e2-cbac2819d3ee":["items"]},"attributes":{}},{"name":"b8e0b639-8fd4-4582-a2e2-cbac2819d3ee.item","label":"5 - For Each - ➛item","type":"reference","base_type":"reference","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["recipient"]},"attributes":{}},{"name":"Service Catalog_1.request_item.opened_by","label":"Trigger - Service Catalog➛Request Item","type":"reference","base_type":"reference","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["given_by"]},"attributes":{}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.card","label":"1137ea05-67c9-4526-ac65-fd6c0b020c75➛card","type":"reference","base_type":"reference","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["card"]},"attributes":{}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.card_type","label":"1137ea05-67c9-4526-ac65-fd6c0b020c75➛card_type","type":"reference","base_type":"reference","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["card_category"]},"attributes":{}},{"name":"1137ea05-67c9-4526-ac65-fd6c0b020c75.reason","label":"1137ea05-67c9-4526-ac65-fd6c0b020c75➛reason","type":"string","base_type":"string","usedInstances":{"ce93810f-e315-4561-883e-7253afabbf3e":["reason"]},"attributes":{}}]</label_cache>
         <master>true</master>
         <name>Assign Recognition card</name>
         <natlang/>
@@ -679,14 +730,14 @@
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
-        <status>published</status>
+        <status>draft</status>
         <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:45:05</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>be08af432b4bba109748faa6fe91bf6f</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -694,13 +745,13 @@
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:53</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:49</sys_updated_on>
         <type>flow</type>
         <version>2</version>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=be08af432b4bba109748faa6fe91bf6f"/>
     <sys_variable_value action="delete_multiple" query="document_key=be08af432b4bba109748faa6fe91bf6f"/>
-    <sys_hub_flow_stage action="delete_multiple" query="flow=be08af432b4bba109748faa6fe91bf6f^sys_idNOT IN0b08af432b4bba109748faa6fe91bfc0,4308af432b4bba109748faa6fe91bfc1,4708af432b4bba109748faa6fe91bfc0,8308af432b4bba109748faa6fe91bfc0,8f08af432b4bba109748faa6fe91bfc0,cb08af432b4bba109748faa6fe91bfc0"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=be08af432b4bba109748faa6fe91bf6f^sys_idNOT IN1ff194382be89f109748faa6fe91bf7d,1ff194382be89f109748faa6fe91bf7e,5bf194382be89f109748faa6fe91bf7e,97f194382be89f109748faa6fe91bf7e,d3f194382be89f109748faa6fe91bf7e,dff194382be89f109748faa6fe91bf7e"/>
     <sys_hub_flow_stage action="INSERT_OR_UPDATE">
         <always_show>true</always_show>
         <ancestor_array_position>0</ancestor_array_position>
@@ -710,42 +761,42 @@
         <component_indexes>6</component_indexes>
         <duration>1970-01-01 00:00:00</duration>
         <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
-        <label>Request Cancelled</label>
-        <order>0</order>
-        <stage_id>933e21f9-8782-4e73-a69d-30839b142e2e</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <label>Completed</label>
+        <order>3</order>
+        <stage_id>e8e3678b-2b0b-ba10-9748-faa6fe91bf1c</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>0b08af432b4bba109748faa6fe91bfc0</sys_id>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>1ff194382be89f109748faa6fe91bf7d</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:45:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
         <type>standard</type>
-        <value>Request Cancelled</value>
+        <value>complete</value>
     </sys_hub_flow_stage>
     <sys_hub_flow_stage action="INSERT_OR_UPDATE">
-        <always_show>false</always_show>
+        <always_show>true</always_show>
         <ancestor_array_position>0</ancestor_array_position>
         <ancestor_component_id/>
         <ancestor_stage_id/>
         <ancestral_if_else_logic/>
-        <component_indexes>3</component_indexes>
-        <duration>1970-01-02 00:00:00</duration>
+        <component_indexes>2</component_indexes>
+        <duration>1970-01-01 00:00:00</duration>
         <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
-        <label>Fulfillment</label>
-        <order>2</order>
-        <stage_id>1336d616-d863-4e24-ae84-ec5ca4ab1505</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <label>Request Approved</label>
+        <order>1</order>
+        <stage_id>ace3678b-2b0b-ba10-9748-faa6fe91bf1c</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>4308af432b4bba109748faa6fe91bfc1</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>1ff194382be89f109748faa6fe91bf7e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:52</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
         <type>standard</type>
-        <value>fulfillment</value>
+        <value>request_approved</value>
     </sys_hub_flow_stage>
     <sys_hub_flow_stage action="INSERT_OR_UPDATE">
         <always_show>true</always_show>
@@ -757,16 +808,16 @@
         <duration>1970-01-03 00:00:00</duration>
         <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
         <label>Delivery</label>
-        <order>3</order>
-        <stage_id>e4e0631d-bda9-44aa-9e66-134e22a55dd5</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <order>5</order>
+        <stage_id>64e3678b-2b0b-ba10-9748-faa6fe91bf1c</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>4708af432b4bba109748faa6fe91bfc0</sys_id>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>5bf194382be89f109748faa6fe91bf7e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:45:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
         <type>standard</type>
         <value>delivery</value>
     </sys_hub_flow_stage>
@@ -780,41 +831,41 @@
         <duration>1970-01-02 00:00:00</duration>
         <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
         <label>Waiting for Approval</label>
-        <order>1</order>
-        <stage_id>4465ca75-be58-40fc-a1a9-d80cfd9f19e1</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <order>0</order>
+        <stage_id>28e3678b-2b0b-ba10-9748-faa6fe91bf1b</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>8308af432b4bba109748faa6fe91bfc0</sys_id>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>97f194382be89f109748faa6fe91bf7e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:45:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
         <type>standard</type>
         <value>waiting_for_approval</value>
     </sys_hub_flow_stage>
     <sys_hub_flow_stage action="INSERT_OR_UPDATE">
-        <always_show>true</always_show>
+        <always_show>false</always_show>
         <ancestor_array_position>0</ancestor_array_position>
         <ancestor_component_id/>
         <ancestor_stage_id/>
         <ancestral_if_else_logic/>
-        <component_indexes>2</component_indexes>
-        <duration>1970-01-01 00:00:00</duration>
+        <component_indexes>3</component_indexes>
+        <duration>1970-01-02 00:00:00</duration>
         <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
-        <label>Request Approved</label>
-        <order>5</order>
-        <stage_id>1e998f2d-b367-4658-8ca5-2e62fa68b2e3</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <label>Fulfillment</label>
+        <order>2</order>
+        <stage_id>60e3678b-2b0b-ba10-9748-faa6fe91bf1d</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>8f08af432b4bba109748faa6fe91bfc0</sys_id>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>d3f194382be89f109748faa6fe91bf7e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:45:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
         <type>standard</type>
-        <value>request_approved</value>
+        <value>fulfillment</value>
     </sys_hub_flow_stage>
     <sys_hub_flow_stage action="INSERT_OR_UPDATE">
         <always_show>true</always_show>
@@ -822,22 +873,22 @@
         <ancestor_component_id/>
         <ancestor_stage_id/>
         <ancestral_if_else_logic/>
-        <component_indexes>4</component_indexes>
+        <component_indexes>8</component_indexes>
         <duration>1970-01-01 00:00:00</duration>
         <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
-        <label>Completed</label>
+        <label>Request Cancelled</label>
         <order>4</order>
-        <stage_id>58e7a3ac-bba4-4876-a613-e2d4495f2793</stage_id>
-        <states>{"pending":"Pending - has not started","in_progress":"In progress","skipped":"Skipped","complete":"Completed","error":"Error"}</states>
+        <stage_id>28e3678b-2b0b-ba10-9748-faa6fe91bf1c</stage_id>
+        <states>{"in_progress":"In progress","complete":"Completed","error":"Error","pending":"Pending - has not started","skipped":"Skipped"}</states>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>cb08af432b4bba109748faa6fe91bfc0</sys_id>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>dff194382be89f109748faa6fe91bf7e</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:45:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
         <type>standard</type>
-        <value>complete</value>
+        <value>Request Cancelled</value>
     </sys_hub_flow_stage>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=be08af432b4bba109748faa6fe91bf6f^sys_idNOT INba08af432b4bba109748faa6fe91bf71"/>
     <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
@@ -852,7 +903,92 @@
         <sys_updated_on>2026-02-18 20:45:05</sys_updated_on>
     </sys_flow_cat_variable_model>
     <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=ba08af432b4bba109748faa6fe91bf71"/>
-    <sys_hub_flow_input action="delete_multiple" query="model=be08af432b4bba109748faa6fe91bf6f^sys_idNOT IN3608af432b4bba109748faa6fe91bf8d,fa08af432b4bba109748faa6fe91bf73"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=be08af432b4bba109748faa6fe91bf6f^sys_idNOT IN0bf194382be89f109748faa6fe91bf2c,4ff194382be89f109748faa6fe91bf19"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>sc_req_item</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</model>
+        <model_id>be08af432b4bba109748faa6fe91bf6f</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_be08af432b4bba109748faa6fe91bf6f</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>true</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-11-11 15:08:52</sys_created_on>
+        <sys_id>0bf194382be89f109748faa6fe91bf2c</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:17:49</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=0bf194382be89f109748faa6fe91bf2c"/>
     <sys_hub_flow_input action="INSERT_OR_UPDATE">
         <active>true</active>
         <array>false</array>
@@ -915,16 +1051,16 @@
         <staged>false</staged>
         <sys_class_name>sys_hub_flow_input</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>3608af432b4bba109748faa6fe91bf8d</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_created_on>2026-11-11 15:08:52</sys_created_on>
+        <sys_id>4ff194382be89f109748faa6fe91bf19</sys_id>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:52</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:52</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -937,92 +1073,7 @@
         <write_roles/>
         <xml_view>false</xml_view>
     </sys_hub_flow_input>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3608af432b4bba109748faa6fe91bf8d"/>
-    <sys_hub_flow_input action="INSERT_OR_UPDATE">
-        <active>true</active>
-        <array>false</array>
-        <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
-        <audit>false</audit>
-        <calculation><![CDATA[(function calculatedFieldValue(current) {
-
-	// Add your code here
-	return '';  // return the calculated value
-
-})(current);]]></calculation>
-        <choice/>
-        <choice_field/>
-        <choice_table/>
-        <column_label/>
-        <comments/>
-        <create_roles/>
-        <default_value>sc_req_item</default_value>
-        <defaultsort/>
-        <delete_roles/>
-        <dependent/>
-        <dependent_on_field/>
-        <display>false</display>
-        <dynamic_creation>false</dynamic_creation>
-        <dynamic_creation_script/>
-        <dynamic_default_value/>
-        <dynamic_ref_qual/>
-        <element>table_name</element>
-        <element_reference>false</element_reference>
-        <foreign_database/>
-        <formula/>
-        <function_definition/>
-        <function_field>false</function_field>
-        <help/>
-        <hint/>
-        <internal_type display_value="">table_name</internal_type>
-        <label>Table Name</label>
-        <mandatory>false</mandatory>
-        <max_length>40</max_length>
-        <model display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</model>
-        <model_id>be08af432b4bba109748faa6fe91bf6f</model_id>
-        <model_table>sys_hub_flow_snapshot</model_table>
-        <name>var__m_sys_hub_flow_input_be08af432b4bba109748faa6fe91bf6f</name>
-        <next_element/>
-        <order>100</order>
-        <primary>false</primary>
-        <read_only>true</read_only>
-        <read_only_option>instance_configured</read_only_option>
-        <read_roles/>
-        <reference/>
-        <reference_cascade_rule/>
-        <reference_floats>false</reference_floats>
-        <reference_key/>
-        <reference_qual/>
-        <reference_qual_condition/>
-        <reference_type/>
-        <sizeclass/>
-        <spell_check>false</spell_check>
-        <staged>false</staged>
-        <sys_class_name>sys_hub_flow_input</sys_class_name>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:05</sys_created_on>
-        <sys_id>fa08af432b4bba109748faa6fe91bf73</sys_id>
-        <sys_mod_count>21</sys_mod_count>
-        <sys_name/>
-        <sys_package/>
-        <sys_policy/>
-        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_update_name/>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:53</sys_updated_on>
-        <table_reference>false</table_reference>
-        <text_index>false</text_index>
-        <unique>false</unique>
-        <use_dependent_field>false</use_dependent_field>
-        <use_dynamic_default>false</use_dynamic_default>
-        <use_reference_qualifier>simple</use_reference_qualifier>
-        <virtual>false</virtual>
-        <virtual_type>script</virtual_type>
-        <widget/>
-        <write_roles/>
-        <xml_view>false</xml_view>
-    </sys_hub_flow_input>
-    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fa08af432b4bba109748faa6fe91bf73"/>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=4ff194382be89f109748faa6fe91bf19"/>
     <sys_hub_flow_output action="delete_multiple" query="model=be08af432b4bba109748faa6fe91bf6f"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=be08af432b4bba109748faa6fe91bf6f"/>
     <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=be08af432b4bba109748faa6fe91bf6f^sys_idNOT INcb08af432b4bba109748faa6fe91bfbf"/>
@@ -1037,17 +1088,65 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:45:06</sys_created_on>
         <sys_id>cb08af432b4bba109748faa6fe91bfbf</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:52</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
         <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
-        <trigger_inputs>H4sIAAAAAAAA/81UTW/bMAz9K4ZOK5AATrI2i29DgQIFunZoul2CwlAkyhEmS64ku82C/PdRsR07rVfssENv5ofI98hHr3ZE0TUokpD7UkdXyjxH15qMiNQerKbqYVsABtnGSAbo51CA5qA9OtGs/TfSob3aEbGEpxI0ZibjyYiIn1SVUGeKm6bPeBzdGg3ReBy81znN2owlKGAeOEkEVQ7Q88P1rW/SOamzxrEf/b3fmrJfmTWl5v3OgaEIDKWOuozoEwdBS+XPXuP5Ti3NAefgSLIjGr8x4LYuDUVSC8xYnnorswxsfzRpFWDgoxUhj/v/SkwYC+8TO834CHQeRySnmlNv7LZLsiZ/gLxQ1MPRiQCwdTKJ41GLz5a6xieDKqtOT0XLJpBhG6m4BY0YsZtELOQiXsRsPl3M59N4Notjcb4WTDA2/zKJLybnCywxrPzBxv7VGfSRwosPg+oG8JatBcrvtOocG9leUE5fnPyNxT/HIU+ArdceYkcz5dLhqLb9o3OHi1P/ru1q6DhaIkF0Q7VO5FQNqbCpMA17brpdfliA9ejuCi8NioXMwmrpWr1/CcyoMte3Q7po0Pf+c6XDbXU/yVbuy415vm/XeSX1AVITVIZRdbSox87r0sPhTCmvKL4IivYWe+wPqkifyvCCnJzpgVFIcMzKwn9lXlZwPMI/9Tv4qOoFAAA=</trigger_inputs>
+        <trigger_inputs>H4sIAAAAAAAA/7VTTW/CMAz9K1VOm9QDu3LbBakS0yRgu6AJmcQt0VKnywfQIf77nJUVxmCXabf4I37P9vN8J4LTVYWuIB+AJE5bXygxFCIXBpZo+DmJlJXGbrKC2KspoCMws7ZBDsqV1RLZr7BBUkih+9z5x9qzPd+JcopvEbm+GA5yUT6Diek3UMu55fgcSVPGoUxaBtuGlFLUUGFXmmsZlAGZZgnGI3ue/Kn1oL3XVB0c+/wq/BLka+VsJHWNxTEju1FYQjTh9t/olNbh73S+Z/yBxEsuaiAFwbr2mORsPcO6MRCwd1qn0Inh3YCZEtQJz0VaJEYLnQSxvjRMpT2XaS8OWq60UQ6JhcE0GnBcNSSM3RXJXYQNZ/o78GSWrJikxGPzPzt1COqRTHuSsvX6vdtH9Lg4UfPXcKYru5lgiS4tbqTpE+4QNFaC6S0IfFTLGNCnnkCt02GlowqOp7Hf9+MZaTSHY/PS6Sbcy6DX2C/pA/WoHfafAwAA</trigger_inputs>
         <trigger_outputs/>
         <trigger_type>service_catalog</trigger_type>
         <updation_source/>
     </sys_hub_trigger_instance_v2>
-    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=be08af432b4bba109748faa6fe91bf6f^sys_idNOT IN8308af432b4bba109748faa6fe91bfa2,4708af432b4bba109748faa6fe91bfa5,8308af432b4bba109748faa6fe91bfa4"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=be08af432b4bba109748faa6fe91bf6f^sys_idNOT IN57f194382be89f109748faa6fe91bf74,5ff194382be89f109748faa6fe91bf75,8308af432b4bba109748faa6fe91bfa2,8308af432b4bba109748faa6fe91bfa4"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Records">43400a1587003300663ca1bb36cb0b4b</action_type>
+        <action_type_parent display_value="Look Up Records">d1c56ec50b30030085c083eb37673a50</action_type_parent>
+        <attributes/>
+        <comment>resolve the users selected in the "I want to recognise" list collector</comment>
+        <compiled_snapshot>43400a1587003300663ca1bb36cb0b4b</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
+        <generation_source/>
+        <order>4</order>
+        <parent_ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>57f194382be89f109748faa6fe91bf74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
+        <ui_id>77bc7331-fe35-4487-811b-ba6b40e33b39</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX207jMBD9lSrPaeU0bQq8rUBISAtIgHhBK8txnNZaN8naTkup+u87jp0Q2nBbigTax8z1zPjM2LlbexmZM+/Io3mWcM3zTHm+tyCiNEK1UpgnZxfrdRCEE0bQuB9N6GF/NB5GfUKjcT9NIopiNER0Mh7ofLMB74SrQpDV7YeCFEQCMM2kd7T26IyLRLLMO7r75Xs8gagH6QghEowPJgiFIUJRFFISxHEY0RjFYwQhBImZANPjdmld5epV0Sn72RUgl4kBFfgeu9csSxigSYlQzPfmJEuIzuWqkUhGkstMPApmPNMQ0TPG94o/QF6oAxnLlEGFlFlt84ldN604PSGaXGtZUl1KZ0pnOadM2d4kLCWl0MdtmTW4LEwF1kWTWNTeuSjn2YXtitcEqA8PJKUCEKwwpRrskBzqSK9n+fKqBnnKs6oprkiRUyKaL6K15HGpDZy1xwSbQxw8J0XBsykuZL7glTNAmQ+mAj4GqciXkFPxaTYg1OAeQGPJ4BTkJ5X4lkhuijiHMOC88Q3NjgVR6rEU6CH+UxoktjBXAq66YFtg/Kjkhf4BWRbMYd74zVhYs6cTAQ2R3TR3mo9xdxS3uHvj8m/BcYytPnGle8rYyq13YRWOsWhvjD34Tnx1ZXwxwgIgLoAh2B6hyktZtXKBqShVpZAkUzbWP9D7dWarXGpc8ajFbiMjiu6ym/R03nt4A7fRy3v5sMXta8jWu7EIOkDVW7liw/ZGroWO2+HeuB0O98PtdVNm07qOLtejac6ltn8w9mTbHsjVcgg2XbPzrpzBe3MON7uzGb5rONv0spqTZ1i25xlOE5xyJhLMM8GzanPCLQZ5Pm24EzwDV5cP20nES55MmX7MXlsluV4S8btL7xiH64OqyvuUfQATgCVTcCjtF+AQod1lYIWvbYLRi5sgClqb4Jzc966a3J2A3DaAgWXTqsXtdXDWSB1XR3t8nX3Zuy5A9nA6RynwrfZb3Iafdr/ZDu4y+A30pZMXL7Jxi76XhnS9eLV1jzXJHXftCup4rZ0axdZrbfh/vta+5N+F/9wFsuffjl9/AZKVL4GPDwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=57f194382be89f109748faa6fe91bf74"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Recognition Card">c4f190382be89f109748faa6fe91bf70</action_type>
+        <action_type_parent display_value="Create Recognition Card">3629340645f043d281f96e7b3852e822</action_type_parent>
+        <attributes/>
+        <comment>create Information Asset record for this recipient</comment>
+        <compiled_snapshot>c4f190382be89f109748faa6fe91bf70</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>b8e0b639-8fd4-4582-a2e2-cbac2819d3ee</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>5ff194382be89f109748faa6fe91bf75</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
+        <ui_id>ce93810f-e315-4561-883e-7253afabbf3e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+2WXW/aMBSG/wrK1SaFKAlfCXcTVXezrlPZelNVkWOfgCXno45DyxD/fceJoSlt2UDrpKFecnw+3vfYj8LNyspICtbYkkB5wSFTlm0tiKh0bLWKA3DjYS/sBgnrd/uDwO8SH/wujQn1Ay9kPQCHK0jXa6xjvCwEWV6bcowURGJ7BdIaryw654JJyKzxza1tcYYpbj/xQrcX+DEEYeK54agfJIQMEwi9OBkNsIUgMQhMvWoJfEGzWhZNKAEcQcGEvmyrH+O5ZFqQZ1vwoCBjgEoSIkqwrZRkjKhcLq2xkhUGJBB2mYnlNmPOcVztLSUPJf+JQ3u+3Zo7tsplGVUljmiFI7MbPP7RHCVnRJEpTqGqkmZddJ5zCmWzIAYJqYSatGNNwmWheJ41JYrEYlOdiyrNvja7sbYNWteBqiIGhfasXRhLyXSe328XdM6zej3mUOSUiFYqEEnn5xyEvr76HmyLKCV5XCmtcmWBgBTbRykpCp7NokLmC163RIWpMxP4w0lEfo9SSj7LHEK1HQcXT5xzjJ/V4WsiufZ2gW3qhVX8++4dr2297IkgZfloG4+ju0qLbpZg7EbNxnQJlbxQn3DqAoyztb0FYYbRLIqXTziYglzg4jsT1CjyWeQ5Eu4qKFWkH7+T4wxgWHQkBkGwFwNoYfBZy+vU8p4LPhwC/x2CdwieQ0CJZE8A8LzeCIg76A5HNMQPgT/sEjocdBM2pG7s+i4dDRxddSwB7j4CgvaHYIJTOh9woQxfTSfNGYiPjzQY5YeT0HsrEmjK4ojmmdL7N7KjWvYrbEya3M43Y/HC5J4CLMZldKrQRJQomOkXcxQ9kX6kRyLU34tQGOwi1FL6ioHDIeq/KUQ1NG2BL9FT06I/1JukU8DmFHHBZ1Bi6sGcNHUvQXJ4g98ytfePWdj+Y3a1sbNrz1BU4tVlsx2Eppug4Wewnx8T+ROA+q7rPkXoFV7+V0L+MQvm+v4eCLe/ACSdIfR8DwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=5ff194382be89f109748faa6fe91bf75"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Ask For Approval">f8f2e9920b10030085c083eb37673abd</action_type>
         <action_type_parent display_value="Ask For Approval">bae0a1120b10030085c083eb37673a92</action_type_parent>
@@ -1063,39 +1162,15 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:45:06</sys_created_on>
         <sys_id>8308af432b4bba109748faa6fe91bfa2</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
-        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-03-03 16:51:59</sys_updated_on>
-        <ui_id>7af1dca6-b1e6-4b59-9120-c315fa672b55</ui_id>
-        <updation_source/>
-        <values>H4sIAAAAAAAA/+1YXW/iOBT9KyjPlHEICYG3qqirruZDgu68lCpynBvwyCRM7HSGifjvexM7JAMtAyvmodt5qeTre51zD+f4ow+FxSNrbA39uA+jUZ+ENiEOIb7LiO9A6Ay9oUMZsbpWQleAmRmwNItw/ERFXgaKYgbZE2fQuaGKinQR2L0MvuYgVcAVrLZbTI64XAu6+WxqMMKWXEQZJNb44bFrrWmGyyvIrHGxN3UqPkFDEJg6rQHuA1abdTmOUpavIEFwdfC9qZyYmc7dBGewqIRDuhZ8V5BEgDhiKiR0rRVNIqrSbGONVZZjIAMafUrEZpex5InSfa7od8l/4IedfpkXAzbGDAe7YWD40eF4gkTOcGWm8mxHV4oUS01JBDHNhbppx3TCp7XiaaJLFA1FXZ2KfJV81IRYuwVaP0cuEQSsyz5L5LqteLZMv01rkLc8qRgxLYqUUbEbUaUyHuaqhFNYIKCieEXXa54sgnWWPvGqGKGseguBg14s0m/4TckXSY+yEncPWaW9W4xPqvBnmvGyiQ+4DBZvu5bcyBtBpWxaQQ6Dr3mJRDdmWggqFjQFZR3L+Fpd41eewGDedo32Q3ZUW6yRkl6ukb5kASq9UvmhxqfaAxB17vT8eYo/AVWt+HsDaw+l0Xs1DKq5n+VelXU+6gmjdvu42k2kkbvWyTNq98krUrtp69XL/VdKh4HnuPhnGDvE7tvEB8/32YhQ5nueO3AaDSEC7IEK1DeVuHaj+Qts5ifAqKV9bXB0pjWOFwEauUv8YZLFntRnddDIvH+mzF/e1W3vLQk95/d7LOvIAc+/xxHl5/5JOO6rd6WOvH7ojYgfXUUxCa8GvuNeUQbkCjzbBTfymGs7v8FFxD62M0f+MyKNOYj2nameODRTa+Y8U52A6sBUtwbWS3CNparhcydIVb93glzOWj4hr8lbb+nKxI6KDVoHyZc0z5IjDgiWXFbKeNEJrYzzHHECyNoRf2uU+4bYB/9f/OD88cP/3w8D96jUWpfznapZmkS8RCxbrtA7M8gpfAGm5HWy+euhKKSiirMeLj+A4ZD0QxKH4JLRcODHlHoxjOwwduLt9vHQRRdY8TzXnUDF7qWeC5C/osZ4rrnvmaK275pbopk03htc6u3+yqz3Vt4z7KjW4lGjrShHgqhqP96LuaVhz63x3ErSBOZWd26VWUEpriqMGQhuN1HFimK71ZE8o2YBuzVsqiO6kVWmZEuIUJtV9KdIUJnBxC/xn7ITOKn9N8mhM9GkHNJUP6dqnJoXfnDmzUxCtdK7e94++9yLnX2DP/a7xOMp2D0v8GDD3e+Cnnz8F+dvIRRLFgAA</values>
-    </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8308af432b4bba109748faa6fe91bfa2"/>
-    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
-        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
-        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
-        <attributes/>
-        <comment>create new Information Asset record based on catalogue item input</comment>
-        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
-        <display_text/>
-        <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
-        <generation_source/>
-        <order>4</order>
-        <parent_ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</parent_ui_id>
-        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
-        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>4708af432b4bba109748faa6fe91bfa5</sys_id>
         <sys_mod_count>3</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-03-03 16:51:59</sys_updated_on>
-        <ui_id>15312787-8c0b-ba10-818d-a582aeda5fe3</ui_id>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
+        <ui_id>7af1dca6-b1e6-4b59-9120-c315fa672b55</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1WS2/bOBD+KwJPya4tSH7IsfcUJMiiwLYBmm4udStQ4sgmQJEqSTn1GvrvOxQlx4iTTQzspUByCMyZb4bfvMT5uiOckQVJYoim8zjJx/F4PIqi0cUkzpJxFo/YmAJMyIBIWgIiLc0EpO1hQDZU1E5IRZlyWShdUsuVTKkxYFHPuKkE3d53sA+PkOCyg+RrLpgGSRZfvw1IRTV6tqDJYvdE9VaegmYgEPrFEX2Bt91Wz8r+OrQNPnmF0szxiQYEflqQDJBIQYWBASmpZNQqvSULq2sUaKDsVortHrHm0qJD4rA/Df8Hr72IHK4AjCwHr9sf0y5jXlxcU0vv0HNua91B87XiORifEwYFrYW9OpR5wG3lsuxN2jA7ayXqUn7yKSF7B32BUFIbJAGVi9Mx78Io7tbq4XPP8obLNiWdUqiciv2JWqt5VlvHZ0dAQImO0pJWFZertNJqw1tj5FKGK4GHsBDqAS81fCVDmjviIaaVhjcov27F91RzF8VHdIPGzYCYrbkS2GePsWAS0x+1Y+Ij62JIfRqcSa55ZS/xgg10dJtBPwAMovmLjRVnj43U9rw5aH5TV5XSFliabZd1FI3ZbncHeoNVCK4wDKFWaRxq+IFmNuUWylAhtxbfNN9pnqta2t4yjsczoNF0mMzy+XAyHSVDmifTYcGSPMqiUZTPpqFVIWavotI5KBUDkebUwgo78SQ/OdUsdY3veBiXaGRl1Ylc0BjZuDKbkyxxWIySfQQnE/ecwaaWrrxxwYa+xsC+C15Amm9zHHCDAOjcL/tv0pIsluQWm6n9HFGxJIOlL2mrmY6nF5NkOs1mCXZDHAFEbBzPZgBxTOezooW3g9XCj25zamzRlLM3umuOGLv/tjbPEv8gg78NPOEMk/k8Gs1fuIRlr3Du73tC/XWvj71zVIbjN+B9Wt6n5X1aXpyWE9eh11+tfh264SCYeeYZ63chKDFfFlL/rD3ZhzplcN8pu50o/r92ojiJ2r9faDPywf3yi9HBDny0IvkQvcxx3n9A3OG/oHgl1kUGrsNHs/ury8/X/mfwe3D2kdq1i0xp/1Njw6jy7Dz4LZi3TXCOqPgcP5VYYEzN2fkfSNvQDbB9NZBqP0WvctlQHXC5wackZTbwQxdIeAj+dDnGRoIvvAS8ZSmXsiO+x4crsNcHL9gzZN76flHbNKRpmm//Ar4SD+d1DQAA</values>
+        <values>H4sIAAAAAAAA/+1Y0W7bOgz9lUDPaa4cx47Tt6JBhw33bkDb7aUpDFmiEw2OnVlyt1wj/z7akh03adOtyIBu3UtRUSR1SJ0js70pScqWQE4JW63y7I4lYSwhEaRP8Peiu4EmIdUqYetP+zsrlmMaDTk5LQlfyETkkJLTm9s+kQJdqRMPYTIZ0sih1KU08DgNXIjcsT92mQgwRcIiSND1zGbtXVggjwHU61Vlr5dh7WRs/9pEdXzvvdnIclGBG/YJfNOQCkBUMUsU9MmSpYLpLF+3lhyY+JAmW8NCphozksr5m5L/47kBpbTyjAEr5WB222VoW2XM8ZRpdqXzgusit658kUkOyvRIQMyKRJ93bcbhw0rLLDUhmkVJE50lxTJ9bzpD2gTNzaClUAgCVlWpFXY8HOuIrxbZ18sG5IVM66bYIpOM4102K6Z1LqNCV3BKAgksMU+4xFuQ6TysrkLWwQhlOZgnuBjESfYVz1Ryng4Yr3APsLFscIH2aW3+xHJZFfEfpsHgTZ+otTpPmFLbUrCH4ZeiQmIKsyWEdRdMC6o4nsuVPsNT7sBi3vRbMn/Oijw9wOVwIVV9449yuuPxFLf5QW6D2+H2O4Nrl9q7cJ/DbPcvs18Ds0WBxTMNHVKXM2IwzcjpjKRZCjPSn5HKK6xYU5vRA09uN2pbWW42xlLkzCZwOstttGBrVXsqvgBRJMZ6zxLWHLf2zb6wfkRI3iEhxZOOkKYF9KamDfuNsfJpkZlOyD0ZXVmHOtM/17IrJ+9ochr9TmKyZbwwNSFMGbbTBmoFJf8MiT2trvb151kqZIVMdYRmJhNQl/AZuFZn6frNTVkqjWLhA6TtCMZjOoxoHIFHJ+NREDPmxzBxotiNN5vbfVEcIeNTohodFBVAR1SXqAX1wMB1rxlWXO1mboO6wmpHuCajFdXosKjMS/4HfqJepqp+hYBMl7aSUTzM4UsoNSz32X9/8ykiR/wQkTnvEPnaotgBZalbLx8aq+qwnbHK+cnvgOHwg5T9S9gXSNgcON50d5oqryC/w172zhFMks1DZ4AsLUDpmqmb58024+Age2n3GW4g7UK0/BUZL+ruSrFD4Knd6b2dbhlMj/XousPfiMGv66+C7dcYmMLALZ2fRVYY+a6HP8axS52hQwPwg4BPKOOB73uj7l+02099c/KjkJqxHPuczndH8cZ49P/TOP5rengLeb3TZWPZ6/OvG9Q/phJfy7cVj/xh5E9oIE5ETKOTUeB6J4wDPQHf8cATPvcc94iv+u13SgVY3s4UAAA=</values>
     </sys_hub_action_instance_v2>
-    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4708af432b4bba109748faa6fe91bfa5"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8308af432b4bba109748faa6fe91bfa2"/>
     <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
         <action_type display_value="Get Catalog Variables">330ba3abc31013002841b63b12d3aee8</action_type>
         <action_type_parent display_value="Get Catalog Variables">22f0b88cc3c632002841b63b12d3aeff</action_type_parent>
@@ -1111,17 +1186,17 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:45:06</sys_created_on>
         <sys_id>8308af432b4bba109748faa6fe91bfa4</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:45:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:08:53</sys_updated_on>
         <ui_id>1137ea05-67c9-4526-ac65-fd6c0b020c75</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/91VXW/bMAz8K4GejcCK0zjN29ahwIB9AMvQl2EQZJlOhMmyJ8nJsqD/fZQtJ266pi2wDtgeQ5PiHcm7fNkTmZMFyYo44wnPREJjmsTxZD6l2SzJ6CRPOAAnEdG8BMw08L0B6yBn0kGJ8Q1Xjf+w3y/BbKSA0RV3XFUrRschuU29vcXkXNpa8d1NqMGIWEuVG9Bk8eVrRGpusI0DQxb7k09Pxal4BgpTl01WSodAR586FGc4uF3dxQvAfgJC6F146tMgXpnco4sjAj8c6BwQVsGVhYiUXOfcVWZHFs40GDDA849a7Q4Za6ldR7vkP6z8iU2TSTTouyBWMITXAzt8YWFyLZqAfvS2Syre4MCX2FK4xhzGWuEqbDe6HAreKHc1jHUJH2snK92VOJ6pvrpSTak/dNMihwcGa2ssQoLaD8BTCvyK5braHqZ1LXU7q/BRVYKrQSpwI9bXEpRfrG7KDHMjwp0zMmucx7knoKDEBqzkdS31itWm2sj2UcRYjlcKf4wLVW0RjJUrPebCExrjHvj4GuNv2vANN9Kze4/PtF0q3ArLTVXXgbRfGLmNiN3ZK8WtPXLHFbDvjUfeTSJwZt3YfIkwsnavsPEGAr3bqNdVdu5eC3q8SVwl7tcBE0E9J/K6mAOlcTpJ8MViRmPI4FLQi3R2AdMLPpvfF9cr66nj9YtqpaUfCyrT5M/X3OMces19DiR6C2gv1I5QF6N+BaMlOPs47ecrkr6YIh3Dq7gD0DJ8mG0CJWY7Sr8T6+OD+C/U63v9Le1Kiw5ZVngzLWc23FUrY5QkEsGteIjH4Br7MdNoJ0tgrayY1Kyq7UbC9uUsID0vn/Sohf7C+ruyA/nHgtJkNk2TbJ5m/FT+tFj4s0QyfoJMwzYq0ktawIMFyb0CmqeTAuYPFUzvFcDlfFpMRPb7gpSfFtx3qP+D1PPc9Ann0Ltp7x03g3s4cyrBMq1q7DprxDdwJ6a59F9Gr/tPwTcn530zRJ5inHQSx/Fd73zAFf9V27trcGhEBf534eyOe8CbgHaSpC3Bpi9lg0+yMzw6LVSDmSWOQhrscoDq/34OaX40AxBg2NZ0nQ4ptcEas/F/dwqEa0n2fls1RgQ/xuipRv6cqX79BatBApCxDAAA</values>
+        <values>H4sIAAAAAAAA/91VUW/aMBD+KyjPCMWEEspb16rSpG2VytSXarIc5wLWHCe1HShD/PedEydAaWknrZPWR5/vfN/dd5/vfhMolkMwDTizTBZzumRasESCCfrBksnK3YWckGg8iqNkEieMhJDAOSdn8fgMRmeMZFNhIadFaUWhqIJVP4vPSQYvBkRHASSNhxlMXgoYHQXA+WSUDXnyfEDMngZgNakwpWTruw9VVMk08mdBB9NNwBdCphpUML3/0Q9EilXGSZiwiCU8IiGJwnA4GZFkHCVkmEYMshifkCwBia6XzQT07vYm4MRw2HXproyszCKp+E+w3vjFvzdzN71P7VWhU4dy2A/g0YJKAeFlTBroBzlTKbOFXncWDSy9UXJnWAhl8c3AOT8a8QtTk2EYhs41A6yZQ3PdHannuzFnV1jCzOqK20p7V74oBMda6m6lkLFK2st9W+NwU/e7CbGueh9dyCpX35oGBd0D7XihpTIIAkpXqwPvK8lmi2J126K8Fqpui7+UBWeyOzFrtUgq6/BsAmFoJtEEascDTgHUnQzqEEwKEnJMR3NWlkLNaamLpahTIOJ8MJd4GGSyWCE0I+ZqwLgrb4AEsME12q9qczsEX/EZDHYEpEB1pazIgdYfAxUKZ9EsBQ7iNMDWuvRCcVmhZ46tEBqzdFDBmp2ba80eCNB0pZtMnUupMUYvgRosidu6SH9likojwS0ZT1WxRY+1uZTMmB09OBf0oXLNbcjytNCGWRfCtSjtBXZjCZ6Bbb/7HjU8VGAQBXXZ9v7GzWaGKHFMel4/lAy8c+263R5/PW/QbZKd0i2wPd3OqiQXOBZp77bJu9PtEWov2p1mDiV7u2f3eg1P69Ux8ja5RsNDrRpOEV4L7DnZ3rboe58bp/9SxNkMmOaLawHSEauqPKkFdSju95JtgazQVBdl6YuuJfQeCkGKkDcLtF0WT4RyNgFCwngY4UbKxk+X23hyLJML40rCqebFXAlXLmpMp29Rz+mtR/bU893DbuVbz5rp4YR3i7A3c39X/7VC/1xb5N20ZSnyewDQUHy4+42paUp6TnavN+JD6NDl+lcqxNWtIS+s31l0n6t2p2EhyIqDuDO+aen+PTH/+A0NvYVODwwAAA==</values>
     </sys_hub_action_instance_v2>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=8308af432b4bba109748faa6fe91bfa4"/>
     <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=be08af432b4bba109748faa6fe91bf6f"/>
-    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=be08af432b4bba109748faa6fe91bf6f^sys_idNOT IN4308af432b4bba109748faa6fe91bf9d,4f08af432b4bba109748faa6fe91bf9e,8f08af432b4bba109748faa6fe91bf9f,cf08af432b4bba109748faa6fe91bfa0"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=be08af432b4bba109748faa6fe91bf6f^sys_idNOT IN4308af432b4bba109748faa6fe91bf9d,9ff194382be89f109748faa6fe91bf78,d7f194382be89f109748faa6fe91bf7a,8f08af432b4bba109748faa6fe91bf9f,17f194382be89f109748faa6fe91bf7d"/>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
         <attributes/>
         <block display_value="">8b225d403bde4710ebe9c15765e45a17</block>
@@ -1140,13 +1215,40 @@
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:45:06</sys_created_on>
         <sys_id>4308af432b4bba109748faa6fe91bf9d</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:53</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:49</sys_updated_on>
         <ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</ui_id>
         <updation_source/>
-        <values>H4sIAAAAAAAA/+1Vy27bMBD8lYJn2SAlS459CxIECJA2QBPk0gbCiiJtohSpipQd1/C/dynJD6Qp2qA+9iYOubsz4x14S2zr69a7R3vpnFoYMv/yHBFlAobfWyK1Xd/ZheK3xnkwXDxs3G1J5oSxhGXTi2lc0KIARmfTyYUEyKSYsUJOJImIgUrgS25NqbyyJu+AiKxAt+ECP0vlag2bpyPCl0qXjRiY1NBgjRcNmW9fXanAQlKQbMYZT+IsiSmNLyasyJKCxWUCAhJsqKEQGp9e7Wl8uOuQ3/PzmzrgzjfKLIbz3dDlYQ/apgysGI2IePHClAL5SNBORKQCU4K3zeaANALKe6OPwFIZ3wuu4MWpHzgwTtPwUAqUyAc3Dsd8cKqH5TV4QCot921zMM4qLlxvTikktNpfnWL9g/s6SO1LPBR6X211W5lPvSPk0ODkh2kdkhB1UBqoDzrkw9KuP+9Z3ijTuTJcastBH07g0bui9YHPlggtKmyUV1DX6GheN3alumLkUo0XGg/jsH04NGzmGHggPkZjYXyD+HUHP0GjgoqP2AaLe5oFOMXzbouxHdokyC4ibuOuNDh3FInu5t/bQLGXPIjLe39CCW9U7S9x8koMOnbReUNxkoftdorbXHLIRgUT2WhSpLPRjMV0xBOWSsiwb5qOUSl6BTrH2V7sdl9bSpOyR3EJfwnVudq+L5kzSGXKaPp2MifZW8l82573xDH+QxzDLvxlGiml/+P4z3FULu9DNGjrhp8xjc8hPv3Mg9dcOaT2GLDb/T9ZuNjgcoXMHqG1bb4FUUds9xOuvnizEwcAAA==</values>
+        <values>H4sIAAAAAAAA/+1VXU/bMBT9K5Of2ypOmpT2DYGQkNiQBuJlQ9GNP1prjp3FDpBF/e+7TtIWQSfYx+Pe6mPf63OO72k6YhtfNd7d2lPn1NqQ1Zf7CVEmYPi7I4qTFSETYqAU+ItZw5VX1iD0ALoJWNctQFLOIJsWVGTTeZEup0saR1OW0FRCtoiLNJ1BVdUWa3LnwYvt9msTRQkfUMGxH1eu0tDe/eO2bKM0r8UorYIalXhRk1X3YquXuoRUpjRKWRJnSRxF8cmcFllS0JgnIOYZNtRQCI1Hz555ccQe31YBcr5WZj2ur8bSmx1oax6oxNGEiCcvDEfKKwnaiQkpwXDwtm7JytcNArUAfm10uz+xUcYPz1PCk1M/ROgUReGkFKiLiWF3v8xHjwdYnoMHpNIw39TjUbaxigk3OMKFhEb7s+fYcOC66lX2JR4Kvau2uinNp8EMsm+we1JEGockRBWUBu6jEHmzsY+fdywvlOldGTe1ZaD3K/DoXdH4wKcjQosSG+UlPjg6modXV30xcilna42LmdT2ES8N8z0DFojP0FiYXSB+3sN3UKug4iO2wWKcBZc7Vqtqp62/nGwnxLXuTINzB41obv69CQwHxaO2fLAnlPSNTvHiBzHK2E46Elhd2bVilwZHF2XftO4yjCClCc0WJzjeUVEAjZaL+YkEyKRY0kLOJRlHVUaYjyWjx0cVkiNjmffAIbqvU0fejsg77n0VkQ/D5P+a0e+khb6RlhF5V1zS9H9a/jotgWYBTrG8/3Jgu/CH9YdxGU2/UELzoyN0LE/3YaYHVvvXYMph2W3ALncftLDR4siF1B2gR1t/C7IP2PYnYPqqERoHAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">e6f154382be89f109748faa6fe91bf9a</block>
+        <comment>one card asset per selected user</comment>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Assign Recognition card">be08af432b4bba109748faa6fe91bf6f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="For Each">098e1dc5c3e232002841b63b12d3ae33</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>9ff194382be89f109748faa6fe91bf78</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
+        <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
+        <sys_updated_on>2026-11-11 15:17:49</sys_updated_on>
+        <ui_id>b8e0b639-8fd4-4582-a2e2-cbac2819d3ee</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/51Ty27bMBD8F55lQQ/Hr1uQIECAtAGcIJciMFbkyiZKkSpJ2VEF/3uXpqwEOfYk7XB3dmZEDcx0vu28ezW3zsm9Zptf7wmTOmD0PjAp2IaxhGlokN6kx8ZReQTVhXoYlsuKL8syn9VY3szm89VytsrzalbBoppnWJZVuU63yI0V7nymUSFdq6B/+3+GFiyp8WjZZmD8IJWweFUe5OZrUa/zbM3LYlEWWVas5nm1KKu8ECWgWBCFggoVtT6Ofr7Z830bShuXjsDTOLOdUHoEEUWWMPzwqAXS+hqUw4Q1oAV4Y3u28bYjwCKIZ636qeMgtY/hNvDh5F/amGdZaKyRDHGMh1O5G5OLcH0PHl6ImvvOjq38YCRHF6MQWEOn/N1XLDY8t14aHUc8VOo6bVTX6J8xCTYRXD8UIZ0jEdgGo0H66KN+OZjT9qryQepLKOOhMhzUVIH3VladD3oGhgobIto10LZS73etNUd5GSYtTbpXVKS1MidaGi5nCjwITylXSB8Iv7/Ab2BlcPGDaGj4nDDXuzsFzn16oRB3f7qgJDobPexiDGGEW9n6W1pwxFHu+T3c88g9ZcqlIwmvAXu8/iXhoKcbJPlX6GTs7yD+Ezv/A9O6jBJvAwAA</values>
         <workflow_reference/>
     </sys_hub_flow_logic_instance_v2>
     <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
@@ -1160,18 +1262,18 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>5</order>
+        <order>7</order>
         <outputs_assigned/>
         <parent_ui_id>d9312787-b60b-ba10-85b6-a8793af55ede</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>4f08af432b4bba109748faa6fe91bf9e</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>d7f194382be89f109748faa6fe91bf7a</sys_id>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:53</sys_updated_on>
-        <ui_id>99312787-4e0b-ba10-500d-6c274dca19e4</ui_id>
+        <sys_updated_on>2026-11-11 15:17:49</sys_updated_on>
+        <ui_id>ed316787-2b0b-ba10-9748-faa6fe91bf52</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
@@ -1187,17 +1289,17 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
-        <order>6</order>
+        <order>8</order>
         <outputs_assigned/>
         <parent_ui_id/>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:45:06</sys_created_on>
         <sys_id>8f08af432b4bba109748faa6fe91bf9f</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:53</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:49</sys_updated_on>
         <ui_id>d1312787-ae0b-ba10-1b57-ac457990e2e5</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
@@ -1214,18 +1316,18 @@
         <flow_variables_assigned/>
         <generation_source/>
         <logic_definition display_value="End">d176605ea76103004f27b0d2187901c7</logic_definition>
-        <order>7</order>
+        <order>9</order>
         <outputs_assigned/>
         <parent_ui_id>d1312787-ae0b-ba10-1b57-ac457990e2e5</parent_ui_id>
         <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>cf08af432b4bba109748faa6fe91bfa0</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_created_on>2026-11-11 15:08:53</sys_created_on>
+        <sys_id>17f194382be89f109748faa6fe91bf7d</sys_id>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:53</sys_updated_on>
-        <ui_id>99312787-c20b-ba10-240d-3153fd175ee5</ui_id>
+        <sys_updated_on>2026-11-11 15:17:49</sys_updated_on>
+        <ui_id>61316787-2b0b-ba10-9748-faa6fe91bf55</ui_id>
         <updation_source/>
         <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
         <workflow_reference/>
@@ -1243,8 +1345,8 @@
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:06</sys_created_on>
-        <sys_id>8708af432b4bba109748faa6fe91bf93</sys_id>
+        <sys_created_on>2026-11-11 15:17:48</sys_created_on>
+        <sys_id>86041c7c2be89f109748faa6fe91bf20</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
@@ -1252,7 +1354,7 @@
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:45:06</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:48</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -1266,8 +1368,8 @@
         <plural/>
         <sys_class_name>sys_documentation</sys_class_name>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
-        <sys_created_on>2026-02-18 20:45:05</sys_created_on>
-        <sys_id>fa08af432b4bba109748faa6fe91bf89</sys_id>
+        <sys_created_on>2026-11-11 15:17:48</sys_created_on>
+        <sys_id>c6041c7c2be89f109748faa6fe91bf1b</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name/>
         <sys_package display_value="Visual Cards" source="x_konl_visual_card">ba68c10f2bb63e109748faa6fe91bfb2</sys_package>
@@ -1275,7 +1377,7 @@
         <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_update_name/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-02-18 20:45:05</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:48</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
@@ -1284,7 +1386,7 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>853127872b0bba109748faa6fe91bfb0</sys_id>
         <latest_snapshot>be08af432b4bba109748faa6fe91bf6f</latest_snapshot>
-        <compiler_build>glide-australia-02-11-2026__patch2-hotfix3a-07-01-2026_07-02-2026_1220.zip</compiler_build>
+        <compiler_build>glide-australia-02-11-2026__patch5bw45-11-01-2026_11-03-2026_2134.zip</compiler_build>
         <version_record/>
     </sys_hub_flow>
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=853127872b0bba109748faa6fe91bfb0^sys_idNOT IN9708af432b4bba109748faa6fe91bfe4"/>
@@ -1292,17 +1394,17 @@
         <binding_strategy>com.snc.process_flow.engine.binding.RunAlways</binding_strategy>
         <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_flow_trigger_plan","id":"9708af432b4bba109748faa6fe91bfe4","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
         <plan_id>853127872b0bba109748faa6fe91bfb0</plan_id>
-        <snapshot>be08af432b4bba109748faa6fe91bf6f</snapshot>
+        <snapshot>a13458783be8df10ebe9c15765e45aef</snapshot>
         <sys_created_by>dzmitry.peshkur-snadmin</sys_created_by>
         <sys_created_on>2026-02-18 20:45:07</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9708af432b4bba109748faa6fe91bfe4</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
-        <sys_updated_on>2026-08-26 09:02:54</sys_updated_on>
+        <sys_updated_on>2026-11-11 15:17:50</sys_updated_on>
         <trigger display_value="">9708af432b4bba109748faa6fe91bfe3</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=853127872b0bba109748faa6fe91bfb0"/>

@@ -91,7 +91,7 @@
         <sys_created_on>2026-02-11 22:26:30</sys_created_on>
         <sys_id>3f1cb3382b03fe509748faa6fe91bf75</sys_id>
         <sys_mod_count>3</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:36:33</sys_updated_on>
         <type>standard</type>
@@ -114,7 +114,7 @@
         <sys_created_on>2026-02-11 22:26:30</sys_created_on>
         <sys_id>3f1cb3382b03fe509748faa6fe91bf76</sys_id>
         <sys_mod_count>6</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:36:33</sys_updated_on>
         <type>standard</type>
@@ -137,7 +137,7 @@
         <sys_created_on>2026-02-11 22:26:30</sys_created_on>
         <sys_id>771cb3382b03fe509748faa6fe91bf77</sys_id>
         <sys_mod_count>3</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-13 14:43:38</sys_updated_on>
         <type>standard</type>
@@ -160,7 +160,7 @@
         <sys_created_on>2026-02-11 22:26:30</sys_created_on>
         <sys_id>7b1cb3382b03fe509748faa6fe91bf76</sys_id>
         <sys_mod_count>4</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-23 23:36:33</sys_updated_on>
         <type>standard</type>
@@ -183,7 +183,7 @@
         <sys_created_on>2026-02-11 22:26:30</sys_created_on>
         <sys_id>b31cb3382b03fe509748faa6fe91bf77</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-13 14:34:45</sys_updated_on>
         <type>standard</type>
@@ -206,7 +206,7 @@
         <sys_created_on>2026-02-11 22:26:30</sys_created_on>
         <sys_id>ff1cb3382b03fe509748faa6fe91bf76</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-13 14:43:38</sys_updated_on>
         <type>standard</type>
@@ -220,7 +220,7 @@
         <sys_created_on>2026-02-10 22:56:40</sys_created_on>
         <sys_id>c479fee02b8ffa509748faa6fe91bf33</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-10 22:56:40</sys_updated_on>
     </sys_flow_cat_variable_model>
@@ -411,7 +411,7 @@
         <sys_created_on>2026-02-10 22:56:41</sys_created_on>
         <sys_id>5879fee02b8ffa509748faa6fe91bfc1</sys_id>
         <sys_mod_count>2</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-11 21:45:27</sys_updated_on>
         <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
@@ -1079,7 +1079,7 @@
         <sys_created_on>2026-02-11 22:45:03</sys_created_on>
         <sys_id>3f5000052b43fe509748faa6fe91bf86</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-25 10:00:20</sys_updated_on>
         <type>standard</type>
@@ -1102,7 +1102,7 @@
         <sys_created_on>2026-02-11 22:45:03</sys_created_on>
         <sys_id>775000052b43fe509748faa6fe91bf87</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-13 14:43:48</sys_updated_on>
         <type>standard</type>
@@ -1125,7 +1125,7 @@
         <sys_created_on>2026-02-11 22:45:03</sys_created_on>
         <sys_id>7b5000052b43fe509748faa6fe91bf86</sys_id>
         <sys_mod_count>3</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-25 10:00:20</sys_updated_on>
         <type>standard</type>
@@ -1148,7 +1148,7 @@
         <sys_created_on>2026-02-11 22:45:03</sys_created_on>
         <sys_id>b35000052b43fe509748faa6fe91bf87</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-13 14:43:48</sys_updated_on>
         <type>standard</type>
@@ -1171,7 +1171,7 @@
         <sys_created_on>2026-02-11 22:45:03</sys_created_on>
         <sys_id>b75000052b43fe509748faa6fe91bf86</sys_id>
         <sys_mod_count>3</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-25 10:00:20</sys_updated_on>
         <type>standard</type>
@@ -1194,7 +1194,7 @@
         <sys_created_on>2026-02-11 22:45:03</sys_created_on>
         <sys_id>ff5000052b43fe509748faa6fe91bf86</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-13 14:43:48</sys_updated_on>
         <type>standard</type>
@@ -1208,7 +1208,7 @@
         <sys_created_on>2026-02-11 21:45:41</sys_created_on>
         <sys_id>8ec2bff82b8fbe509748faa6fe91bf9f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-11 21:45:41</sys_updated_on>
     </sys_flow_cat_variable_model>
@@ -1399,7 +1399,7 @@
         <sys_created_on>2026-02-11 21:45:42</sys_created_on>
         <sys_id>1ac2fff82b8fbe509748faa6fe91bf06</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-02-11 21:45:42</sys_updated_on>
         <trigger_definition display_value="Service Catalog">c43a1011c36813002841b63b12d3ae15</trigger_definition>
@@ -2022,7 +2022,7 @@
         <sys_id>eec2fff82b8fbe509748faa6fe91bf7e</sys_id>
         <sys_mod_count>11</sys_mod_count>
         <sys_overrides/>
-        <sys_scope/>
+        <sys_scope display_value="Visual Cards">ba68c10f2bb63e109748faa6fe91bfb2</sys_scope>
         <sys_updated_by>dzmitry.peshkur-snadmin</sys_updated_by>
         <sys_updated_on>2026-03-03 16:50:58</sys_updated_on>
         <trigger display_value="">eec2fff82b8fbe509748faa6fe91bf7d</trigger>
